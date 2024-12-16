@@ -12,8 +12,9 @@ public class EngineEffect : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         spriteRenderer.enabled = !spriteRenderer.enabled;
     }
+
 }

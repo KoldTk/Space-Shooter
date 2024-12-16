@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public float shootingInterval;
+    public float lastBulletTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,4 +19,5 @@ public class PlayerControl : MonoBehaviour
         worldPoint.z = 0;
         transform.position = worldPoint;
     }
+
 }
