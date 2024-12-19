@@ -5,10 +5,11 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     public float bulletSpeed;
+    private int ballDamage;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ballDamage = 2;
     }
 
     // Update is called once per frame
@@ -21,6 +22,11 @@ public class BallMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var enemy = collision.GetComponent<EnemyHealth>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(ballDamage);
+        }    
         Destroy(gameObject);
     }
 }

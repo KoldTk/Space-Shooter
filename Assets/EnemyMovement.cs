@@ -19,5 +19,4 @@ public class EnemyMovement : MonoBehaviour
         newPosition.y -= enemySpeed * Time.deltaTime;
         transform.position = newPosition;
     }
-
 }

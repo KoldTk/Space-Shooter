@@ -7,12 +7,11 @@ public class SpawnPoint : MonoBehaviour
     public GameObject enemyPrefab;
     private Vector3 spawnPoint;
     public float spawnTime;
-    public float lastSpawnTime;
+    private float lastSpawnTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

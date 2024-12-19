@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : Health
+public class PlayerHealth : Health
 {
     public override void Die()
     {
         base.Die();
-        Debug.Log("Enemy Die");
+        Debug.Log("Player die");
     }
 }
