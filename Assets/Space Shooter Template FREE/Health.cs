@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.UI;
 
 public class Health : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHP = maxHP;
+
     }
     public virtual void Die()
     {
         var explosion = Instantiate(explodeEffectPrefab, transform.position, transform.rotation);
+        DataManage.score += 1;
         Destroy(gameObject);
     }
     public void TakeDamage(int damage)
