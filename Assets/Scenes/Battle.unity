@@ -202,7 +202,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33876870}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -454,8 +454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41, y: 177.05298}
-  m_SizeDelta: {x: 264.8353, y: 55.8942}
+  m_AnchoredPosition: {x: -1.7686, y: 177.05298}
+  m_SizeDelta: {x: 350.3725, y: 55.8942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467063198
 MonoBehaviour:
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 381564f5fa997bf4892ae1b6e2d43079, type: 2}
   m_sharedMaterial: {fileID: -8741236635094673729, guid: 381564f5fa997bf4892ae1b6e2d43079, type: 2}
@@ -524,8 +524,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
