@@ -7,7 +7,10 @@ public class DataManage : MonoBehaviour
 {
     public static int score;
     public static bool isAlive = true;
+    public static bool isEndGame = false;
     public static int highScore;
+    public static int enemyCount;
+
 
     private static string filePath = "Assets/Score.txt";
     // Start is called before the first frame update
@@ -16,6 +19,8 @@ public class DataManage : MonoBehaviour
         LoadData();
         score = 0;
         isAlive = true;
+        isEndGame = false;
+        enemyCount = 50;
 }
 
     // Update is called once per frame

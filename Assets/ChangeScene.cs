@@ -9,6 +9,8 @@ public class ChangeScene : MonoBehaviour
     // Start is called before the first frame update
     public void SwitchScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
+        
     }
 }

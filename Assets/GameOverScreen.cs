@@ -14,7 +14,7 @@ public class GameOverScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DataManage.isAlive == false)
+        if (DataManage.isAlive == false || DataManage.isEndGame == true)
         {
             gameOverScreen.enabled = true;
         }    
