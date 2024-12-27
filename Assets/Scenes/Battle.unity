@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 886498183}
   - component: {fileID: 886498185}
   - component: {fileID: 886498184}
-  - component: {fileID: 886498186}
+  - component: {fileID: 887903561}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1135,7 +1135,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886498182}
   m_CullTransparentMesh: 1
---- !u!114 &886498186
 --- !u!1 &887903557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1146,6 @@ GameObject:
   - component: {fileID: 887903560}
   - component: {fileID: 887903559}
   - component: {fileID: 887903558}
-  - component: {fileID: 887903561}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1234,14 +1232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverText: {fileID: 886498184}
-  m_GameObject: {fileID: 887903557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c99c14853c034f2439195a8ebdcab9ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgRenderer: {fileID: 887903558}
-  scrollSpeed: 1
 --- !u!1 &1124140789
 GameObject:
   m_ObjectHideFlags: 0
