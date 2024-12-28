@@ -23,7 +23,8 @@ public class EnemyAttack : MonoBehaviour
         if (player != null)
         {
             player.TakeDamage(damage);
-            enemyHealth.TakeDamage(1000);
+            enemyHealth.TakeDamage(enemyHealth.maxHP);
+            enemyHealth.Die();
         }
     }
 }

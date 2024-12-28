@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Health : MonoBehaviour
@@ -9,9 +10,12 @@ public class Health : MonoBehaviour
     public GameObject hitEffectPrefab;
     public int maxHP;
     public int currentHP;
+    public System.Action onHealthChanged;
     private void Start()
     {
+
         currentHP = maxHP;
+        onHealthChanged?.Invoke();
 
     }
     public virtual void Die()
@@ -22,14 +26,15 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if (currentHP > 0)
+        if (currentHP > 1)
         {
             var hitEffect = Instantiate(hitEffectPrefab, transform.position, transform.rotation);
             currentHP -= damage;
+            onHealthChanged?.Invoke();
             return;
         }
         
-        if (currentHP <= 0)
+        if (currentHP <= 1)
         {
             Die();
         }
