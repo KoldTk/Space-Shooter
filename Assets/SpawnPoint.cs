@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public GameObject flyPath;
     private Vector3 spawnPoint;
     public float spawnTime;
     private float lastSpawnTime;
@@ -21,6 +22,15 @@ public class SpawnPoint : MonoBehaviour
         if (lastSpawnTime >= spawnTime)
         {
             Instantiate(enemyPrefab, transform.position + spawnPoint, transform.rotation);
+            FlyPathControl flyPathControl = enemyPrefab.GetComponent<FlyPathControl>();
+            FlyPath fly = flyPath.GetComponent<FlyPath>();
+            
+            if (flyPathControl != null && fly != null)
+            {
+                flyPathControl.flyPath = fly;
+                
+            }
+
             lastSpawnTime = 0;
         }
         else if (lastSpawnTime < spawnTime)
