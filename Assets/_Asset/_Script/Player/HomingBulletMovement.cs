@@ -2,33 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HomingBulletMovement : MonoBehaviour
+public class HomingBulletMovement : BulletMovement
 {
-    public float bulletSpeed;
-    [SerializeField] private int bulletID;
-    [SerializeField] private int ballDamage;
-    [SerializeField] private float disappearTime;
     private GameObject target;
     void Update()
     {
-        FindTarget();
-        DisappearAfterSeconds(5);
+        MoveToTarget();
     }
     private void OnEnable()
     {
-        target = FindAnyObjectByType<EnemyHealth>()?.gameObject;
-        
+        target = FindClosestTarget();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private GameObject FindClosestTarget()
     {
-        var enemy = collision.GetComponent<EnemyHealth>();
-        if (enemy != null)
+        EnemyHealth[] enemies = FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None);
+        GameObject closestTarget = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        foreach (EnemyHealth enemy in enemies)
         {
-            enemy.TakeDamage(ballDamage);
-        }    
-        Destroy(gameObject);
-    }
-    private void FindTarget()
+            float dist = Vector3.Distance(currentPos, enemy.transform.position);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closestTarget = enemy.gameObject;
+            }
+        }
+        return closestTarget;
+    }    
+    private void MoveToTarget()
     {
         if (target == null)
         {
@@ -38,15 +40,5 @@ public class HomingBulletMovement : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, bulletSpeed * Time.deltaTime); 
         }
-    }
-    private void DisappearAfterSeconds(float second)
-    {
-        disappearTime -= Time.deltaTime;
-        if (disappearTime <= 0)
-        {
-            BulletPool.Instance.ReturnToPool(bulletID, gameObject);
-            disappearTime = second;
-        }
-        
-    }    
+    } 
 }

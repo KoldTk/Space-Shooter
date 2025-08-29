@@ -8,13 +8,6 @@ public class FlyPathControl : MonoBehaviour
     public FlyPath flyPath;
     public float flySpeed;
     private int nextIndex;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (flyPath == null)
@@ -41,6 +34,10 @@ public class FlyPathControl : MonoBehaviour
     private void FlyToNextWaypoint()
     {
         transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex], flySpeed * Time.deltaTime);
+        if (transform.position == flyPath[1])
+        {
+            EventDispatcher<Transform>.Dispatch(Event.EnemyAttack.ToString(), transform);
+        }    
     }
 
     private void LookAt(Vector2 destination)

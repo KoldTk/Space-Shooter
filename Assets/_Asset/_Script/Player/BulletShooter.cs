@@ -16,21 +16,23 @@ public class BulletShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Shooting();
+        if (lastBulletTime >= shootInterval)
+        {
+            Shooting();
+            lastBulletTime = 0;
+
+        }
+        else if (lastBulletTime < shootInterval)
+        {
+            lastBulletTime += Time.deltaTime;
+        }
+
     }
     void Shooting()
     {
         if (Input.GetMouseButton(0))
         {
-            if (lastBulletTime >= shootInterval)
-            {
-                BulletPool.Instance.GetPrefab(bulletID, transform.position, transform.rotation);
-                lastBulletTime = 0;
-            }
-            else if (lastBulletTime < shootInterval)
-            {
-                lastBulletTime += Time.deltaTime;
-            }
+            BulletPool.Instance.GetPrefab(bulletID, transform.position, transform.rotation);
         }
     }
 }

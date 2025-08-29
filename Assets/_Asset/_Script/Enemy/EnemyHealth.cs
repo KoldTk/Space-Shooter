@@ -8,4 +8,14 @@ public class EnemyHealth : Health
     {
         base.Die();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var player = collision.GetComponent<PlayerHealth>();
+        if (player != null)
+        {
+            player.TakeDamage(maxHP);
+            TakeDamage(maxHP);
+            Die();
+        }
+    }
 }

@@ -5,16 +5,7 @@ using UnityEngine;
 
 public enum Event
 {
-    SpawnEnemy, 
-    SpawnAlly, 
-    GainExp, 
-    GainGold, 
-    EnemyDie, //Enemy die, give exp and gold
-    EnemyPass, //Enemy pass the gate, lose health
-    LevelUp, //Level up, open level up menu
-    GameOver,
-    StageClear,
-    WaveEnd,
+    EnemyAttack,
 }
 public class EventDispatcher<T>
 {

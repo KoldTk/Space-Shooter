@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPool : Singleton<EnemyPool>
+public class MobPool : Singleton<MobPool>
 {
     [SerializeField] private int poolSizePerEnemy = 20;
     [SerializeField] private Transform parentTransform;

@@ -8,11 +8,9 @@ public class Health : MonoBehaviour
     public GameObject hitEffectPrefab;
     public int maxHP;
     public int currentHP;
-    public System.Action onHealthChanged;
     private void Start()
     {
         currentHP = maxHP;
-        onHealthChanged?.Invoke();
     }
     public virtual void Die()
     {
@@ -25,7 +23,6 @@ public class Health : MonoBehaviour
         {
             var hitEffect = Instantiate(hitEffectPrefab, transform.position, transform.rotation);
             currentHP -= damage;
-            onHealthChanged?.Invoke();
             return;
         }
         

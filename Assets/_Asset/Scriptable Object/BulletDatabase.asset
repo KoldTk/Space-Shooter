@@ -15,11 +15,31 @@ MonoBehaviour:
   bulletDatas:
   - bulletName: Wind Spear
     ID: 0
-    prefab: {fileID: 5818242117364969577, guid: 96ea5793470c0c340b795a02ad4c57ea, type: 3}
+    prefab: {fileID: 7616144598903086630, guid: 0de91eae3567bc34f8affd5e9d764b3c, type: 3}
     moveSpeed: 5
     damage: 2
   - bulletName: Wind Spear Homing
     ID: 1
     prefab: {fileID: 3760153336955986303, guid: 454cfc2c7116e3b428807fd42efa88f5, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Homing Bullet
+    ID: 2
+    prefab: {fileID: 3890756181438001215, guid: 50ce53bdbece3a040aa9256fff30b806, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Energy Ball
+    ID: 3
+    prefab: {fileID: 5375400394495588458, guid: c367c57f88dc3db459f6176ee37536c4, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Fire Arrow
+    ID: 4
+    prefab: {fileID: 5838402393802865155, guid: db4cb620ec789c040afeb5551c7aa53b, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Fire Ball
+    ID: 5
+    prefab: {fileID: 5181505949268131994, guid: 282b7f1bc01392a489717e5c1bdb142f, type: 3}
     moveSpeed: 5
     damage: 2

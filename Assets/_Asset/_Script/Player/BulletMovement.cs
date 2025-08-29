@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    [SerializeField] private int bulletID;
+    public int bulletID;
     public float bulletSpeed;
-    private int gunDamage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        gunDamage = 0;
-    }
-
-    // Update is called once per frame
+    public int gunDamage;
     void Update()
     {
         transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var enemy = collision.GetComponent<EnemyHealth>();
-        if ((enemy != null))
+        if (collision.CompareTag("Enemy"))
         {
-            enemy.TakeDamage(gunDamage);
+            var enemy = collision.GetComponent<EnemyHealth>();
+            if ((enemy != null))
+            {
+                enemy.TakeDamage(gunDamage);
+            }
+            BulletPool.Instance.ReturnToPool(bulletID, gameObject);
         }
-        BulletPool.Instance.ReturnToPool(bulletID, gameObject);
-    }
+        if (collision.CompareTag("Delete Zone"))
+        {
+            BulletPool.Instance.ReturnToPool(bulletID, gameObject);
+        }    
+    }  
 }
