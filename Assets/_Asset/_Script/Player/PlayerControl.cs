@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    private CharacterController controller;
     private Camera mainCam;
+    private Rigidbody2D body2D;
     
     void Start()
     {
-        controller = GetComponent<CharacterController>();
         mainCam = Camera.main;
+        body2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -23,8 +23,8 @@ public class PlayerControl : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 move = new Vector3(horizontal, vertical).normalized;
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        Vector3 move = new Vector3(horizontal, vertical, 0).normalized;
+        transform.Translate(move * moveSpeed * Time.deltaTime);
         //Restrict movement
         Vector3 pos = transform.position;
         float halfHeigth = mainCam.orthographicSize;

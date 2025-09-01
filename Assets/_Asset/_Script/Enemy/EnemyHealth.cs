@@ -14,8 +14,7 @@ public class EnemyHealth : Health
         if (player != null)
         {
             player.TakeDamage(maxHP);
-            TakeDamage(maxHP);
             Die();
         }
-    }
+    }  
 }

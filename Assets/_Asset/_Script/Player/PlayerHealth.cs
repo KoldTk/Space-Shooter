@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerHealth : Health
 {
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Bullet"))
+        {
+            Debug.Log("Player die");
+        }    
+    }
     public override void Die()
     {
         base.Die();

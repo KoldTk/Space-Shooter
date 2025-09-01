@@ -6,6 +6,7 @@ using UnityEngine;
 public enum Event
 {
     EnemyAttack,
+    WaveEnd,
 }
 public class EventDispatcher<T>
 {
