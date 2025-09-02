@@ -7,6 +7,9 @@ public enum Event
 {
     EnemyAttack,
     WaveEnd,
+    BossAppear,
+    BossStartAttack,
+    BossChangePhase,
 }
 public class EventDispatcher<T>
 {

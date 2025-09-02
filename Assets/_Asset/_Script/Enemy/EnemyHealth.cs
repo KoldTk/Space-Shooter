@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {
-    public override void Die()
-    {
-        base.Die();
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.GetComponent<PlayerHealth>();
@@ -16,5 +12,9 @@ public class EnemyHealth : Health
             player.TakeDamage(maxHP);
             Die();
         }
-    }  
+    }
+    public override void Die()
+    {
+        base.Die();
+    }
 }

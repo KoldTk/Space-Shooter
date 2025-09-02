@@ -35,7 +35,7 @@ public class EnemyWavesController : MonoBehaviour
         }
         else
         {
-            //Boss Appear
+            EventDispatcher<bool>.Dispatch(Event.BossAppear.ToString(), true);
             Debug.Log("Mob Wave End, Boss Appear");
         }    
     }

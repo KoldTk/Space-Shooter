@@ -16,20 +16,28 @@ public class HomingBulletMovement : BulletMovement
     private GameObject FindClosestTarget()
     {
         EnemyHealth[] enemies = FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None);
+        BossControl boss = FindAnyObjectByType<BossControl>();
         GameObject closestTarget = null;
-        float minDistance = Mathf.Infinity;
-        Vector3 currentPos = transform.position;
-        foreach (EnemyHealth enemy in enemies)
+        if (boss != null)
         {
-            float dist = Vector3.Distance(currentPos, enemy.transform.position);
-            if (dist < minDistance)
+            closestTarget = boss.gameObject;
+        }
+        else
+        {
+            float minDistance = Mathf.Infinity;
+            Vector3 currentPos = transform.position;
+            foreach (EnemyHealth enemy in enemies)
             {
-                minDistance = dist;
-                closestTarget = enemy.gameObject;
+                float dist = Vector3.Distance(currentPos, enemy.transform.position);
+                if (dist < minDistance)
+                {
+                    minDistance = dist;
+                    closestTarget = enemy.gameObject;
+                }
             }
         }
         return closestTarget;
-    }    
+    } 
     private void MoveToTarget()
     {
         if (target == null)

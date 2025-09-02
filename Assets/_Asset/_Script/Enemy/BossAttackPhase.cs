@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossPhase : MonoBehaviour
+public class BossAttackPhase : MonoBehaviour
 {
     [SerializeField] private Queue<Transform> waves = new Queue<Transform>();
     [SerializeField] private float waveTime;
 
-    private void OnEnable()
+    private void Awake()
     {
         foreach (Transform child in transform)
         {
@@ -29,6 +29,7 @@ public class BossPhase : MonoBehaviour
     private void CountdownPhase()
     {
         float time = waveTime;
+        waveTime = Mathf.Clamp(waveTime, 0, waveTime);
         waveTime -= Time.deltaTime;
         if (waveTime <= 0)
         {
