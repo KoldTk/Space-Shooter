@@ -10,6 +10,7 @@ public enum Event
     BossAppear,
     BossStartAttack,
     BossChangePhase,
+    StageClear,
 }
 public class EventDispatcher<T>
 {

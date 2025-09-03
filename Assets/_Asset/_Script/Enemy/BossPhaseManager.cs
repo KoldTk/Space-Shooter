@@ -22,10 +22,12 @@ public class BossPhaseManager : MonoBehaviour
     }
     private void StartAttack(bool isAttacking)
     {
+        //Start boss first phase
         phases[0].gameObject.SetActive(true);
     }
     private void ChangePhase(bool isChangingPhase)
     {
+        // Go to next phase, if no next phase available stage clear
         if (currentPhase < phases.Count - 1)
         {
             phases[currentPhase].gameObject.SetActive(false);

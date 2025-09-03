@@ -5,12 +5,11 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    private Camera mainCam;
+    [SerializeField] private Camera subCam;
     private Rigidbody2D body2D;
     
     void Start()
     {
-        mainCam = Camera.main;
         body2D = GetComponent<Rigidbody2D>();
     }
 
@@ -25,14 +24,23 @@ public class PlayerControl : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(horizontal, vertical, 0).normalized;
         transform.Translate(move * moveSpeed * Time.deltaTime);
-        //Restrict movement
         Vector3 pos = transform.position;
-        float halfHeigth = mainCam.orthographicSize;
-        float halfWidth = halfHeigth * mainCam.aspect;
-        pos.x = Mathf.Clamp(pos.x, -halfWidth, halfWidth);
-        pos.y = Mathf.Clamp(pos.y, -halfHeigth, halfHeigth);
-        transform.position = pos;
+        //Restrict movement
+        float halfHeight = subCam.orthographicSize;
+        float halfWidth = halfHeight * subCam.aspect;
 
+        // Set sub camera as center
+        Vector3 camPos = subCam.transform.position;
+
+        float minX = camPos.x - halfWidth;
+        float maxX = camPos.x + halfWidth;
+        float minY = camPos.y - halfHeight;
+        float maxY = camPos.y + halfHeight;
+
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
+
+        transform.position = pos;
     }    
 
 }
