@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletPool : Singleton<BulletPool>
 {
+    //Pool contains bullets that used in-game
     [SerializeField] private int poolSizePerEnemy = 20;
     [SerializeField] private Transform parentTransform;
     [SerializeField] private BulletDatabase bulletDatabase;
     private Dictionary<int, Queue<GameObject>> enemyPool;
-
     void Awake()
     {
         PoolInitialize();

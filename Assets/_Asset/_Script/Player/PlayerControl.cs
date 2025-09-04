@@ -6,11 +6,21 @@ public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private Camera subCam;
-    private Rigidbody2D body2D;
-    
-    void Start()
+    private int powerMileStone = 16;
+    private int gunStage = 0;
+    private List<Transform> guns = new List<Transform>();
+
+    private void OnEnable()
     {
-        body2D = GetComponent<Rigidbody2D>();
+        foreach( Transform child in transform)
+        {
+            guns.Add(child);
+        }    
+        EventDispatcher<bool>.AddListener(Event.StatusChange.ToString(), LevelUp);
+    }
+    private void OnDisable()
+    {
+        EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), LevelUp);
     }
 
     void Update()
@@ -18,6 +28,23 @@ public class PlayerControl : MonoBehaviour
         HandleCharacterMove();
     }
 
+    private void LevelUp(bool isChanged)
+    {
+        //Power up if gain enough power point
+        if (GameManager.Instance.playerPower >= powerMileStone)
+        {
+            powerMileStone *= 2;
+            gunStage++;
+            ChangeGunStage();
+        }    
+    }
+    private void ChangeGunStage()
+    {
+        for (int i = 0; i <= gunStage; i++)
+        {
+            guns[i].gameObject.SetActive(true);
+        }
+    }    
     private void HandleCharacterMove()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -41,6 +68,10 @@ public class PlayerControl : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
+    }
+    private void RestrictMovement()
+    {
+
     }    
 
 }

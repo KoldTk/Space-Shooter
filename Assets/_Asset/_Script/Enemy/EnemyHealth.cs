@@ -16,5 +16,6 @@ public class EnemyHealth : Health
     public override void Die()
     {
         base.Die();
-    }
+        GameManager.Instance.DropItem(this.transform, 0.75f);
+    }  
 }

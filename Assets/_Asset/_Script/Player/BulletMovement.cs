@@ -16,16 +16,21 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            EnemyTakeDmg(collision);  
+            EnemyTakeDmg(collision);
+            //Each dmg equal to 10 points
+            GameManager.Instance.ScoreUp(gunDamage * 10);
         }
         if (collision.CompareTag("Boss"))
         {
             BossTakeDmg(collision);
+            //Each dmg equal to 10 points
+            GameManager.Instance.ScoreUp(gunDamage * 10);
         }
         if (collision.CompareTag("Delete Zone"))
         {
             BulletPool.Instance.ReturnToPool(bulletID, gameObject);
-        }    
+        }
+        Debug.Log(GameManager.Instance.playerScore);
     }
     
     private void EnemyTakeDmg(Collider2D collision)
@@ -48,6 +53,7 @@ public class BulletMovement : MonoBehaviour
             {
                 EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
                 milestoneHP -= 0.25f;
+                milestoneHP = Mathf.Clamp01(milestoneHP);
             }    
         }
         BulletPool.Instance.ReturnToPool(bulletID, gameObject);
