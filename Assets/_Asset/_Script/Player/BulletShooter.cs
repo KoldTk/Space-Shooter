@@ -34,5 +34,9 @@ public class BulletShooter : MonoBehaviour
         {
             BulletPool.Instance.GetPrefab(bulletID, transform.position, transform.rotation);
         }
+        if (Input.GetMouseButton(1))
+        {
+            
+        }
     }
 }

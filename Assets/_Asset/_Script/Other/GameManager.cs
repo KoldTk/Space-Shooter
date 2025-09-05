@@ -11,15 +11,15 @@ public class GameManager : Singleton<GameManager>
     public int playerPower;
     public int playerSpell;
     public int rewardPoint;
+    public bool playerUsingSpell;
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private Transform charSpawnPos;
+    [SerializeField] private Transform playerParent;
     [SerializeField] private GameObject PowerUpPrefab;
     [SerializeField] private GameObject rewardPointPrefab;
     private void Awake()
     {
         GameStartSetup();
-    }
-    private void OnDisable()
-    {
-
     }
     private void GameStartSetup()
     {
@@ -66,4 +66,8 @@ public class GameManager : Singleton<GameManager>
             rb.AddForce(Vector2.up * explodeForce, ForceMode2D.Impulse);
         }
     }
+    public void CharacterSpawn()
+    {
+        Instantiate(playerPrefab, charSpawnPos.position, Quaternion.identity, playerParent);  
+    }    
 }

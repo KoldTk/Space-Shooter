@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,19 @@ public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private Camera subCam;
+    [SerializeField] private GameObject spellPrefab;
+    private Vector3 startingPos = new Vector3(-3,-3.5f,0);
     private int powerMileStone = 16;
     private int gunStage = 0;
+    private bool isUsingSpell;
     private List<Transform> guns = new List<Transform>();
-
+    private void Start()
+    {
+        StartCoroutine(MoveToStartPosition());
+    }
     private void OnEnable()
     {
+        gameObject.tag = "Player_Invi";
         foreach( Transform child in transform)
         {
             guns.Add(child);
@@ -21,13 +29,34 @@ public class PlayerControl : MonoBehaviour
     private void OnDisable()
     {
         EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), LevelUp);
+        if (GameManager.Instance.playerLives > 0)
+        {
+            EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
+            GameManager.Instance.CharacterSpawn();
+        }
+        else
+        {
+            //Game Over or Continue
+        }
     }
-
     void Update()
     {
         HandleCharacterMove();
+        if (Input.GetMouseButtonDown(1))
+        {
+            UseSpell();
+        }
     }
-
+    private IEnumerator MoveToStartPosition()
+    {   
+        while (Vector3.Distance(transform.position, startingPos) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, startingPos, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        gameObject.tag = "Player";
+    }    
     private void LevelUp(bool isChanged)
     {
         //Power up if gain enough power point
@@ -51,6 +80,11 @@ public class PlayerControl : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(horizontal, vertical, 0).normalized;
         transform.Translate(move * moveSpeed * Time.deltaTime);
+        transform.position = RestrictMovement();
+    }
+    private Vector3 RestrictMovement()
+    {
+        if (gameObject.CompareTag("Player_Invi")) return transform.position;
         Vector3 pos = transform.position;
         //Restrict movement
         float halfHeight = subCam.orthographicSize;
@@ -67,11 +101,16 @@ public class PlayerControl : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-        transform.position = pos;
-    }
-    private void RestrictMovement()
-    {
-
+        return pos;
     }    
-
+    private void UseSpell()
+    {
+        if (!GameManager.Instance.playerUsingSpell && GameManager.Instance.playerSpell > 0)
+        {
+            Instantiate(spellPrefab, transform.position, Quaternion.identity, transform);
+            GameManager.Instance.playerSpell--;
+            EventDispatcher<bool>.Dispatch(Event.UsingSpell.ToString(), true);
+            GameManager.Instance.playerUsingSpell = true;
+        }
+    }    
 }

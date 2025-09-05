@@ -13,6 +13,8 @@ public enum Event
     StageClear,
     ScoreGain,
     StatusChange,
+    CharacterDie,
+    UsingSpell,
 }
 public class EventDispatcher<T>
 {

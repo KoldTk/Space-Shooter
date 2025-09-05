@@ -30,7 +30,6 @@ public class BulletMovement : MonoBehaviour
         {
             BulletPool.Instance.ReturnToPool(bulletID, gameObject);
         }
-        Debug.Log(GameManager.Instance.playerScore);
     }
     
     private void EnemyTakeDmg(Collider2D collision)
