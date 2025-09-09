@@ -9,7 +9,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Camera subCam;
     [SerializeField] private GameObject spellPrefab;
     private Vector3 startingPos = new Vector3(-3,-3.5f,0);
-    private int powerMileStone = 16;
+    private int powerMileStone = 8;
     private int gunStage = 0;
     private bool isUsingSpell;
     private List<Transform> guns = new List<Transform>();
@@ -60,17 +60,19 @@ public class PlayerControl : MonoBehaviour
     private void LevelUp(bool isChanged)
     {
         //Power up if gain enough power point
-        if (GameManager.Instance.playerPower >= powerMileStone)
+        if (GameManager.Instance.playerPower >= powerMileStone && GameManager.Instance.powerStage < 5)
         {
             powerMileStone *= 2;
+            GameManager.Instance.powerStage++;
             gunStage++;
             ChangeGunStage();
         }    
     }
     private void ChangeGunStage()
     {
-        for (int i = 0; i <= gunStage; i++)
+        for (int i = 1; i < gunStage; i++)
         {
+            guns[i-1].gameObject.SetActive(false);
             guns[i].gameObject.SetActive(true);
         }
     }    

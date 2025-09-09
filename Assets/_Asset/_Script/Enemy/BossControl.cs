@@ -6,6 +6,21 @@ public class BossControl : Health
 {
     [SerializeField] private Transform startPosition;
     [SerializeField] private float moveSpeed;
+    public int shockCount = 0;
+    private float shockInterval = 0.5f;
+    private void Update()
+    {
+        if (shockInterval <= 0)
+        {
+            if (shockCount == 0) return;
+            InflictShockDamage();
+        }
+        else
+        {
+            shockInterval -= Time.deltaTime;
+        }
+        
+    }
     private void OnEnable()
     {
         StartCoroutine(MoveToPosition(startPosition));
@@ -33,4 +48,10 @@ public class BossControl : Health
         transform.position = target.position;
         EventDispatcher<bool>.Dispatch(Event.BossStartAttack.ToString(), true);
     }
+    private void InflictShockDamage()
+    {
+        //Take damage overtime if shocked
+        float dmgInflict = shockCount * GameManager.Instance.playerPower * 0.5f;
+        currentHP -= (int)dmgInflict;
+    }    
 }

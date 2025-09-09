@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public int playerPower;
     public int playerSpell;
     public int rewardPoint;
+    public int powerStage;
     public bool playerUsingSpell;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
@@ -27,8 +28,9 @@ public class GameManager : Singleton<GameManager>
         playerScore = 0;
         playerLives = 3;
         playerSpell = 2;
-        playerPower = 0;
+        playerPower = 1;
         rewardPoint = 0;
+        powerStage = 5;
     } 
     public void PowerUp(int value)
     {

@@ -30,5 +30,5 @@ public class Health : MonoBehaviour
         {
             Die();
         }
-    }
+    }  
 }

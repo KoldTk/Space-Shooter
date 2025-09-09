@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: BulletDatabase
   m_EditorClassIdentifier: 
   bulletDatas:
-  - bulletName: Wind Spear
+  - bulletName: Fireball
     ID: 0
-    prefab: {fileID: 7616144598903086630, guid: 0de91eae3567bc34f8affd5e9d764b3c, type: 3}
+    prefab: {fileID: 5362601399484187088, guid: 0de91eae3567bc34f8affd5e9d764b3c, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Wind Spear Homing
+  - bulletName: Flame Dust
     ID: 1
-    prefab: {fileID: 3760153336955986303, guid: 454cfc2c7116e3b428807fd42efa88f5, type: 3}
+    prefab: {fileID: 2988058427645939686, guid: 029637dd1d5b8774ea6064f70756561b, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Enemy Homing Bullet
+  - bulletName: Lightning Ball
     ID: 2
-    prefab: {fileID: 3890756181438001215, guid: 50ce53bdbece3a040aa9256fff30b806, type: 3}
+    prefab: {fileID: 4908562515195843112, guid: 79494f9c63f7ab2419173e50814d8805, type: 3}
     moveSpeed: 5
     damage: 2
   - bulletName: Enemy Energy Ball

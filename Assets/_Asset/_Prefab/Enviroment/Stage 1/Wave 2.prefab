@@ -52,21 +52,21 @@ MonoBehaviour:
     numberOfEnemy: 10
     formationOffset: {x: -1, y: 0, z: 0}
     flyPath: {fileID: 8888420228275186848}
-    enemyHealth: 10
+    enemyHealth: 15
     speed: 2
     nextWaveDelay: 4
   - enemyPrefab: {fileID: 4793779173245048858, guid: ced455e319e14244bbae3dc7d86dc495, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: -1, y: 0, z: 0}
     flyPath: {fileID: 3099547648787073771}
-    enemyHealth: 15
+    enemyHealth: 10
     speed: 2
     nextWaveDelay: 5
   - enemyPrefab: {fileID: 4793779173245048858, guid: ced455e319e14244bbae3dc7d86dc495, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: -1, y: 0, z: 0}
     flyPath: {fileID: 6622000480861693565}
-    enemyHealth: 20
+    enemyHealth: 10
     speed: 2
     nextWaveDelay: 2
 --- !u!1 &4556730120461190333
