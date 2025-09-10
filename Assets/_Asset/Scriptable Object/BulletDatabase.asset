@@ -28,18 +28,18 @@ MonoBehaviour:
     prefab: {fileID: 4908562515195843112, guid: 79494f9c63f7ab2419173e50814d8805, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Enemy Energy Ball
+  - bulletName: Ice Bullet
     ID: 3
-    prefab: {fileID: 5375400394495588458, guid: c367c57f88dc3db459f6176ee37536c4, type: 3}
+    prefab: {fileID: 9170806523335110096, guid: 7b944b384234d324aa5fa0e16a545801, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Enemy Fire Arrow
+  - bulletName: Water Bullet
     ID: 4
-    prefab: {fileID: 5838402393802865155, guid: db4cb620ec789c040afeb5551c7aa53b, type: 3}
+    prefab: {fileID: 6791572459135233284, guid: 922c855e8b9504e44b42f3418aa291a3, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Enemy Fire Ball
+  - bulletName: Homing Bullet
     ID: 5
-    prefab: {fileID: 5181505949268131994, guid: 282b7f1bc01392a489717e5c1bdb142f, type: 3}
+    prefab: {fileID: 3760153336955986303, guid: 454cfc2c7116e3b428807fd42efa88f5, type: 3}
     moveSpeed: 5
     damage: 2
