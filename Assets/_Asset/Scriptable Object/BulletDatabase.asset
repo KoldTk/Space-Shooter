@@ -15,12 +15,12 @@ MonoBehaviour:
   bulletDatas:
   - bulletName: Fireball
     ID: 0
-    prefab: {fileID: 5362601399484187088, guid: 0de91eae3567bc34f8affd5e9d764b3c, type: 3}
+    prefab: {fileID: 3609852693682000153, guid: 9b99025672b289b40a5e12eb17dd321e, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Flame Dust
+  - bulletName: Laser Bullet
     ID: 1
-    prefab: {fileID: 2988058427645939686, guid: 029637dd1d5b8774ea6064f70756561b, type: 3}
+    prefab: {fileID: 2355992329686132152, guid: a3eabff2990812a46b287753f14ea233, type: 3}
     moveSpeed: 5
     damage: 2
   - bulletName: Lightning Ball

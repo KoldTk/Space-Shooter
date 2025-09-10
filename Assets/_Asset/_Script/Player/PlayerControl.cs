@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
     [SerializeField] private Camera subCam;
     [SerializeField] private GameObject spellPrefab;
+    [SerializeField] private GameObject normalMode;
+    [SerializeField] private GameObject focusMode;
     private Vector3 startingPos = new Vector3(-3,-3.5f,0);
-    private int powerMileStone = 8;
-    private int gunStage = 0;
-    private bool isUsingSpell;
-    private List<Transform> guns = new List<Transform>();
     private void Start()
     {
         StartCoroutine(MoveToStartPosition());
@@ -20,15 +17,9 @@ public class PlayerControl : MonoBehaviour
     private void OnEnable()
     {
         gameObject.tag = "Player_Invi";
-        foreach( Transform child in transform)
-        {
-            guns.Add(child);
-        }    
-        EventDispatcher<bool>.AddListener(Event.StatusChange.ToString(), LevelUp);
     }
     private void OnDisable()
     {
-        EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), LevelUp);
         if (GameManager.Instance.playerLives > 0)
         {
             EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
@@ -46,42 +37,24 @@ public class PlayerControl : MonoBehaviour
         {
             UseSpell();
         }
+        SwitchModeHandler();
     }
     private IEnumerator MoveToStartPosition()
     {   
         while (Vector3.Distance(transform.position, startingPos) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startingPos, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, startingPos, GameManager.Instance.playerSpeed * Time.deltaTime);
             yield return null;
         }
         yield return new WaitForSeconds(2f);
         gameObject.tag = "Player";
-    }    
-    private void LevelUp(bool isChanged)
-    {
-        //Power up if gain enough power point
-        if (GameManager.Instance.playerPower >= powerMileStone && GameManager.Instance.powerStage < 5)
-        {
-            powerMileStone *= 2;
-            GameManager.Instance.powerStage++;
-            gunStage++;
-            ChangeGunStage();
-        }    
-    }
-    private void ChangeGunStage()
-    {
-        for (int i = 1; i < gunStage; i++)
-        {
-            guns[i-1].gameObject.SetActive(false);
-            guns[i].gameObject.SetActive(true);
-        }
     }    
     private void HandleCharacterMove()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(horizontal, vertical, 0).normalized;
-        transform.Translate(move * moveSpeed * Time.deltaTime);
+        transform.Translate(move * GameManager.Instance.playerSpeed * Time.deltaTime);
         transform.position = RestrictMovement();
     }
     private Vector3 RestrictMovement()
@@ -114,5 +87,18 @@ public class PlayerControl : MonoBehaviour
             EventDispatcher<bool>.Dispatch(Event.UsingSpell.ToString(), true);
             GameManager.Instance.playerUsingSpell = true;
         }
+    }
+    private void SwitchModeHandler()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            normalMode.SetActive(false);
+            focusMode.SetActive(true);
+        }
+        else
+        {
+            normalMode.SetActive(true);
+            focusMode.SetActive(false);
+        }    
     }    
 }
