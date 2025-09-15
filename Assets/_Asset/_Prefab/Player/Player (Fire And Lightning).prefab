@@ -763,6 +763,7 @@ Transform:
   - {fileID: 7231047370147047581}
   - {fileID: 8329710483191063432}
   - {fileID: 4084400029284592760}
+  - {fileID: 2029320445944757099}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -831,7 +832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subCam: {fileID: 6669693952756001733, guid: 9a0423ec8f005dd44b18ca433a136e50, type: 3}
-  spellPrefab: {fileID: 6181317213967098049, guid: 75bf980c09a7b074bb0c8c0d811e0bd8, type: 3}
+  magicCirclePrefab: {fileID: 765958333971239549, guid: 07f3223dcfcef4442a716636d106f03f, type: 3}
+  spellBomb: {fileID: 4346327959676356413}
   normalMode: {fileID: 7411485162756337108}
   focusMode: {fileID: 5237154917601813000}
 --- !u!114 &5427228355132268850
@@ -881,7 +883,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.03}
@@ -1220,6 +1222,53 @@ Transform:
   m_Father: {fileID: 7231047370147047581}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4346327959676356413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029320445944757099}
+  - component: {fileID: 2060178796300378082}
+  m_Layer: 0
+  m_Name: Spell Bomb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2029320445944757099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346327959676356413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3809358132953886320}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2060178796300378082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346327959676356413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de67139a4cab5214abe21b0658b45631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4736605785622148166, guid: c219cfcae3a544a42ad938c0ac7b2487, type: 3}
+  numberOfBullet: 20
+  radius: 1.5
 --- !u!1 &4451555953743477600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,7 +1629,7 @@ GameObject:
   - component: {fileID: 7231047370147047581}
   - component: {fileID: 4931115245701583031}
   m_Layer: 6
-  m_Name: Fire Spell
+  m_Name: Fire Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

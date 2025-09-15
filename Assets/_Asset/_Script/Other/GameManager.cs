@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     public float playerSpeed;
     public int expMilestone;
     public bool playerUsingSpell;
+    public bool dialogueOn;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
     [SerializeField] private Transform playerParent;
@@ -35,6 +36,7 @@ public class GameManager : Singleton<GameManager>
         powerStage = 0;
         playerSpeed = 5;
         expMilestone = 8;
+        dialogueOn = false;
     } 
     public void PowerUp(int value)
     {
@@ -75,5 +77,15 @@ public class GameManager : Singleton<GameManager>
     public void CharacterSpawn()
     {
         Instantiate(playerPrefab, charSpawnPos.position, Quaternion.identity, playerParent);  
+    }
+    public DialogueData LoadDialogue(string filePath)
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>(filePath);
+        if (jsonFile == null)
+        {
+            Debug.LogError($"File {filePath} does not exist.");
+            return null;
+        }    
+        return JsonUtility.FromJson<DialogueData>(jsonFile.text);
     }    
 }

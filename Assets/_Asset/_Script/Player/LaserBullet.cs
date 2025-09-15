@@ -1,44 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class LaserBullet : BulletMovement
 {
-    private int gunDamage;
+    private int damage;
     [SerializeField] private float hitInterval;
     private float lastBulletTime;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gunDamage = GameManager.Instance.playerPower;
+        damage = GameManager.Instance.playerPower;
         if (collision.CompareTag("Enemy"))
         {
-            DealDmgToEnemy(collision, gunDamage);
+            DealDmgToEnemy(collision, damage);
             //Each dmg equal to 10 points
-            GameManager.Instance.ScoreUp(gunDamage * 10);
+            GameManager.Instance.ScoreUp(damage * 10);
         }
         if (collision.CompareTag("Boss"))
         {
-            DealDmgToBoss(collision, gunDamage);
+            DealDmgToBoss(collision, damage);
             //Each dmg equal to 10 points
-            GameManager.Instance.ScoreUp(gunDamage * 10);
+            GameManager.Instance.ScoreUp(damage * 10);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        gunDamage = GameManager.Instance.playerPower;
+        damage = GameManager.Instance.playerPower;
         if (lastBulletTime >= hitInterval)
         {
             if (collision.CompareTag("Enemy"))
             {
-                DealDmgToEnemy(collision, gunDamage);
-                GameManager.Instance.ScoreUp(gunDamage * 10);
+                DealDmgToEnemy(collision, damage);
+                GameManager.Instance.ScoreUp(damage * 10);
             }
             if (collision.CompareTag("Boss"))
             {
-                DealDmgToBoss(collision, gunDamage);
-                GameManager.Instance.ScoreUp(gunDamage * 10);
+                DealDmgToBoss(collision, damage);
+                GameManager.Instance.ScoreUp(damage * 10);
             }
             lastBulletTime = 0;
         }

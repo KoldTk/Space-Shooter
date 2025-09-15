@@ -15,6 +15,7 @@ public enum Event
     StatusChange,
     CharacterDie,
     UsingSpell,
+    StartDialogue,
 }
 public class EventDispatcher<T>
 {

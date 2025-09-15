@@ -1,0 +1,40 @@
+{
+  "actors": [
+    {
+      "id": 0,
+      "name": "Hero",
+      "spritePath": "Resources\Character Sprite\MC_Sprite1.png"
+    },
+    {
+      "id": 1,
+      "name": "Companion",
+      "spritePath": "Resources\Character Sprite\Boss1_Sprite1.png"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 0,
+      "message": "It's hot here."
+    },
+    {
+      "actorId": 0,
+      "message": "Why is it so hot in the middle of spring?"
+    }
+    {
+      "actorId": 1,
+      "message": "Really, I though the weather is quite cool."
+    },
+    {
+      "actorId": 0,
+      "message": "Not for normal person."
+    }
+    {
+      "actorId": 0,
+      "message": "And you are?"
+    },
+    {
+      "actorId": 1,
+      "message": "I'm a fairy."
+    }
+  ]
+}

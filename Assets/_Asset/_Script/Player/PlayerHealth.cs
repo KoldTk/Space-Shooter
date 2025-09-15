@@ -13,7 +13,7 @@ public class PlayerHealth : Health
         }    
     }
     public override void Die()
-    {
+    {//Need sequence for destroying character
         GameManager.Instance.playerLives--;
         base.Die();
         Debug.Log("Player die");

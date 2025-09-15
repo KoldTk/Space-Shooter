@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Camera subCam;
-    [SerializeField] private GameObject spellPrefab;
+    [SerializeField] private GameObject magicCirclePrefab;
+    [SerializeField] private GameObject spellBomb;
     [SerializeField] private GameObject normalMode;
     [SerializeField] private GameObject focusMode;
     private Vector3 startingPos = new Vector3(-3,-3.5f,0);
@@ -82,7 +83,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (!GameManager.Instance.playerUsingSpell && GameManager.Instance.playerSpell > 0)
         {
-            Instantiate(spellPrefab, transform.position, Quaternion.identity, transform);
+            Instantiate(magicCirclePrefab, transform.position, Quaternion.identity, transform);
+            spellBomb.SetActive(true);
             GameManager.Instance.playerSpell--;
             EventDispatcher<bool>.Dispatch(Event.UsingSpell.ToString(), true);
             GameManager.Instance.playerUsingSpell = true;
