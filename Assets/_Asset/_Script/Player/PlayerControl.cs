@@ -23,6 +23,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (GameManager.Instance.playerLives > 0)
         {
+            GameManager.Instance.playerSpell = 2;
             EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
             GameManager.Instance.CharacterSpawn();
         }
@@ -34,7 +35,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         HandleCharacterMove();
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.X) && !GameManager.Instance.dialogueOn)
         {
             UseSpell();
         }

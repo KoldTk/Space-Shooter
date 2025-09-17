@@ -30,7 +30,7 @@ public class BulletShooter : MonoBehaviour
     }
     void Shooting()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.Z) && !GameManager.Instance.dialogueOn)
         {
             BulletPool.Instance.GetPrefab(bulletID, transform.position, transform.rotation);
         }

@@ -87,5 +87,5 @@ public class GameManager : Singleton<GameManager>
             return null;
         }    
         return JsonUtility.FromJson<DialogueData>(jsonFile.text);
-    }    
+    }  
 }

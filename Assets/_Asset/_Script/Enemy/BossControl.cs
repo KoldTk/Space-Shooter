@@ -37,6 +37,7 @@ public class BossControl : Health
     public override void Die()
     {
         base.Die();
+        EventDispatcher<bool>.Dispatch(Event.StartAfterBossDialogue.ToString(), true);
     }
     private IEnumerator MoveToPosition(Transform target)
     {
@@ -46,7 +47,6 @@ public class BossControl : Health
             yield return null;
         }
         transform.position = target.position;
-        EventDispatcher<bool>.Dispatch(Event.BossStartAttack.ToString(), true);
     }
     private void InflictShockDamage()
     {

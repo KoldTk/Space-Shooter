@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UIGameplay : MonoBehaviour
 {
+    [SerializeField] private GameObject introImage;
     [Header("Score UI")]
     public TextMeshProUGUI bestScore;
     public TextMeshProUGUI currentScore;
@@ -13,7 +14,7 @@ public class UIGameplay : MonoBehaviour
     [Header("Point UI")]
     public TextMeshProUGUI powerPoint;
     public TextMeshProUGUI rewardPoint;
-    private int rewardMilestone = 2;
+    private int rewardMilestone = 50;
 
     [Header("Lives And Spell UI")]
     [SerializeField] private float spacing; //space between images
@@ -30,8 +31,8 @@ public class UIGameplay : MonoBehaviour
         UpdateStat(true);
         UpdateScore(true);
         UpdateSpellLivesOnUI(true);
-        rewardMilestone = Mathf.Clamp(rewardMilestone, 0, 150);
-        
+        rewardMilestone = Mathf.Clamp(rewardMilestone, 0, 900);
+        PlayIntro();
     }
     private void OnEnable()
     {
@@ -98,5 +99,10 @@ public class UIGameplay : MonoBehaviour
             RectTransform rect = newObj.GetComponent<RectTransform>();
             rect.anchoredPosition = new Vector2(i * spacing, 0);
         }
-    }    
+    }
+    private void PlayIntro()
+    {
+        introImage.SetActive(true);
+    }
+
 }

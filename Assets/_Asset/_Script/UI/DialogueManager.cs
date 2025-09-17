@@ -18,23 +18,23 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Color dimColor = Color.gray;
 
     public TextMeshProUGUI message;
-    public RectTransform dialogueBox;
-    public RectTransform leftActorSlot;
-    public RectTransform rightActorSlot;
-    public Transform leftEntryPoint;
-    public Transform rightEntryPoint;
     private DialogueData currentDialogue;
     private int leftActorId = 0;
     private int rightActorId = -1;
     private int lastSpeakingActor = -1; //Last people talk
     private int activeMessage = 0;
     private float textSpeed;
+    private bool bossBattleStart = true;
     private Dictionary<int, string> actorPositions = new Dictionary<int, string>();
-    private void Start()
+    private void OnEnable()
     {
         //Load text speed from playerPref here
         textSpeed = 0.1f;
-        dialogueBox.transform.localScale = Vector3.zero;
+        transform.localScale = Vector3.zero;
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
     void Update()
     {
@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
 
         activeMessage = 0;
         GameManager.Instance.dialogueOn = true;
-        dialogueBox.DOScale(Vector3.one, 0.5f);
+        transform.DOScale(Vector3.one, 0.5f);
                 DisplayMessage();
     }    
     public void DisplayMessage()
@@ -66,9 +66,27 @@ public class DialogueManager : MonoBehaviour
         MessageData messageToDisplay = currentDialogue.messages[activeMessage];
         message.text = string.Empty;
         StartCoroutine(TypeMessageLine(messageToDisplay.message));
+        
         ActorData actorToDisplay = currentDialogue.actors[messageToDisplay.actorId];
         DisplayCharacterImage(actorToDisplay);
+
     }
+    private IEnumerator CloseMessageBox()
+    {
+        transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InOutExpo);
+        GameManager.Instance.dialogueOn = false;
+        yield return new WaitForSeconds(0.6f);
+        if (bossBattleStart)
+        {
+            EventDispatcher<bool>.Dispatch(Event.BossStartAttack.ToString(), true);
+            bossBattleStart = false;
+        }
+        else
+        {
+            //To result menu
+        }    
+
+    }    
     private IEnumerator TypeMessageLine(string dialogueLine)
     {
         foreach (char character in dialogueLine)
@@ -86,8 +104,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            dialogueBox.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InOutExpo);
-            GameManager.Instance.dialogueOn = false;
+            StartCoroutine(CloseMessageBox());
         }    
     }
     private void DisplayCharacterImage(ActorData actorToDisplay)
@@ -139,6 +156,7 @@ public class DialogueManager : MonoBehaviour
                     leftActorName.text = actorToDisplay.name;
                     actorPositions[speakerId] = "left";
                 }
+                EventDispatcher<bool>.Dispatch(Event.BossAppear.ToString(), true);
             }
             // Highlight speaking actor
             if (actorPositions[speakerId] == "left")

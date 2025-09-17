@@ -15,7 +15,10 @@ public enum Event
     StatusChange,
     CharacterDie,
     UsingSpell,
-    StartDialogue,
+    StartBeforeBossDialogue,
+    StartAfterBossDialogue,
+    GameStart,
+    PlayIntro,
 }
 public class EventDispatcher<T>
 {

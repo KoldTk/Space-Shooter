@@ -37,7 +37,7 @@ public class BossPhaseManager : MonoBehaviour
         else return;
     }
     private void BossAppear(bool isAppear)
-    {
+    {  
         boss.gameObject.SetActive(isAppear);
     }    
  
