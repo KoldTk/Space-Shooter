@@ -7,17 +7,21 @@ public class EnemyBullet : MonoBehaviour
 {
     public float bulletSpeed;
     public int bulletID;
-    private Vector3 playerPos;
-    private Vector3 moveDirection;
-    private bool reachedTarget = false;
+    public float rotation;
+    private Vector2 spawnPoint;
+    private float timer;
     private void OnEnable()
     {
-        var player = FindAnyObjectByType<PlayerHealth>();
-        if (player != null)
-        {
-            playerPos = player.transform.position;
-            moveDirection = (playerPos - transform.position).normalized;
-        }    
+        spawnPoint = new Vector2(transform.position.x, transform.position.y);
+    }
+    private void OnDisable()
+    {
+        timer = 0;
+    }
+    private void Update()
+    {
+        //timer += Time.deltaTime; 
+        //transform.position = Movement(timer);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,26 +39,10 @@ public class EnemyBullet : MonoBehaviour
             BulletPool.Instance.ReturnToPool(bulletID, gameObject);
         }    
     }
-    public void MoveTowardPlayer()
+    private Vector2 Movement(float timer)
     {
-        if (playerPos != null)
-        {
-            if (!reachedTarget) 
-            {
-                transform.position = Vector3.MoveTowards(transform.position, playerPos, bulletSpeed * Time.deltaTime);
-            }
-            else
-            {
-                transform.position += moveDirection * bulletSpeed * Time.deltaTime;
-            }
-            if (Vector3.Distance(transform.position, playerPos) < 0.01f)
-            {
-                reachedTarget = true;
-            }    
-        }
-        else
-        {
-            transform.Translate(Vector3.down * bulletSpeed * Time.deltaTime);
-        }
-    }   
+        float x = timer * bulletSpeed * transform.right.x;
+        float y = timer * bulletSpeed * transform.right.y;
+        return new Vector2(x + spawnPoint.x, y + spawnPoint.y);
+    }    
 }

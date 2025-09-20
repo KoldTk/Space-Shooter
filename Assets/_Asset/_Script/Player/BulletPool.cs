@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletPool : Singleton<BulletPool>
 {
     //Pool contains bullets that used in-game
-    [SerializeField] private int poolSizePerEnemy = 20;
+    [SerializeField] private int poolSizePerEnemy = 50;
     [SerializeField] private Transform parentTransform;
     [SerializeField] private BulletDatabase bulletDatabase;
     private Dictionary<int, Queue<GameObject>> enemyPool;
@@ -38,7 +38,7 @@ public class BulletPool : Singleton<BulletPool>
         }
         else
         {
-            bullet = Instantiate(bulletDatabase.bulletDatas[ID].prefab, parentTransform);
+            bullet = Instantiate(bulletDatabase.bulletDatas[ID].prefab, position, rotation, parentTransform);
         }
         bullet.transform.SetPositionAndRotation(position, rotation);
         bullet.SetActive(true);

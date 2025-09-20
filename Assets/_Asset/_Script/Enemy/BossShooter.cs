@@ -11,12 +11,16 @@ public enum FireMode
 }
 public class BossShooter : MonoBehaviour
 {
-    [Header("General Setting")]
-    public FireMode fireMode;
-    public Transform firePoint;
-    [SerializeField] private float fireRate = 1f;
-    [SerializeField] private int bulletID;
     private float fireTimer;
+    [Header("Bullet Attribute")]
+    [SerializeField] private int bulletID;
+    [SerializeField] private float bulletSpeed; 
+    public Transform firePoint;
+    
+
+    [Header("Shooter Attribute")]
+    public FireMode fireMode;
+    [SerializeField] private float fireRate = 1f;
 
     [Header("Wave Settings")]
     [SerializeField] private int bulletsPerWave = 5;
@@ -27,7 +31,6 @@ public class BossShooter : MonoBehaviour
     [SerializeField] private float rotationDirection = -360f;
     private void OnEnable()
     {
-        ShooterRotate();
     }
     private void OnDisable()
     {
@@ -63,7 +66,7 @@ public class BossShooter : MonoBehaviour
     {
         transform.DORotate(new Vector3(0, 0, rotationDirection), 360f / rotationSpeed, RotateMode.FastBeyond360)
          .SetEase(Ease.Linear)
-         .SetLoops(-1, LoopType.Restart);
+         .SetLoops(-1, LoopType.Yoyo);
     }
     private void ShootInWave()
     {
@@ -85,8 +88,8 @@ public class BossShooter : MonoBehaviour
     private void ShootNormal()
     {
         GameObject bullet = BulletPool.Instance.GetPrefab(bulletID, firePoint.position, firePoint.rotation);
-        Vector3 shootDir = firePoint.right;
-        bullet.GetComponent<EnemyNormalBullet>().Init(shootDir);
+        bullet.GetComponent<EnemyBullet>().bulletSpeed = bulletSpeed;
+        bullet.transform.rotation = transform.rotation;
     }
     private void ShootInStarWave()
     {
