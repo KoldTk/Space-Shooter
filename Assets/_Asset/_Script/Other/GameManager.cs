@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public int expMilestone;
     public bool playerUsingSpell;
     public bool dialogueOn;
+    public BossInfo bossInfo;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
     [SerializeField] private Transform playerParent;
@@ -88,4 +89,12 @@ public class GameManager : Singleton<GameManager>
         }    
         return JsonUtility.FromJson<DialogueData>(jsonFile.text);
     }  
+}
+
+public struct BossInfo
+{
+    public string name;
+    public int maxHealth;
+    public float timeCounter;
+    public int phaseCount;
 }

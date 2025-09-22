@@ -5,11 +5,8 @@ using UnityEngine;
 public class LightningBullet : BulletMovement
 {
     private int lightningDmg;
-    private float shockChance;
-    private int maxShockCount = 6;
     private void OnEnable()
     {
-        shockChance = GameManager.Instance.powerStage * 0.1f;
         lightningDmg = (int)GetLightningDmg();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +20,6 @@ public class LightningBullet : BulletMovement
         if (collision.CompareTag("Boss"))
         {
             BossTakeDmg(collision, lightningDmg);
-            InflictShockToBoss(shockChance, collision);
             //Each dmg equal to 10 points
             GameManager.Instance.ScoreUp(lightningDmg * 10);
         }
@@ -31,19 +27,6 @@ public class LightningBullet : BulletMovement
         {
             BulletPool.Instance.ReturnToPool(bulletID, gameObject);
         }
-    }
-    private void InflictShockToBoss(float shockChance, Collider2D collision)
-    {
-        //Shock is a negative status that inflict damage over time to boss
-        float rate = Random.Range(0, 1);
-        if (rate < shockChance)
-        {
-            var boss = collision.GetComponent<BossControl>();
-            if (boss.shockCount < maxShockCount)
-            {
-                boss.shockCount++;
-            }    
-        }    
     }
     private float GetLightningDmg()
     {
@@ -69,7 +52,6 @@ public class LightningBullet : BulletMovement
             default:
                 dmg = GameManager.Instance.playerPower;
                 transform.localScale = new Vector3(2.5f, 2.5f, 0);
-                maxShockCount = 9;
                 return dmg;
         }
     }    

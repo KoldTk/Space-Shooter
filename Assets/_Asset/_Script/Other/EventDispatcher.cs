@@ -15,6 +15,7 @@ public enum Event
     StatusChange,
     CharacterDie,
     UsingSpell,
+    BossTakeDamage,
     StartBeforeBossDialogue,
     StartAfterBossDialogue,
     GameStart,

@@ -3234,6 +3234,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727122096}
   m_CullTransparentMesh: 1
+--- !u!1 &775329013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775329014}
+  m_Layer: 5
+  m_Name: Phase Count
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &775329014
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775329013}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1351485453}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -327.373, y: -44}
+  m_SizeDelta: {x: 66, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &800315925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,7 +3495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &841321772
 Transform:
   m_ObjectHideFlags: 0
@@ -3974,7 +4010,7 @@ RectTransform:
   - {fileID: 1836550916}
   - {fileID: 1359869883}
   m_Father: {fileID: 1351485453}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4117,7 +4153,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1351485453}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4440,9 +4476,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 500
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4659,13 +4695,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1351485453}
+  - component: {fileID: 1351485454}
   m_Layer: 5
   m_Name: Boss Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1351485453
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4679,6 +4716,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1199554491}
+  - {fileID: 775329014}
   - {fileID: 1160399249}
   - {fileID: 1875210591}
   - {fileID: 1044109834}
@@ -4690,6 +4728,25 @@ RectTransform:
   m_AnchoredPosition: {x: -291.7755, y: 501}
   m_SizeDelta: {x: 675.8137, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1351485454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351485452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51155b1da0ab6c14e93a4df875ddb7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossName: {fileID: 1160399250}
+  bossHealthBar: {fileID: 1199554492}
+  timeCounter: {fileID: 1875210592}
+  phaseIcon: {fileID: 8640226277562351073, guid: 05f5ee5838dc86d40b16a4bdd3b1fc49, type: 3}
+  phaseIconTransform: {fileID: 775329014}
+  spacing: 50
+  healthFillSpeed: 5
 --- !u!1 &1353275668
 GameObject:
   m_ObjectHideFlags: 0
@@ -5395,7 +5452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1531791278
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5479,11 +5536,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explodeEffectPrefab: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1, type: 3}
   hitEffectPrefab: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
-  maxHP: 10000
+  maxHP: 1000
   currentHP: 0
   startPosition: {fileID: 800315926}
   moveSpeed: 5
-  shockCount: 0
+  phaseCount: 0
+  bossName: Reimu Hakurei
 --- !u!70 &1531791281
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5771,7 +5829,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6165,7 +6223,7 @@ GameObject:
   - component: {fileID: 1875210593}
   - component: {fileID: 1875210592}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Time Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6184,7 +6242,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1351485453}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6559,6 +6617,7 @@ MonoBehaviour:
   spellImage: {fileID: 1410133611231076943, guid: b00d07f6f07972f4f80e7b0201fd4529, type: 3}
   livesImagePosition: {fileID: 974090117}
   spellImagePosition: {fileID: 2056307728}
+  bossHealthBar: {fileID: 1351485452}
 --- !u!114 &1951275857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6742,7 +6801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1974404723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6863,7 +6922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2000302744
 MonoBehaviour:
   m_ObjectHideFlags: 0

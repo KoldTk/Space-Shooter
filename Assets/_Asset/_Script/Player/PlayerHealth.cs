@@ -9,13 +9,16 @@ public class PlayerHealth : Health
     {
         if (collision.CompareTag("Enemy") || collision.CompareTag("Bullet"))
         {
-            Debug.Log("Player die");
+            Die();
         }    
     }
     public override void Die()
     {//Need sequence for destroying character
         GameManager.Instance.playerLives--;
         base.Die();
-        Debug.Log("Player die");
+    }
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
     }
 }

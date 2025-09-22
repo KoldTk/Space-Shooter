@@ -44,11 +44,11 @@ public class BossSkillCutIn : MonoBehaviour
         TextFadeIn();
         ImageMoveToTarget();
         yield return new WaitForSeconds(2f);
-        ImageReturn();
-        HideWarningText();
-        yield return new WaitForSeconds(0.5f);
+        ImageToFinalTarget();
         TextMoveToTarget();
-        yield return new WaitForSeconds(5);
+        HideWarningText();
+        yield return new WaitForSeconds(2);
+        cutInImage.transform.position = imageStartingPos;
     }    
     private void TextFadeIn()
     {
@@ -67,9 +67,9 @@ public class BossSkillCutIn : MonoBehaviour
         cutInImage.transform.DOMove(imageMidTarget.position, 1)
             .SetEase(Ease.OutQuad);
     }
-    private void ImageReturn()
+    private void ImageToFinalTarget()
     {
-        cutInImage.transform.DOMove(imageStartingPos, 0.5f)
+        cutInImage.transform.DOMove(imageTargetPos.position, 0.5f)
             .SetEase(Ease.Linear);
     }
     private void ShowWarningText()

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIIntro : MonoBehaviour
+public class UIStageStartIntro : MonoBehaviour
 {
     [SerializeField] private Image targetImage;
     [SerializeField] private float duration = 1.5f;

@@ -10,6 +10,7 @@ public class BossPhaseManager : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.bossInfo.phaseCount = phases.Count;
         EventDispatcher<bool>.AddListener(Event.BossAppear.ToString(), BossAppear);
         EventDispatcher<bool>.AddListener(Event.BossStartAttack.ToString(), StartAttack);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), ChangePhase);

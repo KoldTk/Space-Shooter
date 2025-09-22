@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public GameObject hitEffectPrefab;
     public int maxHP;
     public int currentHP;
-    private void Start()
+    private void Awake()
     {
         currentHP = maxHP;
     }
@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
         var explosion = Instantiate(explodeEffectPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         if (currentHP > 1)
         {

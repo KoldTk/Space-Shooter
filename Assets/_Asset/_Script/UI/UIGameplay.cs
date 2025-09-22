@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -24,7 +25,9 @@ public class UIGameplay : MonoBehaviour
     [SerializeField] private Transform spellImagePosition;
     private List<GameObject> lives = new List<GameObject>();
     private List<GameObject> spells = new List<GameObject>();
-    
+
+    [Header("Boss Health Bar")]
+    [SerializeField] private GameObject bossHealthBar;
     private void Start()
     {
         //Initial Setup
@@ -40,14 +43,18 @@ public class UIGameplay : MonoBehaviour
         EventDispatcher<bool>.AddListener(Event.ScoreGain.ToString(), UpdateScore);
         EventDispatcher<bool>.AddListener(Event.CharacterDie.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.AddListener(Event.UsingSpell.ToString(), UpdateSpellLivesOnUI);
+        EventDispatcher<bool>.AddListener(Event.BossStartAttack.ToString(), ShowBossHealthBar);
     }
+
     private void OnDisable()
     {
         EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), UpdateStat);
         EventDispatcher<bool>.RemoveListener(Event.ScoreGain.ToString(), UpdateScore);
         EventDispatcher<bool>.RemoveListener(Event.CharacterDie.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.RemoveListener(Event.UsingSpell.ToString(), UpdateSpellLivesOnUI);
+        EventDispatcher<bool>.RemoveListener(Event.BossStartAttack.ToString(), ShowBossHealthBar);
     }
+
     private void UpdateStat(bool isChanged)
     {
         //Update stat on UI
@@ -103,6 +110,10 @@ public class UIGameplay : MonoBehaviour
     private void PlayIntro()
     {
         introImage.SetActive(true);
+    }
+    private void ShowBossHealthBar(bool isOn)
+    {
+        bossHealthBar.SetActive(isOn);
     }
 
 }

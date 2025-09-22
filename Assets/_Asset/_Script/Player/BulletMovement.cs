@@ -7,7 +7,6 @@ public class BulletMovement : MonoBehaviour
     public int bulletID;
     public float bulletSpeed;
     private int gunDamage;
-    private float milestoneHP = 0.75f; //Boss change to next phase when reach milestone
     void Update()
     {
         transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
@@ -32,7 +31,6 @@ public class BulletMovement : MonoBehaviour
             BulletPool.Instance.ReturnToPool(bulletID, gameObject);
         }
     }
-    
     public void EnemyTakeDmg(Collider2D collision, int gunDamage)
     {
         var enemy = collision.GetComponent<EnemyHealth>();
@@ -47,14 +45,7 @@ public class BulletMovement : MonoBehaviour
         var boss = collision.GetComponent<BossControl>();
         if ((boss != null))
         {
-            float hpToNextPhase = boss.maxHP * milestoneHP;
-            boss.TakeDamage(gunDamage);
-            if (boss.currentHP < (hpToNextPhase))
-            {
-                EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
-                milestoneHP -= 0.25f;
-                milestoneHP = Mathf.Clamp01(milestoneHP);
-            }    
+            boss.TakeDamage(gunDamage); 
         }
         BulletPool.Instance.ReturnToPool(bulletID, gameObject);
     }
