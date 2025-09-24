@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnDisable()
     {
+        GameManager.Instance.playerLives--;
         if (GameManager.Instance.playerLives > 0)
         {
             GameManager.Instance.playerSpell = 2;
