@@ -5,11 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class AttackPoint
 {
-    public Transform attackPoint; // Point to instantiate attack
-    public Transform destination; // Destination for boss
-    public List<BulletPatternBase> attackPattern;  // Attack pattern at this position
-    public float attackInterval;
-    public float prepareTime;
+    public Transform destination;       // Destination for boss
+    public GameObject shooterPrefab;
+    public float shooterDuration;       //Shooter's alive time
+    public bool shootWhileMoving;       //Shooter follow boss or independent
+    public float prepareTime;           //Delay time before spawn shooter
+    public float actionDelay;          //Delay before starting new action
 }
 
 [System.Serializable]
@@ -20,6 +21,7 @@ public class BossPhase
     public AttackPoint[] attackPoints;       // Attack and movement point
     public float moveSpeed = 3f;
     public float phaseTime;
+    public float loopDelay;         //Delay before starting a new loop
 }
 public class BossPhaseManager : MonoBehaviour
 {
@@ -28,8 +30,8 @@ public class BossPhaseManager : MonoBehaviour
     private Coroutine phaseRoutine;
 
     [SerializeField] private Transform boss;
+    [SerializeField] private Transform startPos;
     [SerializeField] private GameObject cutInAnim;
-    [SerializeField] private float attackInterval;
 
     private void OnEnable()
     {
@@ -43,6 +45,7 @@ public class BossPhaseManager : MonoBehaviour
         EventDispatcher<bool>.RemoveListener(Event.BossAppear.ToString(), BossAppear);
         EventDispatcher<bool>.RemoveListener(Event.BossStartAttack.ToString(), StartAttack);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), ChangePhase);
+        StopAllCoroutines();
     }
     private void StartAttack(bool isAttacking)
     {
@@ -73,7 +76,9 @@ public class BossPhaseManager : MonoBehaviour
     private IEnumerator PhaseRoutine(BossPhase phase)
     {
         int pointIndex = 0;
+        boss.CompareTag("Boss_Invi");
         yield return PreparePhase(phase);
+        boss.CompareTag("Boss");
         while (true) //Loop phase until stop
         {
             var attackPoint = phase.attackPoints[pointIndex];
@@ -86,7 +91,12 @@ public class BossPhaseManager : MonoBehaviour
             //Go to next point
             pointIndex++;
             if (pointIndex >= phase.attackPoints.Length)
+            {
                 pointIndex = 0;
+                yield return MoveToPoint(startPos.position, phase.moveSpeed);
+                yield return new WaitForSeconds(phase.loopDelay);
+                
+            }    
         }    
     }
     private IEnumerator MoveToPoint(Vector3 target, float moveSpeed)
@@ -99,12 +109,10 @@ public class BossPhaseManager : MonoBehaviour
     }
     private IEnumerator DoAttackAtPoint(AttackPoint point)
     {
-        foreach (var pattern in point.attackPattern)
-        {
-            pattern.ExecutePattern(point.attackPoint.transform.position);
-            yield return new WaitForSeconds(point.attackInterval);
-        }
-        yield return null;
+        GameObject shooter = Instantiate(point.shooterPrefab, point.destination.position, Quaternion.identity);
+        Destroy(shooter, point.shooterDuration);
+        //Wait before new action
+        yield return new WaitForSeconds(point.actionDelay);
     }
     private IEnumerator PreparePhase(BossPhase phase)
     {

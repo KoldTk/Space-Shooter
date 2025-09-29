@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
 
 public class UIBossStat : MonoBehaviour
 {
@@ -27,7 +26,7 @@ public class UIBossStat : MonoBehaviour
         phaseCount = GameManager.Instance.bossInfo.phaseCount;
         time = GameManager.Instance.bossInfo.timeCounter;
         timeCounter.text = ((int)time).ToString();
-        UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount);
+        UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount-1);
         ShowHealthBar(GameManager.Instance.bossInfo.maxHealth);
     }
     private void OnEnable()
@@ -73,7 +72,7 @@ public class UIBossStat : MonoBehaviour
         maxHealth = GameManager.Instance.bossInfo.maxHealth;
         currentHealth = maxHealth;
 
-        UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount);
+        UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount-1);
         bossHealthBar.DOValue(currentHealth, 1)
         .SetEase(Ease.Linear);
     }    

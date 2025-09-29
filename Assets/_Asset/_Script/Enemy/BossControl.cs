@@ -26,9 +26,9 @@ public class BossControl : Health
     }
     public override void Die()
     {
+        phaseCount--;
         if (phaseCount > 0)
         {
-            phaseCount--;
             EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
             currentHP = maxHP;
         }

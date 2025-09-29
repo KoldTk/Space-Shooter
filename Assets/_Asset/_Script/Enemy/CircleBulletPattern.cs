@@ -7,8 +7,8 @@ public class CircleBulletPattern : BulletPatternBase
     public GameObject bulletPrefab;
     public int bulletCount = 10;
     public float bulletSpeed = 5f;
-
-    public override void ExecutePattern(Vector3 position)
+    
+    public override void ExecutePattern()
     {
         float angleStep = 360f / bulletCount;
 
@@ -16,7 +16,7 @@ public class CircleBulletPattern : BulletPatternBase
         {
             float angle = i * angleStep;
             Vector3 dir = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0);
-            GameObject bullet = Instantiate(bulletPrefab, position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = dir * bulletSpeed;
         }
     }

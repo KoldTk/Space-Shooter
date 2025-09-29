@@ -4,5 +4,9 @@ using UnityEngine;
 
 public abstract class BulletPatternBase : MonoBehaviour
 {
-    public abstract void ExecutePattern(Vector3 position);
+    private void OnEnable()
+    {
+        ExecutePattern();
+    }
+    public abstract void ExecutePattern();
 }
