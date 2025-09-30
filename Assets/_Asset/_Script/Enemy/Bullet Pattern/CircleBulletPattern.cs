@@ -7,7 +7,10 @@ public class CircleBulletPattern : BulletPatternBase
     public GameObject bulletPrefab;
     public int bulletCount = 10;
     public float bulletSpeed = 5f;
-    
+    private void OnEnable()
+    {
+        ExecutePattern();
+    }
     public override void ExecutePattern()
     {
         float angleStep = 360f / bulletCount;
