@@ -3,21 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class BulletHellEmitter : MonoBehaviour
+public class BulletShooterBase : MonoBehaviour
 {
-    public enum PatternType
-    {
-        Radial,
-        Spiral,
-        Wave,
-    }
-    public enum ShootType
-    {
-        Continuous,
-        Once,
-    }
     [Header("Bullet Settings")]
-    public GameObject bulletPrefab;
     public int bulletID;
     public float bulletSpeed = 5f;
     public ShootType shootType;
@@ -30,13 +18,14 @@ public class BulletHellEmitter : MonoBehaviour
     public RadialPatternConfig radialConfig;
     public SpiralPatternConfig spiralConfig;
     public WavePatternConfig waveConfig;
+    public StraightConfig straightConfig;
 
     private void OnEnable()
     {
         ChooseShootType(patternType);
     }
     //SETUP SHOOTER
-    public void ChooseShootType(PatternType pattern)
+    private void ChooseShootType(PatternType pattern)
     {
         switch (shootType)
         {
@@ -48,7 +37,7 @@ public class BulletHellEmitter : MonoBehaviour
                 break;
         }
     }    
-    public void ExecutePattern(PatternType pattern)
+    private void ExecutePattern(PatternType pattern)
     {
         switch (pattern)
         {
@@ -61,12 +50,15 @@ public class BulletHellEmitter : MonoBehaviour
             case PatternType.Wave:
                 FireWave();
                 break;
+            case PatternType.Straight:
+                FireStraight();
+                break;
         }
     }
     /// <summary>
     /// Shoot continuously in seconds
     /// </summary>
-    public IEnumerator FirePatternForSeconds(PatternType pattern, float fireRate, float duration)
+    private IEnumerator FirePatternForSeconds(PatternType pattern, float fireRate, float duration)
     {
         float timer = 0f;
         while (timer < duration)
@@ -79,7 +71,7 @@ public class BulletHellEmitter : MonoBehaviour
     /// <summary>
     /// Shoot a number of times
     /// </summary>
-    public IEnumerator FirePatternNTimes(PatternType pattern, float fireRate, int times)
+    private IEnumerator FirePatternNTimes(PatternType pattern, float fireRate, int times)
     {
         for (int i = 0; i < times; i++)
         {
@@ -115,6 +107,13 @@ public class BulletHellEmitter : MonoBehaviour
             SpawnBullet(angle);
         }
     }
+    private void FireStraight()
+    {
+        for (int i = 0; i < straightConfig.bulletCount; i++)
+        {
+            SpawnBullet(0);
+        }
+    }    
     // ------------ UTILS ------------
     private void SpawnBullet(float angle)
     {
@@ -127,21 +126,4 @@ public class BulletHellEmitter : MonoBehaviour
         rb.velocity = worldDir * bulletSpeed;
     }
 }
-[System.Serializable]
-public class RadialPatternConfig
-{
-    public int bulletCount;
-}
-[System.Serializable]
-public class SpiralPatternConfig
-{
-    public float spiralAngle;
-    public float spiralSpeed;
-    public bool clockwise;
-}
-[System.Serializable]
-public class WavePatternConfig
-{
-    public int bulletCount;
-    public float spreadAngle;
-}
+
