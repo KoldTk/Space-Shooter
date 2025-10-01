@@ -5,9 +5,7 @@ using UnityEngine.UIElements;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public float bulletSpeed;
-    public int bulletID;
-    public float rotation;
+    [SerializeField] private int bulletID;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

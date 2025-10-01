@@ -208,20 +208,6 @@ MonoBehaviour:
     enemyHealth: 5
     speed: 2
     nextWaveDelay: 4
-  - enemyPrefab: {fileID: 4793779173245048858, guid: ced455e319e14244bbae3dc7d86dc495, type: 3}
-    numberOfEnemy: 10
-    formationOffset: {x: -1, y: 0, z: 0}
-    flyPath: {fileID: 2413350660782821732}
-    enemyHealth: 5
-    speed: 2
-    nextWaveDelay: 5
-  - enemyPrefab: {fileID: 4793779173245048858, guid: ced455e319e14244bbae3dc7d86dc495, type: 3}
-    numberOfEnemy: 10
-    formationOffset: {x: -1, y: 0, z: 0}
-    flyPath: {fileID: 1088579980543120861}
-    enemyHealth: 5
-    speed: 2
-    nextWaveDelay: 2
 --- !u!1001 &908509295018346180
 PrefabInstance:
   m_ObjectHideFlags: 0

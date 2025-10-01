@@ -12,9 +12,10 @@ public class RadialPatternConfig
     public int bulletCount;
 }
 [System.Serializable]
-public class StraightConfig
+public class StraightPatternConfig
 {
     public int bulletCount;
+    public float offset;
 }
 [System.Serializable]
 public class SpiralPatternConfig
@@ -29,15 +30,28 @@ public class WavePatternConfig
     public int bulletCount;
     public float spreadAngle;
 }
+[System.Serializable]
+public class RandomPatternConfig
+{
+    public float spreadAngle;
+    public int bulletCount;
+}
 public enum PatternType
 {
     Radial,
     Spiral,
     Wave,
     Straight,
+    Random,
 }
 public enum ShootType
 {
     Continuous,
     Once,
+}
+public enum BulletType
+{
+    Normal,
+    Target,
+    Drop,
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3034540295430832720}
   - component: {fileID: 3034540295430832723}
   - component: {fileID: 7701004196458928051}
-  - component: {fileID: 5895674691302105539}
   - component: {fileID: 3413313114205781374}
   m_Layer: 7
   m_Name: EnemyYellowPrefab
@@ -152,18 +151,6 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   maxHP: 5
   currentHP: 0
---- !u!114 &5895674691302105539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3034540295430832733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b22e65878a70c47b440ebad974a8c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3413313114205781374
 MonoBehaviour:
   m_ObjectHideFlags: 0

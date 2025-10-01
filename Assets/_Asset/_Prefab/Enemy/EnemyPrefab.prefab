@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4793779173245048855}
   - component: {fileID: 4793779173245048852}
   - component: {fileID: -9059764622712222220}
-  - component: {fileID: 4128554516695939972}
   - component: {fileID: 5171452477702580025}
   m_Layer: 7
   m_Name: EnemyPrefab
@@ -152,22 +151,6 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   maxHP: 5
   currentHP: 0
---- !u!114 &4128554516695939972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4793779173245048858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b22e65878a70c47b440ebad974a8c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletWaves:
-  - bulletID: 6
-    interval: 1
-    speed: 2
 --- !u!114 &5171452477702580025
 MonoBehaviour:
   m_ObjectHideFlags: 0

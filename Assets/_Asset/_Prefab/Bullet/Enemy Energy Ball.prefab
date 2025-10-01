@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5375400394495588459}
   - component: {fileID: 3059085552300826553}
-  - component: {fileID: 1415605393191531955}
   m_Layer: 9
   m_Name: Enemy Energy Ball
   m_TagString: Bullet
@@ -134,17 +133,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.35, y: 0.7}
   m_Direction: 0
---- !u!114 &1415605393191531955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5375400394495588458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cc31d7ed5e61b40918548b57740edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 1
-  bulletID: 3
