@@ -6,21 +6,30 @@ using UnityEngine;
 public class BulletShooterBase : MonoBehaviour
 {
     [Header("Bullet Settings")]
-    public int bulletID;
-    public float bulletSpeed = 5f;
-    public ShootType shootType;
-    public BulletType bulletType;
-    public float fireRate;
-    public float fireDuration;         //Continously shooting
-    public int shootCount;             //One time shooting
+    [SerializeField] private int bulletID;
+    [SerializeField] private float bulletSpeed = 5f;
+    [SerializeField] private ShootType shootType;
+    [SerializeField] private BulletType bulletType;
+    [SerializeField] private float fireRate;
+    [SerializeField] private float fireDuration;         //Continously shooting
+    [SerializeField] private int shootCount;             //One time shooting
+
+    [Header("Delay And Accelerate Setting")]
+    [SerializeField] private float targetSpeed;         //Delay bullet 
+    [SerializeField] private float delayTime;           //Delay bullet 
+    [SerializeField] private float accelRate;           //Delay bullet
+
+    [Header("Wave Movement Setting")]
+    [SerializeField] private float waveAmp;             //Wave bullet
+    [SerializeField] private float frequency;           //Wave bullet
 
     [Header("Pattern Settings")]
-    public PatternType patternType;
-    public RadialPatternConfig radialConfig;
-    public SpiralPatternConfig spiralConfig;
-    public WavePatternConfig waveConfig;
-    public StraightPatternConfig straightConfig;
-    public RandomPatternConfig randomConfig;
+    [SerializeField] private PatternType patternType;
+    [SerializeField] private RadialPatternConfig radialConfig;
+    [SerializeField] private SpiralPatternConfig spiralConfig;
+    [SerializeField] private WavePatternConfig waveConfig;
+    [SerializeField] private StraightPatternConfig straightConfig;
+    [SerializeField] private RandomPatternConfig randomConfig;
 
     private void OnEnable()
     {
@@ -120,7 +129,7 @@ public class BulletShooterBase : MonoBehaviour
             float angle = Random.Range(-halfSpread, halfSpread);
             SpawnBullet(angle, bulletType);
         }
-    }    
+    }
     private void FireStraight(BulletType bulletType)
     {
         for (int i = 0; i < straightConfig.bulletCount; i++)
@@ -139,7 +148,11 @@ public class BulletShooterBase : MonoBehaviour
             case BulletType.Target:
                 SpawnTargetingBullet(angle);
                 break;
-            case BulletType.Drop:
+            case BulletType.Delay:
+                SpawnDelayBullet(angle);
+                break;
+            case BulletType.Wave:
+                SpawnWaveBullet(angle);
                 break;
         }
     }
@@ -147,7 +160,6 @@ public class BulletShooterBase : MonoBehaviour
     {
         float rad = angle * Mathf.Deg2Rad;
         Vector2 localDir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
-
         Vector2 worldDir = transform.TransformDirection(localDir);
         GameObject bullet = BulletPool.Instance.GetPrefab(bulletID, transform.position,transform.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -166,6 +178,30 @@ public class BulletShooterBase : MonoBehaviour
                 .OnComplete(() => SpawnNormalBullet(angle));
         }
     }
+    private void SpawnDelayBullet(float angle)
+    {
+        float rad = angle * Mathf.Deg2Rad;
+        Vector2 localDir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+        Vector2 worldDir = transform.TransformDirection(localDir);
+        GameObject bullet = BulletPool.Instance.GetPrefab(bulletID, transform.position, transform.rotation);
+        DelayBullet delayBullet = bullet.GetComponent<DelayBullet>();
+        if (delayBullet != null)
+        {
+            delayBullet.Init(worldDir, bulletSpeed, targetSpeed, accelRate, delayTime);
+        }    
+    }
+    private void SpawnWaveBullet(float angle)
+    {
+        float rad = angle * Mathf.Deg2Rad;
+        Vector2 localDir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+        Vector2 worldDir = transform.TransformDirection(localDir);
+        GameObject bullet = BulletPool.Instance.GetPrefab(bulletID, transform.position, transform.rotation);
+        WaveMovementBullet waveBullet = bullet.GetComponent<WaveMovementBullet>();
+        if (waveBullet != null)
+        {
+            waveBullet.Init(worldDir, bulletSpeed, waveAmp, frequency);
+        }
+    }    
     private void RotateBulletDirection(Vector2 destination, GameObject bullet)
     {
         Vector2 position = bullet.transform.position; 

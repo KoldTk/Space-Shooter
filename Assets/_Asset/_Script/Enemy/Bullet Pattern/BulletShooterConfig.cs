@@ -53,5 +53,6 @@ public enum BulletType
 {
     Normal,
     Target,
-    Drop,
+    Delay,
+    Wave,
 }
