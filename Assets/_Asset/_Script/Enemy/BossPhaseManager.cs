@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class BossPhase
     public string phaseName;
     public bool isSpell;
     public AttackPoint[] attackPoints;       // Attack and movement point
-    public float moveSpeed = 3f;
+    public float moveDuration = 3f;
     public float phaseTime;
     public float loopDelay;         //Delay before starting a new loop
 }
@@ -53,13 +54,13 @@ public class BossPhaseManager : MonoBehaviour
     }
     private void ChangePhase(bool isChangingPhase)
     {
+        boss.CompareTag("Boss_Invi");
         cutInAnim.SetActive(false);
         currentPhaseIndex++;
         if (currentPhaseIndex >= phases.Length)
         {
             return;
         }    
-
         StartPhase(currentPhaseIndex);
     }
     private void BossAppear(bool isAppear)
@@ -76,14 +77,13 @@ public class BossPhaseManager : MonoBehaviour
     private IEnumerator PhaseRoutine(BossPhase phase)
     {
         int pointIndex = 0;
-        boss.CompareTag("Boss_Invi");
         yield return PreparePhase(phase);
         boss.CompareTag("Boss");
         while (true) //Loop phase until stop
         {
             var attackPoint = phase.attackPoints[pointIndex];
             //Move to attackPoint
-            yield return MoveToPoint(attackPoint.destination.position, phase.moveSpeed);
+            yield return MoveToPoint(attackPoint.destination.position, phase.moveDuration);
             //Prepare attack
             yield return PrepareAttack(attackPoint);
             //Attack
@@ -93,19 +93,16 @@ public class BossPhaseManager : MonoBehaviour
             if (pointIndex >= phase.attackPoints.Length)
             {
                 pointIndex = 0;
-                yield return MoveToPoint(startPos.position, phase.moveSpeed);
+                yield return MoveToPoint(startPos.position, phase.moveDuration);
                 yield return new WaitForSeconds(phase.loopDelay);
-                
             }    
         }    
     }
-    private IEnumerator MoveToPoint(Vector3 target, float moveSpeed)
+    private IEnumerator MoveToPoint(Vector3 target, float moveDuration)
     {
-        while ((boss.transform.position - target).sqrMagnitude > 0.01f)
-        {
-            boss.transform.position = Vector3.MoveTowards(boss.position, target, Time.deltaTime * moveSpeed);
-            yield return null;
-        }
+        Tween tween = boss.transform.DOMove(target, moveDuration)
+            .SetEase(Ease.OutQuad);
+        yield return tween.WaitForCompletion();
     }
     private IEnumerator DoAttackAtPoint(AttackPoint point)
     {
@@ -116,15 +113,16 @@ public class BossPhaseManager : MonoBehaviour
     }
     private IEnumerator PreparePhase(BossPhase phase)
     {
+        yield return MoveToPoint(startPos.position, 1);
         if(phase.isSpell)
         {
             cutInAnim.SetActive(true);
         }  
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
     }
     private IEnumerator PrepareAttack(AttackPoint point)
     {
         //Create prepare attack effect/shakeScreen here
         yield return new WaitForSeconds(point.prepareTime);
-    }    
+    }
 }

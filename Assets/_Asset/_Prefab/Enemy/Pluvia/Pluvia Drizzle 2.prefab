@@ -57,13 +57,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 9
   bulletSpeed: 2.25
   shootType: 0
   bulletType: 0
   fireRate: 1.5
   fireDuration: 30
   shootCount: 0
+  targetSpeed: 0
+  delayTime: 0
+  accelRate: 0
+  waveAmp: 0
+  frequency: 0
   patternType: 4
   radialConfig:
     bulletCount: 30
