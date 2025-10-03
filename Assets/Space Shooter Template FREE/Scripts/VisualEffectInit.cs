@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This script attaches to ‘VisualEffect’ objects. It destroys or deactivates them after the defined time.
 /// </summary>
-public class VisualEffect : MonoBehaviour {
+public class VisualEffectInit : MonoBehaviour {
 
     [Tooltip("the time after object will be destroyed")]
     public float destructionTime;
