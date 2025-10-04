@@ -12,9 +12,14 @@ public class BossControl : Health
     private void OnEnable()
     {
         GameManager.Instance.bossInfo.maxHealth = maxHP;
-        GameManager.Instance.bossInfo.name = bossName;
+        GameManager.Instance.bossInfo.bossName = bossName;
         phaseCount = GameManager.Instance.bossInfo.phaseCount;
+        EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), RefillHealth);
         StartCoroutine(MoveToPosition(startPosition));
+    }
+    private void OnDisable()
+    {
+        EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), RefillHealth);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,7 +35,7 @@ public class BossControl : Health
         if (phaseCount > 0)
         {
             EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
-            currentHP = maxHP;
+            RefillHealth(true);
         }
         else
         {
@@ -51,5 +56,9 @@ public class BossControl : Health
             yield return null;
         }
         transform.position = target.position;
-    } 
+    }
+    private void RefillHealth(bool isRefilled)
+    {
+        currentHP = maxHP;
+    }    
 }

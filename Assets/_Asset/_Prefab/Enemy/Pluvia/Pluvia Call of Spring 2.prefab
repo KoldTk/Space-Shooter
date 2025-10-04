@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6611102563466274591}
   - component: {fileID: 6611102563466274577}
   - component: {fileID: 6611102563466274576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611102563466274590}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6611102564192257942}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &6611102563466274577
 MonoBehaviour:
@@ -67,6 +67,8 @@ MonoBehaviour:
   targetSpeed: 1.5
   delayTime: 4
   accelRate: 5
+  waveAmp: 0
+  frequency: 0
   patternType: 4
   radialConfig:
     bulletCount: 20
@@ -92,13 +94,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6611102564192257942}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pluvia Call of Spring 2
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6611102564192257942
 Transform:
   m_ObjectHideFlags: 0
@@ -106,6 +108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611102564192257941}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.28, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -113,5 +116,4 @@ Transform:
   m_Children:
   - {fileID: 6611102563466274591}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

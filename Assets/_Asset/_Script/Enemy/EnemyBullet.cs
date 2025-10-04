@@ -22,4 +22,9 @@ public class EnemyBullet : MonoBehaviour
             BulletPool.Instance.ReturnToPool(bulletID, gameObject);
         }    
     }
+    public void ChangeToPoint()
+    {
+        BulletPool.Instance.ReturnToPool(bulletID, gameObject);
+        //Create item here
+    }    
 }

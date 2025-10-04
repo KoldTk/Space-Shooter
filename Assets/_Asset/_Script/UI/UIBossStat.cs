@@ -22,12 +22,7 @@ public class UIBossStat : MonoBehaviour
 
     private void Start()
     {
-        bossName.text = GameManager.Instance.bossInfo.name;
-        phaseCount = GameManager.Instance.bossInfo.phaseCount;
-        time = GameManager.Instance.bossInfo.timeCounter;
-        timeCounter.text = ((int)time).ToString();
-        UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount-1);
-        ShowHealthBar(GameManager.Instance.bossInfo.maxHealth);
+        StatSetup();
     }
     private void OnEnable()
     {
@@ -38,6 +33,18 @@ public class UIBossStat : MonoBehaviour
     {
         EventDispatcher<int>.RemoveListener(Event.BossTakeDamage.ToString(), UpdateBossHealth);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), RefillHealth);
+    }
+    private void Update()
+    {
+        if (time > 0 && timeCounter.isActiveAndEnabled)
+        {
+            time -= Time.deltaTime;
+            timeCounter.text = ((int)time).ToString();
+        }
+        else if (time <= 0)
+        {
+            EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
+        }
     }
     private void UpdateBossHealth(int dmg)
     {
@@ -69,6 +76,7 @@ public class UIBossStat : MonoBehaviour
     private void RefillHealth(bool isNewPhase)
     {
         phaseCount--;
+        StatSetup();
         maxHealth = GameManager.Instance.bossInfo.maxHealth;
         currentHealth = maxHealth;
 
@@ -86,5 +94,13 @@ public class UIBossStat : MonoBehaviour
         bossHealthBar.DOValue(targetHealth, 1)
             .SetEase(Ease.Linear);
     }
-  
+    private void StatSetup()
+    {
+        bossName.text = GameManager.Instance.bossInfo.bossName;
+        phaseCount = GameManager.Instance.bossInfo.phaseCount;
+        time = GameManager.Instance.bossInfo.phaseTime;
+        timeCounter.text = ((int)time).ToString();
+        UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount - 1);
+        ShowHealthBar(GameManager.Instance.bossInfo.maxHealth);
+    }    
 }

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3812293597832275401}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pluvia Normal 1
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3812293597832275402}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.28, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -30,7 +31,6 @@ Transform:
   m_Children:
   - {fileID: 3812293599119770944}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3812293599119770945
 GameObject:
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3812293599119770944}
   - component: {fileID: 3812293599119770958}
   - component: {fileID: 3812293599119770959}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,13 +57,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3812293599119770945}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3812293597832275401}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3812293599119770958
 MonoBehaviour:
@@ -96,6 +96,11 @@ MonoBehaviour:
   fireRate: 0.2
   fireDuration: 2
   shootCount: 0
+  targetSpeed: 0
+  delayTime: 0
+  accelRate: 0
+  waveAmp: 0
+  frequency: 0
   patternType: 0
   radialConfig:
     bulletCount: 30
@@ -109,3 +114,6 @@ MonoBehaviour:
   straightConfig:
     bulletCount: 1
     offset: 0
+  randomConfig:
+    spreadAngle: 0
+    bulletCount: 0

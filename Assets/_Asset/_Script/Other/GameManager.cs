@@ -38,6 +38,7 @@ public class GameManager : Singleton<GameManager>
         playerSpeed = 5;
         expMilestone = 8;
         dialogueOn = false;
+        bossInfo.phaseTime = Mathf.Clamp(bossInfo.phaseTime, 0, bossInfo.phaseTime);
     } 
     public void PowerUp(int value)
     {
@@ -93,8 +94,9 @@ public class GameManager : Singleton<GameManager>
 
 public struct BossInfo
 {
-    public string name;
+    public string bossName;
+    public string phaseName;
     public int maxHealth;
-    public float timeCounter;
+    public float phaseTime;
     public int phaseCount;
 }

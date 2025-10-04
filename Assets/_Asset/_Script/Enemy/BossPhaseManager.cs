@@ -54,7 +54,8 @@ public class BossPhaseManager : MonoBehaviour
     }
     private void ChangePhase(bool isChangingPhase)
     {
-        boss.CompareTag("Boss_Invi");
+        StartCoroutine(DeleteBullet());
+        boss.tag = "Boss_Invi";
         cutInAnim.SetActive(false);
         currentPhaseIndex++;
         if (currentPhaseIndex >= phases.Length)
@@ -64,7 +65,8 @@ public class BossPhaseManager : MonoBehaviour
         StartPhase(currentPhaseIndex);
     }
     private void BossAppear(bool isAppear)
-    {  
+    {
+        boss.tag = "Boss_Invi";
         boss.gameObject.SetActive(isAppear);
     }
     private void StartPhase(int index)
@@ -76,9 +78,11 @@ public class BossPhaseManager : MonoBehaviour
     }
     private IEnumerator PhaseRoutine(BossPhase phase)
     {
+        GameManager.Instance.bossInfo.phaseTime = phase.phaseTime;
+        GameManager.Instance.bossInfo.phaseName = phase.phaseName;
         int pointIndex = 0;
         yield return PreparePhase(phase);
-        boss.CompareTag("Boss");
+        boss.tag = "Boss";
         while (true) //Loop phase until stop
         {
             var attackPoint = phase.attackPoints[pointIndex];
@@ -125,4 +129,23 @@ public class BossPhaseManager : MonoBehaviour
         //Create prepare attack effect/shakeScreen here
         yield return new WaitForSeconds(point.prepareTime);
     }
+    private IEnumerator DeleteBullet()
+    {
+        GameObject[] shooters = GameObject.FindGameObjectsWithTag("Shooter");
+        foreach (GameObject shooter in shooters)
+        {
+            Destroy(shooter);
+        }
+        yield return null;
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach(GameObject bullet in bullets)
+        {
+            EnemyBullet bulletObj = bullet.GetComponent<EnemyBullet>();
+            if (bulletObj != null)
+            {
+                bulletObj.ChangeToPoint();
+            }    
+        }
+        yield return null;
+    }    
 }

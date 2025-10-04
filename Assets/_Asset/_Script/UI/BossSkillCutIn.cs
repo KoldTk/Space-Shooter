@@ -10,7 +10,6 @@ public class BossSkillCutIn : MonoBehaviour
     [SerializeField] private Image cutInImage;
     [SerializeField] private TextMeshProUGUI spellText;
     [SerializeField] private RectTransform imageTargetPos;
-    [SerializeField] private RectTransform imageMidTarget;
     [SerializeField] private RectTransform spellTextTarget;
     [SerializeField] private RectTransform[] warningTextLines;
     [SerializeField] private float moveDistance = 100f;
@@ -31,6 +30,7 @@ public class BossSkillCutIn : MonoBehaviour
     private void OnEnable()
     {
         backgroundText.gameObject.SetActive(true);
+        spellText.text = GameManager.Instance.bossInfo.phaseName;
         cutInImage.transform.position = imageStartingPos;
         StartCoroutine(CutInSequence());
     }
@@ -42,9 +42,8 @@ public class BossSkillCutIn : MonoBehaviour
     {
         ShowWarningText();
         TextFadeIn();
-        ImageMoveToTarget();
-        yield return new WaitForSeconds(1.5f);
         ImageToFinalTarget();
+        yield return new WaitForSeconds(1.5f);
         TextMoveToTarget();
         HideWarningText();
         yield return new WaitForSeconds(1.5f);
@@ -62,15 +61,16 @@ public class BossSkillCutIn : MonoBehaviour
     {
         spellText.transform.DOMove(spellTextTarget.position, 1);
     }
-    private void ImageMoveToTarget()
-    {
-        cutInImage.transform.DOMove(imageMidTarget.position, 1)
-            .SetEase(Ease.OutQuad);
-    }
     private void ImageToFinalTarget()
     {
-        cutInImage.transform.DOMove(imageTargetPos.position, 0.5f)
-            .SetEase(Ease.InQuad);
+        AnimationCurve customEase = new AnimationCurve(
+        new Keyframe(0, 0, 1, 1),
+        new Keyframe(0.25f, 0.5f, 0, 0),  // Slower at the middle
+        new Keyframe(0.75f, 0.55f, 0, 0),  // Stay at the middle
+        new Keyframe(1, 1, 1, 1)
+        );
+        cutInImage.transform.DOMove(imageTargetPos.position, 2f)
+            .SetEase(customEase);
     }
     private void ShowWarningText()
     {

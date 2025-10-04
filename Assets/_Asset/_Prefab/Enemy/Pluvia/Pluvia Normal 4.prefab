@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4015599511979750192}
   - component: {fileID: 3250276787802766615}
   - component: {fileID: 7728875320829494284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487962755593841539}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.9659258, w: 0.2588191}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 150}
 --- !u!114 &3250276787802766615
 MonoBehaviour:
@@ -94,9 +94,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193897968147889627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pluvia Normal 4
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583732930986988514}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.28, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -127,7 +128,6 @@ Transform:
   - {fileID: 2957038153440526152}
   - {fileID: 846584655299521515}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2225275210196377721
 GameObject:
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8290336235045765384}
   - component: {fileID: 2747980934568860044}
   - component: {fileID: 2600121272902259342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,13 +154,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2225275210196377721}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!114 &2747980934568860044
 MonoBehaviour:
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 846584655299521515}
   - component: {fileID: 6609947987243132468}
   - component: {fileID: 1568391383253895431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,13 +239,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2929612417008771518}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!114 &6609947987243132468
 MonoBehaviour:
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 2532066300873244906}
   - component: {fileID: 21977612950845552}
   - component: {fileID: 8811293393273586139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,13 +324,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4324848848814806184}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
 --- !u!114 &21977612950845552
 MonoBehaviour:
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 5013432593253471473}
   - component: {fileID: 2214369043344254737}
   - component: {fileID: 8770885578017237164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,13 +409,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4866404786167323883}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!114 &2214369043344254737
 MonoBehaviour:
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 8242110020414215792}
   - component: {fileID: 4388740907558159307}
   - component: {fileID: 3097492046479088163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,13 +494,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5164681539118560078}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
 --- !u!114 &4388740907558159307
 MonoBehaviour:
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 7962711702403562606}
   - component: {fileID: 9134936595634255419}
   - component: {fileID: 3168407968542643231}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,13 +579,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5551435736920412348}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
 --- !u!114 &9134936595634255419
 MonoBehaviour:
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 2590030369790069350}
   - component: {fileID: 2185815337396691885}
   - component: {fileID: 4929482937308357836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,13 +664,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5622905776669158243}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2185815337396691885
 MonoBehaviour:
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 5852714282215408742}
   - component: {fileID: 8981822362339492610}
   - component: {fileID: 6332846624872368605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,13 +749,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6191114611206245284}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
 --- !u!114 &8981822362339492610
 MonoBehaviour:
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 6452267997603644311}
   - component: {fileID: 3350786093033286238}
   - component: {fileID: 5253444146014772461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -834,13 +834,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6652744152677667799}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &3350786093033286238
 MonoBehaviour:
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 3663920550530927757}
   - component: {fileID: 1476056647836152221}
   - component: {fileID: 1652535058001371029}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,13 +919,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6722557956584362169}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1476056647836152221
 MonoBehaviour:
@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 2957038153440526152}
   - component: {fileID: 2923235934625692193}
   - component: {fileID: 6052173431427196323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,13 +1004,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7465707069845218981}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.9659258, w: 0.2588191}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -150}
 --- !u!114 &2923235934625692193
 MonoBehaviour:
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 3413817659625490508}
   - component: {fileID: 5209340776981628857}
   - component: {fileID: 3510456806510737199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter Middle (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,13 +1089,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8941526837308309983}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2193897968147889627}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &5209340776981628857
 MonoBehaviour:
