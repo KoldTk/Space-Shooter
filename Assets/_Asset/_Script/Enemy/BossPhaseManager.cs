@@ -122,7 +122,7 @@ public class BossPhaseManager : MonoBehaviour
         {
             cutInAnim.SetActive(true);
         }  
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
     }
     private IEnumerator PrepareAttack(AttackPoint point)
     {

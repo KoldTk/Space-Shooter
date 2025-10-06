@@ -4,27 +4,11 @@ using UnityEngine;
 
 public class BackgroundMoving : MonoBehaviour
 {
-    private Vector2 startPosition;
-    public float loopPosition;
+    public Renderer bgRenderer;
     public float speed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        startPosition = transform.position;
-    }
-
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2 (transform.position.x, transform.position.y - speed * Time.deltaTime);
-        if (transform.position.y <= loopPosition)
-        {
-            BackgroundLoop();
-        }    
+        bgRenderer.material.mainTextureOffset = new Vector2(0, Time.time * speed);
     }
-
-    public void BackgroundLoop()
-    {
-        transform.position = startPosition;
-    }    
 }
