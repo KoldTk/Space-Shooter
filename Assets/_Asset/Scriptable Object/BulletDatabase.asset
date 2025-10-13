@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: BulletDatabase
   m_EditorClassIdentifier: 
   bulletDatas:
-  - bulletName: Fire Laser Bullet
+  - bulletName: Fire Laser Bullet (Ally)
     ID: 0
     prefab: {fileID: 3609852693682000153, guid: 9b99025672b289b40a5e12eb17dd321e, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Fire Homing
+  - bulletName: Fire Homing (Ally)
     ID: 1
     prefab: {fileID: 3760153336955986303, guid: 454cfc2c7116e3b428807fd42efa88f5, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Fire Lightning
+  - bulletName: Fire Lightning(Ally)
     ID: 2
     prefab: {fileID: 3609852693682000153, guid: db345b0189af7b04ca5dd37094a25367, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Ice Bullet
+  - bulletName: Ice Bullet(Ally)
     ID: 3
     prefab: {fileID: 3609852693682000153, guid: f339ba75b79a88840a99cc99e135a5e1, type: 3}
     moveSpeed: 5
@@ -63,17 +63,17 @@ MonoBehaviour:
     prefab: {fileID: 3890756181438001215, guid: 5c84dc143c5d5bf408cbd59137ba8bb8, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Ice Flower Bullet
+  - bulletName: Ice Flower Bullet (Ally)
     ID: 10
     prefab: {fileID: 3609852693682000153, guid: f7fe02e4916869843b19d723e2140abd, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Long Ice Bullet
+  - bulletName: Long Ice Bullet (Ally)
     ID: 11
     prefab: {fileID: 3609852693682000153, guid: db68e62c17da2cc4e9865dd46c985883, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Ice Bullet Focus
+  - bulletName: Ice Bullet Focus(Ally)
     ID: 12
     prefab: {fileID: 3609852693682000153, guid: cfe2e2c1ca6433d4abc4109fa58e4be2, type: 3}
     moveSpeed: 5

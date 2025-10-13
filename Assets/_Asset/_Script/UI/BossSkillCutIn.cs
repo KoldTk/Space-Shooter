@@ -79,7 +79,7 @@ public class BossSkillCutIn : MonoBehaviour
         {
             Image sprite = warningTextLines[i].GetComponent<Image>();
             sprite.color = new Color(1f, 1f, 1f, 0);
-            sprite.DOFade(0.6f, 1f);
+            sprite.DOFade(0.5f, 1f);
             float direction = (i % 2 == 0) ? 1f : -1f;
             warningTextLines[i].DOLocalMoveX(direction * moveDistance, 2.5f)
                 .SetRelative(true)
