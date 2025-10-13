@@ -35,15 +35,16 @@ public class NormalMode : MonoBehaviour
         {
             GameManager.Instance.expMilestone *= 2;
             GameManager.Instance.powerStage++;
+            Debug.Log(GameManager.Instance.powerStage);
             ChangeGunStage();
         }
     }
     private void ChangeGunStage()
     {
-        for (int i = 1; i < GameManager.Instance.powerStage; i++)
+        for (int i = 0; i < guns.Count; i++)
         {
-            guns[i - 1].gameObject.SetActive(false);
-            guns[i].gameObject.SetActive(true);
+            guns[i].gameObject.SetActive(false);
         }
+        guns[GameManager.Instance.powerStage].gameObject.SetActive(true);
     }
 }

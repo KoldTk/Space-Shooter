@@ -13,8 +13,8 @@ public class UIGameplay : MonoBehaviour
     public TextMeshProUGUI currentScore;
 
     [Header("Point UI")]
-    public TextMeshProUGUI powerPoint;
-    public TextMeshProUGUI rewardPoint;
+    public Slider power;
+    public Slider mana;
     private int rewardMilestone = 50;
 
     [Header("Lives And Spell UI")]
@@ -58,19 +58,17 @@ public class UIGameplay : MonoBehaviour
     private void UpdateStat(bool isChanged)
     {
         //Update stat on UI
-        powerPoint.text = GameManager.Instance.playerPower.ToString();
-        rewardPoint.text = $"{GameManager.Instance.rewardPoint}/{rewardMilestone}";
+        power.value = GameManager.Instance.playerPower;
+        mana.value = GameManager.Instance.rewardPoint;
+        mana.maxValue = rewardMilestone;
         if (GameManager.Instance.rewardPoint >= rewardMilestone)
         {
             GameManager.Instance.playerSpell++;
             rewardMilestone += 25;
             GameManager.Instance.rewardPoint = 0;
-            rewardPoint.text = $"{GameManager.Instance.rewardPoint}/{rewardMilestone}";
+            mana.value = GameManager.Instance.rewardPoint;
+            mana.maxValue = rewardMilestone;
             UpdateSpellAndLives(spells, spellImage, spellImagePosition, GameManager.Instance.playerSpell);
-        }
-        if (GameManager.Instance.playerPower >= 128)
-        {
-            powerPoint.text = "MAX";
         }
     }
     private void UpdateScore(bool isChanged)

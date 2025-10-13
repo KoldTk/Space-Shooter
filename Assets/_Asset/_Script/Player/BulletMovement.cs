@@ -6,14 +6,13 @@ public class BulletMovement : MonoBehaviour
 {
     public int bulletID;
     public float bulletSpeed;
-    private int gunDamage;
+    public int gunDamage;
     void Update()
     {
         transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gunDamage = GameManager.Instance.playerPower;
         if (collision.CompareTag("Enemy"))
         {
             EnemyTakeDmg(collision, gunDamage);

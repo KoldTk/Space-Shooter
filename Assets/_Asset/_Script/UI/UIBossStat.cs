@@ -26,6 +26,7 @@ public class UIBossStat : MonoBehaviour
     }
     private void OnEnable()
     {
+        phaseCount = GameManager.Instance.bossInfo.phaseCount;
         EventDispatcher<int>.AddListener(Event.BossTakeDamage.ToString(), UpdateBossHealth);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), RefillHealth);
     }
@@ -97,7 +98,6 @@ public class UIBossStat : MonoBehaviour
     private void StatSetup()
     {
         bossName.text = GameManager.Instance.bossInfo.bossName;
-        phaseCount = GameManager.Instance.bossInfo.phaseCount;
         time = GameManager.Instance.bossInfo.phaseTime;
         timeCounter.text = ((int)time).ToString();
         UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount - 1);

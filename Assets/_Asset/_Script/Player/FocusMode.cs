@@ -6,6 +6,7 @@ public class FocusMode : MonoBehaviour
 {
     [SerializeField] private float focusModeSpeed;
     [SerializeField] private GameObject marker;
+    [SerializeField] private GameObject magicCircle;
     private List<Transform> guns = new List<Transform>();
     private void Awake()
     {
@@ -43,18 +44,20 @@ public class FocusMode : MonoBehaviour
     }
     private void ChangeGunStage()
     {
-        for (int i = 1; i < GameManager.Instance.powerStage; i++)
+        for (int i = 0; i < guns.Count; i++)
         {
-            guns[i - 1].gameObject.SetActive(false);
-            guns[i].gameObject.SetActive(true);
+            guns[i].gameObject.SetActive(false);
         }
+        guns[GameManager.Instance.powerStage].gameObject.SetActive(true);
     }
     private void ShowMarker()
     {
         marker.gameObject.SetActive(true);
+        magicCircle.gameObject.SetActive(true);
     }
     private void HideMarker()
     {
         marker.gameObject.SetActive(false);
+        magicCircle.gameObject.SetActive(false);
     }
 }

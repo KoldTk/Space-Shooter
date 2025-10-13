@@ -18,6 +18,7 @@ public class AttackPoint
 public class BossPhase
 {
     public string phaseName;
+    public int phaseHP;
     public bool isSpell;
     public AttackPoint[] attackPoints;       // Attack and movement point
     public float moveDuration = 3f;
@@ -33,10 +34,13 @@ public class BossPhaseManager : MonoBehaviour
     [SerializeField] private Transform boss;
     [SerializeField] private Transform startPos;
     [SerializeField] private GameObject cutInAnim;
+    [SerializeField] private string bossName;
+    [SerializeField] private BackgroundFadeIn spellBackground;
 
     private void OnEnable()
     {
         GameManager.Instance.bossInfo.phaseCount = phases.Length;
+        GameManager.Instance.bossInfo.bossName = bossName;
         EventDispatcher<bool>.AddListener(Event.BossAppear.ToString(), BossAppear);
         EventDispatcher<bool>.AddListener(Event.BossStartAttack.ToString(), StartAttack);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), ChangePhase);
@@ -56,6 +60,7 @@ public class BossPhaseManager : MonoBehaviour
     {
         StartCoroutine(DeleteBullet());
         boss.tag = "Boss_Invi";
+        spellBackground.HideBackground();
         cutInAnim.SetActive(false);
         currentPhaseIndex++;
         if (currentPhaseIndex >= phases.Length)
@@ -80,6 +85,7 @@ public class BossPhaseManager : MonoBehaviour
     {
         GameManager.Instance.bossInfo.phaseTime = phase.phaseTime;
         GameManager.Instance.bossInfo.phaseName = phase.phaseName;
+        EventDispatcher<int>.Dispatch(Event.UpdateBossHP.ToString(), phase.phaseHP);
         int pointIndex = 0;
         yield return PreparePhase(phase);
         boss.tag = "Boss";
@@ -121,7 +127,8 @@ public class BossPhaseManager : MonoBehaviour
         if(phase.isSpell)
         {
             cutInAnim.SetActive(true);
-        }  
+            spellBackground.ShowBackground();
+        }
         yield return new WaitForSeconds(1f);
     }
     private IEnumerator PrepareAttack(AttackPoint point)

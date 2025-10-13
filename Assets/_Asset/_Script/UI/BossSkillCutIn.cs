@@ -45,8 +45,9 @@ public class BossSkillCutIn : MonoBehaviour
         ImageToFinalTarget();
         yield return new WaitForSeconds(1.5f);
         TextMoveToTarget();
-        HideWarningText();
+        FadeInWarningText();
         yield return new WaitForSeconds(1.5f);
+        HideWarningText();
         cutInImage.transform.position = imageStartingPos;
     }    
     private void TextFadeIn()
@@ -76,6 +77,9 @@ public class BossSkillCutIn : MonoBehaviour
     {
         for (int i = 0; i < warningTextLines.Length; i++)
         {
+            Image sprite = warningTextLines[i].GetComponent<Image>();
+            sprite.color = new Color(1f, 1f, 1f, 0);
+            sprite.DOFade(0.6f, 1f);
             float direction = (i % 2 == 0) ? 1f : -1f;
             warningTextLines[i].DOLocalMoveX(direction * moveDistance, 2.5f)
                 .SetRelative(true)
@@ -83,13 +87,20 @@ public class BossSkillCutIn : MonoBehaviour
                 .SetLoops(-1, LoopType.Restart);
         }
     }
-    private void HideWarningText()
+    private void FadeInWarningText()
     {
-        backgroundText.gameObject.SetActive(false);
         for (int i = 0; i < warningTextLines.Length; i++)
         {
-            warningTextLines[i].DOKill();
+            Image sprite = warningTextLines[i].GetComponent<Image>();
+            sprite.DOFade(0, 1f);
+        }
+    }
+    private void HideWarningText()
+    {
+        for (int i = 0; i < warningTextLines.Length; i++)
+        {
             warningTextLines[i].localPosition = backgroundTextStartPos[i];
-        } 
+            warningTextLines[i].DOKill();
+        }
     }    
 }

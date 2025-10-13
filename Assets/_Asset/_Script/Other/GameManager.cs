@@ -5,18 +5,19 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public int playerScore;
-    public int playerBest;
-    public int playerLives;
-    public int playerPower;
-    public int playerSpell;
-    public int rewardPoint;
-    public int powerStage;
-    public float playerSpeed;
-    public int expMilestone;
-    public bool playerUsingSpell;
-    public bool dialogueOn;
-    public BossInfo bossInfo;
+    [HideInInspector] public int playerScore;
+    [HideInInspector] public int playerBest;
+    [HideInInspector] public int playerLives;
+    [HideInInspector] public int playerPower;
+    [HideInInspector] public int playerSpell;
+    [HideInInspector] public int rewardPoint;
+    [HideInInspector] public int powerStage;
+    [HideInInspector] public float playerSpeed;
+    [HideInInspector] public int expMilestone;
+    [HideInInspector] public bool playerUsingSpell;
+    [HideInInspector] public bool dialogueOn;
+    [HideInInspector] public BossInfo bossInfo;
+
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
     [SerializeField] private Transform playerParent;
@@ -36,7 +37,7 @@ public class GameManager : Singleton<GameManager>
         rewardPoint = 0;
         powerStage = 0;
         playerSpeed = 5;
-        expMilestone = 8;
+        expMilestone = 16;
         dialogueOn = false;
         bossInfo.phaseTime = Mathf.Clamp(bossInfo.phaseTime, 0, bossInfo.phaseTime);
     } 

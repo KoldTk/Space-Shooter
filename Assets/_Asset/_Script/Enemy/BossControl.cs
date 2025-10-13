@@ -15,18 +15,20 @@ public class BossControl : Health
         GameManager.Instance.bossInfo.bossName = bossName;
         phaseCount = GameManager.Instance.bossInfo.phaseCount;
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), RefillHealth);
+        EventDispatcher<int>.AddListener(Event.UpdateBossHP.ToString(), UpdateBossHP);
         StartCoroutine(MoveToPosition(startPosition));
     }
     private void OnDisable()
     {
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), RefillHealth);
+        EventDispatcher<int>.RemoveListener(Event.UpdateBossHP.ToString(), UpdateBossHP);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.GetComponent<PlayerHealth>();
         if (player != null)
         {
-            player.TakeDamage(maxHP);
+            player.TakeDamage(GameManager.Instance.bossInfo.maxHealth);
         }
     }
     public override void Die()
@@ -43,6 +45,12 @@ public class BossControl : Health
             EventDispatcher<bool>.Dispatch(Event.StartAfterBossDialogue.ToString(), true);
         }
     }
+    public void UpdateBossHP(int hp)
+    {
+        maxHP = hp;
+        currentHP = maxHP;
+        GameManager.Instance.bossInfo.maxHealth = maxHP;
+    }    
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
