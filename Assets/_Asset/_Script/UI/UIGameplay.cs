@@ -82,6 +82,7 @@ public class UIGameplay : MonoBehaviour
     }
     private void UpdateSpellLivesOnUI(bool isChanged)
     {
+        GameManager.Instance.playerSpell = 2;
         UpdateSpellAndLives(lives, livesImage, livesImagePosition, GameManager.Instance.playerLives - 1);
         UpdateSpellAndLives(spells, spellImage, spellImagePosition, GameManager.Instance.playerSpell);
     }    

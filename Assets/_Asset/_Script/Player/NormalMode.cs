@@ -35,7 +35,6 @@ public class NormalMode : MonoBehaviour
         {
             GameManager.Instance.expMilestone *= 2;
             GameManager.Instance.powerStage++;
-            Debug.Log(GameManager.Instance.powerStage);
             ChangeGunStage();
         }
     }

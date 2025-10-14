@@ -6,12 +6,15 @@ public class EnemyHealth : Health
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.GetComponent<PlayerHealth>();
-        if (player != null)
+        if (collision.CompareTag("Player"))
         {
-            player.TakeDamage(maxHP);
-            Die();
-        }
+            var player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                player.TakeDamage(maxHP);
+                Die();
+            }
+        }    
     }
     public override void Die()
     {

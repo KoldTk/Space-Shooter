@@ -25,11 +25,14 @@ public class BossControl : Health
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.GetComponent<PlayerHealth>();
-        if (player != null)
+        if (collision.CompareTag("Player"))
         {
-            player.TakeDamage(GameManager.Instance.bossInfo.maxHealth);
-        }
+            var player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                player.TakeDamage(GameManager.Instance.bossInfo.maxHealth);
+            }
+        }    
     }
     public override void Die()
     {

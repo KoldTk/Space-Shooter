@@ -12,7 +12,6 @@ public class MagicCircleMovement : MonoBehaviour
     {
         CircleRotate();
         StartCoroutine(Enlarge(targetScale, duration));
-        
     }
     private void OnDisable()
     {

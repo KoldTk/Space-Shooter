@@ -9,6 +9,7 @@ public class BackgroundFadeIn : MonoBehaviour
     [SerializeField] private SpriteRenderer fadeOverlay;
     [SerializeField] private float fadeDuration;
     [SerializeField] private float holdDuration;
+    [SerializeField] private float targetFade = 1;
     public void ShowBackground()
     {
         fadeOverlay.DOFade(1f, fadeDuration).OnComplete(() =>
@@ -16,10 +17,10 @@ public class BackgroundFadeIn : MonoBehaviour
             sprite.enabled = true;
             DOVirtual.DelayedCall(holdDuration, () =>
             {
-                fadeOverlay.DOFade(0f, fadeDuration);
+                fadeOverlay.DOFade(0, fadeDuration);
             });
         });
-        sprite.DOFade(1, 0.5f);
+        sprite.DOFade(targetFade, 0.5f);
     }
     public void HideBackground()
     {

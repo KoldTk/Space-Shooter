@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Camera subCam;
-    [SerializeField] private GameObject magicCirclePrefab;
     [SerializeField] private GameObject spellBomb;
     [SerializeField] private GameObject normalMode;
     [SerializeField] private GameObject focusMode;
+    [SerializeField] private GameObject magicCircle;
     private Vector3 startingPos = new Vector3(-3,-3.5f,0);
     private void Start()
     {
@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnEnable()
     {
-        gameObject.tag = "Player_Invi";
+        StartCoroutine(SpawnSequence());
     }
     private void OnDisable()
     {
@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
         if (GameManager.Instance.playerLives > 0)
         {
             GameManager.Instance.playerSpell = 2;
+            Instantiate(magicCircle, transform.position, transform.rotation);
             EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
             GameManager.Instance.CharacterSpawn();
         }
@@ -85,13 +86,18 @@ public class PlayerControl : MonoBehaviour
     {
         if (!GameManager.Instance.playerUsingSpell && GameManager.Instance.playerSpell > 0)
         {
-            Instantiate(magicCirclePrefab, transform.position, Quaternion.identity, transform);
             spellBomb.SetActive(true);
             GameManager.Instance.playerSpell--;
             EventDispatcher<bool>.Dispatch(Event.UsingSpell.ToString(), true);
             GameManager.Instance.playerUsingSpell = true;
         }
     }
+    private IEnumerator SpawnSequence()
+    {
+        gameObject.tag = "Player_Invi";
+        yield return new WaitForSeconds(3f);
+        gameObject.tag = "Player";
+    }    
     private void SwitchModeHandler()
     {
         if(Input.GetKey(KeyCode.LeftShift))
