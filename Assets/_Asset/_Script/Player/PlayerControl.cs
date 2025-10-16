@@ -10,14 +10,11 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private GameObject normalMode;
     [SerializeField] private GameObject focusMode;
     [SerializeField] private GameObject magicCircle;
+    [SerializeField] private Collider2D playerCollider;
     private Vector3 startingPos = new Vector3(-3,-3.5f,0);
-    private void Start()
-    {
-        StartCoroutine(MoveToStartPosition());
-    }
     private void OnEnable()
     {
-        StartCoroutine(SpawnSequence());
+        StartCoroutine(InvincibleSequence());
     }
     private void OnDisable()
     {
@@ -25,8 +22,8 @@ public class PlayerControl : MonoBehaviour
         if (GameManager.Instance.playerLives > 0)
         {
             GameManager.Instance.playerSpell = 2;
-            Instantiate(magicCircle, transform.position, transform.rotation);
             EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
+            StartCoroutine(SpawnSequence());
             GameManager.Instance.CharacterSpawn();
         }
         else
@@ -42,17 +39,7 @@ public class PlayerControl : MonoBehaviour
             UseSpell();
         }
         SwitchModeHandler();
-    }
-    private IEnumerator MoveToStartPosition()
-    {   
-        while (Vector3.Distance(transform.position, startingPos) > 0.1f)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, startingPos, GameManager.Instance.playerSpeed * Time.deltaTime);
-            yield return null;
-        }
-        yield return new WaitForSeconds(2f);
-        gameObject.tag = "Player";
-    }    
+    } 
     private void HandleCharacterMove()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -92,12 +79,17 @@ public class PlayerControl : MonoBehaviour
             GameManager.Instance.playerUsingSpell = true;
         }
     }
+    private IEnumerator InvincibleSequence()
+    {
+        playerCollider.enabled = false;
+        yield return new WaitForSeconds(5f);
+        playerCollider.enabled = true;
+    }
     private IEnumerator SpawnSequence()
     {
-        gameObject.tag = "Player_Invi";
-        yield return new WaitForSeconds(3f);
-        gameObject.tag = "Player";
-    }    
+        Instantiate(magicCircle, transform.position, transform.rotation);
+        yield return new WaitForSeconds (1f);
+    }
     private void SwitchModeHandler()
     {
         if(Input.GetKey(KeyCode.LeftShift))

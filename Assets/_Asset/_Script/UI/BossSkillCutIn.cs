@@ -44,11 +44,13 @@ public class BossSkillCutIn : MonoBehaviour
         TextFadeIn();
         ImageToFinalTarget();
         yield return new WaitForSeconds(1.5f);
+        FadeOutImage();
         TextMoveToTarget();
         FadeInWarningText();
         yield return new WaitForSeconds(1.5f);
         HideWarningText();
         cutInImage.transform.position = imageStartingPos;
+        cutInImage.color = new Color(1, 1, 1, 0.75f);
     }    
     private void TextFadeIn()
     {
@@ -65,12 +67,12 @@ public class BossSkillCutIn : MonoBehaviour
     private void ImageToFinalTarget()
     {
         AnimationCurve customEase = new AnimationCurve(
-        new Keyframe(0, 0, 1, 1),
-        new Keyframe(0.25f, 0.5f, 0, 0),  // Slower at the middle
+        new Keyframe(0, 0, 1, 0),
+        new Keyframe(0.25f, 0.5f, 0, 0.5f),  // Slower at the middle
         new Keyframe(0.75f, 0.55f, 0, 0),  // Stay at the middle
-        new Keyframe(1, 1, 1, 1)
+        new Keyframe(1, 1, 0, -0.5f)
         );
-        cutInImage.transform.DOMove(imageTargetPos.position, 2f)
+        cutInImage.transform.DOMove(imageTargetPos.position, 3f)
             .SetEase(customEase);
     }
     private void ShowWarningText()
@@ -95,6 +97,11 @@ public class BossSkillCutIn : MonoBehaviour
             sprite.DOFade(0, 1f);
         }
     }
+    private void FadeOutImage()
+    {
+        cutInImage.DOFade(0, 1.5f)
+            .SetEase(Ease.InCubic);
+    }    
     private void HideWarningText()
     {
         for (int i = 0; i < warningTextLines.Length; i++)

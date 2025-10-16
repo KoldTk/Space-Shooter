@@ -8,6 +8,6 @@ public class PowerUpItem : CollectibleManager
     protected override void GainEffect(Collider2D player)
     {
         GameManager.Instance.PowerUp(value);
-        Destroy(gameObject, 0.03f);
+        ItemPool.Instance.ReturnToPool(itemID, this.gameObject);
     }
 }

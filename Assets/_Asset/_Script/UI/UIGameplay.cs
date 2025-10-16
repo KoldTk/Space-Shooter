@@ -40,6 +40,7 @@ public class UIGameplay : MonoBehaviour
     private void OnEnable()
     {
         EventDispatcher<bool>.AddListener(Event.StatusChange.ToString(), UpdateStat);
+        EventDispatcher<bool>.AddListener(Event.StatusChange.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.AddListener(Event.ScoreGain.ToString(), UpdateScore);
         EventDispatcher<bool>.AddListener(Event.CharacterDie.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.AddListener(Event.UsingSpell.ToString(), UpdateSpellLivesOnUI);
@@ -49,6 +50,7 @@ public class UIGameplay : MonoBehaviour
     private void OnDisable()
     {
         EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), UpdateStat);
+        EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.RemoveListener(Event.ScoreGain.ToString(), UpdateScore);
         EventDispatcher<bool>.RemoveListener(Event.CharacterDie.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.RemoveListener(Event.UsingSpell.ToString(), UpdateSpellLivesOnUI);
@@ -82,7 +84,6 @@ public class UIGameplay : MonoBehaviour
     }
     private void UpdateSpellLivesOnUI(bool isChanged)
     {
-        GameManager.Instance.playerSpell = 2;
         UpdateSpellAndLives(lives, livesImage, livesImagePosition, GameManager.Instance.playerLives - 1);
         UpdateSpellAndLives(spells, spellImage, spellImagePosition, GameManager.Instance.playerSpell);
     }    
@@ -97,6 +98,7 @@ public class UIGameplay : MonoBehaviour
         //Create new icon
         for (int i = 0; i < numCount; i++)
         {
+            if (i > 9) break;
             GameObject newObj = Instantiate(prefab, position);
             newObj.transform.SetParent(position, false);
             list.Add(newObj);

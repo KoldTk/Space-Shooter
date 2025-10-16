@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class CollectibleManager : MonoBehaviour
 {
+    public int itemID;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Player_Invi"))
@@ -14,7 +15,7 @@ public abstract class CollectibleManager : MonoBehaviour
         }
         if (collision.CompareTag("Delete Zone"))
         {
-            Destroy(gameObject);
+            ItemPool.Instance.ReturnToPool(itemID, gameObject);
         }    
     }
     protected abstract void GainEffect(Collider2D player);

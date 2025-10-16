@@ -7,47 +7,74 @@
     },
     {
       "id": 1,
-      "name": "The Water Fairy - Pluvia",
-      "spritePath": "Character Sprite/Boss1_Sprite1"
+      "name": "",
+      "spritePath": "Character Sprite/MC_Sprite1"
     },
     {
       "id": 2,
-      "name": "Companion 2",
-      "spritePath": "Character Sprite/Boss1_Sprite2"
+      "name": "",
+      "spritePath": "Character Sprite/MC_Sprite1"
+    },
+    {
+      "id": 3,
+      "name": "The Water Fairy - Pluvia",
+      "spritePath": "Character Sprite/Pluvia/PluviaSmile"
+    },
+    {
+      "id": 4,
+      "name": "The Water Fairy - Pluvia",
+      "spritePath": "Character Sprite/Pluvia/PluviaPout"
+    },
+    {
+      "id": 5,
+      "name": "The Water Fairy - Pluvia",
+      "spritePath": "Character Sprite/Pluvia/PluviaInjured"
     }
   ],
   "messages": [
     {
       "actorId": 0,
-      "message": "It's hot here."
+      "message": "So this is the place in the request"
     },
     {
       "actorId": 0,
-      "message": "Why is it so hot in the middle of spring?"
-    },
-    {
-      "actorId": 1,
-      "message": "Really, I though the weather is quite cool."
+      "message": "Strange weather and phenomenon happen in the East region of Mystalogia... Or so it says..."
     },
     {
       "actorId": 0,
-      "message": "Not for normal person."
+      "message": "Haven't seen anything abnormal aside from cloudy weather."
+    },
+    {
+      "actorId": 3,
+      "message": "Please stop."
     },
     {
       "actorId": 0,
-      "message": "And you are?"
+      "message": "Ah, a suspicious girl appears."
     },
     {
-      "actorId": 1,
-      "message": "I'm a fairy."
+      "actorId": 4,
+      "message": "I'm not suspicious. I'm a fairy."
     },
     {
-      "actorId": 2,
-      "message": "Really?"
+      "actorId": 3,
+      "message": "Anyway, this place is dangerous at the moment so please leave."
     },
     {
-      "actorId": 2,
-      "message": "Never seen one before."
+      "actorId": 0,
+      "message": "Sorry, but my job is to investigate the phenomenon. Do you have any idea about the cause?"
+    },
+    {
+      "actorId": 3,
+      "message": "I see, you're from the Guild."
+    },
+    {
+      "actorId": 3,
+      "message": "But those kids are running amok. It would be dangerous if your ability is not qualified."
+    },
+    {
+      "actorId": 3,
+      "message": "Please, let me test you first."
     }
   ]
 }

@@ -84,53 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &764766777791468853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4152843658355776980}
-  - component: {fileID: 1516784909270790719}
-  m_Layer: 0
-  m_Name: Spell Bomb
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4152843658355776980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764766777791468853}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5036635275294788260}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1516784909270790719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764766777791468853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de67139a4cab5214abe21b0658b45631, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4736605785622148166, guid: c219cfcae3a544a42ad938c0ac7b2487, type: 3}
-  numberOfBullet: 20
-  radius: 1.5
 --- !u!1 &945387266930056984
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focusModeSpeed: 2.5
   marker: {fileID: 668793099292866828}
-  magicCircle: {fileID: 0}
+  magicCircle: {fileID: 3829111206879304342}
 --- !u!1 &2945858041714327390
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +683,7 @@ Transform:
   - {fileID: 7723187988370299747}
   - {fileID: 2841641350870963078}
   - {fileID: 2051867913499790407}
-  - {fileID: 4152843658355776980}
+  - {fileID: 3672581112412666871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3614871893515532695
@@ -798,10 +751,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subCam: {fileID: 6669693952756001733, guid: 9a0423ec8f005dd44b18ca433a136e50, type: 3}
-  magicCirclePrefab: {fileID: 765958333971239549, guid: 07f3223dcfcef4442a716636d106f03f, type: 3}
-  spellBomb: {fileID: 764766777791468853}
+  spellBomb: {fileID: 7471229015842530388}
   normalMode: {fileID: 8136817089570052396}
   focusMode: {fileID: 2939128041503736160}
+  magicCircle: {fileID: 3829111206879304342}
+  playerCollider: {fileID: 2033245220133034233}
 --- !u!114 &7995988695314922706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,3 +2003,70 @@ Transform:
   - {fileID: 7168127862462937815}
   m_Father: {fileID: 7723187988370299747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5298401748121487447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5036635275294788260}
+    m_Modifications:
+    - target: {fileID: 3326074789138115587, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_Name
+      value: Ice Flower Barrier (Ability)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+--- !u!4 &3672581112412666871 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8894632633447576480, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+  m_PrefabInstance: {fileID: 5298401748121487447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7471229015842530388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3326074789138115587, guid: 97799f10e6e20984c8035a4178dcf394, type: 3}
+  m_PrefabInstance: {fileID: 5298401748121487447}
+  m_PrefabAsset: {fileID: 0}

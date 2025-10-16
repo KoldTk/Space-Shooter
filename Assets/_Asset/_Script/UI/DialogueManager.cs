@@ -10,13 +10,10 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private Image leftActorImage;
     [SerializeField] private TextMeshProUGUI leftActorName;
-
     [SerializeField] private Image rightActorImage;  // Sub Slot
     [SerializeField] private TextMeshProUGUI rightActorName;
-
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color dimColor = Color.gray;
-
     public TextMeshProUGUI message;
     private DialogueData currentDialogue;
     private int leftActorId = 0;
@@ -59,17 +56,15 @@ public class DialogueManager : MonoBehaviour
         activeMessage = 0;
         GameManager.Instance.dialogueOn = true;
         transform.DOScale(Vector3.one, 0.5f);
-                DisplayMessage();
+        DisplayMessage();
     }    
     public void DisplayMessage()
     {
         MessageData messageToDisplay = currentDialogue.messages[activeMessage];
         message.text = string.Empty;
         StartCoroutine(TypeMessageLine(messageToDisplay.message));
-        
         ActorData actorToDisplay = currentDialogue.actors[messageToDisplay.actorId];
         DisplayCharacterImage(actorToDisplay);
-
     }
     private IEnumerator CloseMessageBox()
     {
@@ -85,7 +80,6 @@ public class DialogueManager : MonoBehaviour
         {
             //To result menu
         }    
-
     }    
     private IEnumerator TypeMessageLine(string dialogueLine)
     {
@@ -116,7 +110,6 @@ public class DialogueManager : MonoBehaviour
         }
         if (speakerId == 0)
         {
-
             //Main character always at left side
             leftActorImage.sprite = Resources.Load<Sprite>(actorToDisplay.spritePath);
             leftActorName.text = actorToDisplay.name;
@@ -134,14 +127,7 @@ public class DialogueManager : MonoBehaviour
             {
                 //New actor appear -> Go to emtpy slot
                 //Main character -> To left slot
-                if (leftActorId == 0) // main đã chiếm trái
-                {
-                    rightActorId = speakerId;
-                    rightActorImage.sprite = Resources.Load<Sprite>(actorToDisplay.spritePath);
-                    rightActorName.text = actorToDisplay.name;
-                    actorPositions[speakerId] = "right";
-                }
-                else if (rightActorId == -1)
+                if (leftActorId == 0) // Main character on left
                 {
                     rightActorId = speakerId;
                     rightActorImage.sprite = Resources.Load<Sprite>(actorToDisplay.spritePath);
@@ -157,6 +143,24 @@ public class DialogueManager : MonoBehaviour
                     actorPositions[speakerId] = "left";
                 }
                 EventDispatcher<bool>.Dispatch(Event.BossAppear.ToString(), true);
+            }
+            else
+            {
+                if (leftActorId == 0)
+                {
+                    rightActorId = speakerId;
+                    rightActorImage.sprite = Resources.Load<Sprite>(actorToDisplay.spritePath);
+                    rightActorName.text = actorToDisplay.name;
+                    actorPositions[speakerId] = "right";
+                }
+                else
+                {
+                    // If no empty slot -> Switch left image (except main character)
+                    leftActorId = speakerId;
+                    leftActorImage.sprite = Resources.Load<Sprite>(actorToDisplay.spritePath);
+                    leftActorName.text = actorToDisplay.name;
+                    actorPositions[speakerId] = "left";
+                }
             }
             // Highlight speaking actor
             if (actorPositions[speakerId] == "left")
