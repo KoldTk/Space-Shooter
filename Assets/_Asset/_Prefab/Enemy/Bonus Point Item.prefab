@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3058812981883966732}
   - component: {fileID: 9091179718664652495}
   - component: {fileID: 5390322174062566741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bonus Point Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.808, y: -0.91, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: a30e62bcbc4835f4eb526e4171aec7cd, type: 3}
+  m_Sprite: {fileID: 459885871, guid: e79c68c3f21ca274ba4a222a53d9c781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,8 +119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24}
-  m_Size: {x: 0.34, y: 0.55}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.24, y: 0.34}
   m_Direction: 0
 --- !u!50 &9091179718664652495
 Rigidbody2D:
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691625295205732721}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

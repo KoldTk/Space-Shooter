@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6758197330100366529}
   - component: {fileID: 4818849520684479797}
   - component: {fileID: 12186376185493905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bonus Live Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.207, y: -0.91, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 2fa465923ac27094f98579cbf003aba5, type: 3}
+  m_Sprite: {fileID: 13291792, guid: e79c68c3f21ca274ba4a222a53d9c781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,8 +119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24}
-  m_Size: {x: 0.34, y: 0.55}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.3, y: 0.25}
   m_Direction: 0
 --- !u!114 &4818849520684479797
 MonoBehaviour:

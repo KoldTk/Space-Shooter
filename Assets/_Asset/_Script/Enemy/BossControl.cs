@@ -9,6 +9,7 @@ public class BossControl : Health
     [SerializeField] private float moveSpeed;
     [SerializeField] private float phaseCount;
     [SerializeField] private string bossName;
+    [SerializeField] private int itemDropCount = 10;
     private void OnEnable()
     {
         GameManager.Instance.bossInfo.maxHealth = maxHP;
@@ -41,12 +42,19 @@ public class BossControl : Health
         {
             EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
             RefillHealth(true);
+            for (int i = 0; i < itemDropCount; i++)
+            {
+                GameManager.Instance.DropItem(this.transform);
+            }    
         }
         else
         {
+            GameManager.Instance.StartCoroutine(GameManager.Instance.DeleteBullet());
             base.Die();
+            EventDispatcher<bool>.Dispatch(Event.BossDie.ToString(), true);
             EventDispatcher<bool>.Dispatch(Event.StartAfterBossDialogue.ToString(), true);
         }
+        EventDispatcher<bool>.Dispatch(Event.SpellEnd.ToString(), true);
     }
     public void UpdateBossHP(int hp)
     {

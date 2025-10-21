@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class FlyPathControl : MonoBehaviour
 {
-    public FlyPath flyPath;
+    [HideInInspector] public FlyPath flyPath;
     public float flySpeed;
     private int nextIndex;
+    [SerializeField] private GameObject shooter;
     void Update()
     {
         if (flyPath == null)

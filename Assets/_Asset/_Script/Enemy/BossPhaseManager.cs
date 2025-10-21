@@ -44,13 +44,15 @@ public class BossPhaseManager : MonoBehaviour
         EventDispatcher<bool>.AddListener(Event.BossAppear.ToString(), BossAppear);
         EventDispatcher<bool>.AddListener(Event.BossStartAttack.ToString(), StartAttack);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), ChangePhase);
+        EventDispatcher<bool>.AddListener(Event.SpellEnd.ToString(), HideSpellBackground);
+        EventDispatcher<bool>.AddListener(Event.BossDie.ToString(), StopAction);
     }
     private void OnDisable()
     {
         EventDispatcher<bool>.RemoveListener(Event.BossAppear.ToString(), BossAppear);
         EventDispatcher<bool>.RemoveListener(Event.BossStartAttack.ToString(), StartAttack);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), ChangePhase);
-        StopAllCoroutines();
+        EventDispatcher<bool>.RemoveListener(Event.BossDie.ToString(), StopAction);
     }
     private void StartAttack(bool isAttacking)
     {
@@ -58,9 +60,8 @@ public class BossPhaseManager : MonoBehaviour
     }
     private void ChangePhase(bool isChangingPhase)
     {
-        StartCoroutine(DeleteBullet());
+        GameManager.Instance.StartCoroutine(GameManager.Instance.DeleteBullet());
         boss.tag = "Boss_Invi";
-        spellBackground.HideBackground();
         cutInAnim.SetActive(false);
         currentPhaseIndex++;
         if (currentPhaseIndex >= phases.Length)
@@ -110,9 +111,12 @@ public class BossPhaseManager : MonoBehaviour
     }
     private IEnumerator MoveToPoint(Vector3 target, float moveDuration)
     {
-        Tween tween = boss.transform.DOMove(target, moveDuration)
+        if (boss != null)
+        {
+            Tween tween = boss.transform.DOMove(target, moveDuration)
             .SetEase(Ease.OutQuad);
-        yield return tween.WaitForCompletion();
+            yield return tween.WaitForCompletion();
+        }    
     }
     private IEnumerator DoAttackAtPoint(AttackPoint point)
     {
@@ -136,23 +140,12 @@ public class BossPhaseManager : MonoBehaviour
         //Create prepare attack effect/shakeScreen here
         yield return new WaitForSeconds(point.prepareTime);
     }
-    private IEnumerator DeleteBullet()
+    private void HideSpellBackground(bool isHided)
     {
-        GameObject[] shooters = GameObject.FindGameObjectsWithTag("Shooter");
-        foreach (GameObject shooter in shooters)
-        {
-            Destroy(shooter);
-        }
-        yield return null;
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-        foreach(GameObject bullet in bullets)
-        {
-            EnemyBullet bulletObj = bullet.GetComponent<EnemyBullet>();
-            if (bulletObj != null)
-            {
-                bulletObj.ChangeToPoint();
-            }    
-        }
-        yield return null;
+        spellBackground.HideBackground();
+    }
+    private void StopAction(bool isDead)
+    {
+        StopAllCoroutines();
     }    
 }

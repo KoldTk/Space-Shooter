@@ -18,25 +18,24 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public bool dialogueOn;
     [HideInInspector] public BossInfo bossInfo;
     [HideInInspector] public bool allowInput = true;
+    [HideInInspector] public int bonusPoint;
 
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
     [SerializeField] private Transform playerParent;
-    [SerializeField] private GameObject PowerUpPrefab;
-    [SerializeField] private GameObject rewardPointPrefab;
     [SerializeField] private GameObject appearEffect;
     [SerializeField] private Transform gameBackground;
+    private int scoreMilestone = 20000000;
     private void Awake()
     {
         GameStartSetup();
     }
     private void GameStartSetup()
     {
-        playerPower = Mathf.Clamp(playerPower, 0, 128);
         playerScore = 0;
         playerLives = 3;
         playerSpell = 2;
-        playerPower = 1;
+        playerPower = 0;
         rewardPoint = 0;
         powerStage = 0;
         playerSpeed = 5;
@@ -46,6 +45,7 @@ public class GameManager : Singleton<GameManager>
     } 
     public void PowerUp(int value)
     {
+        playerPower = Mathf.Clamp(playerPower, 0, 128);
         playerPower += value;
         EventDispatcher<bool>.Dispatch(Event.StatusChange.ToString(), true);
     }
@@ -67,27 +67,55 @@ public class GameManager : Singleton<GameManager>
     public void ScoreUp(int value)
     {
         playerScore += value;
+        if (playerScore >= scoreMilestone)
+        {
+            playerLives++;
+            playerScore += 20000000;
+        }    
         EventDispatcher<bool>.Dispatch(Event.ScoreGain.ToString(), true);
     }
-    public void DropItem(Transform transform, float explodeForce)
+    public void DropItem(Transform transform)
     {
         GameObject dropItem;
-        //Enemy drop power up item when die with 60% rate
-        //Enemy drop reward point when die with 40% rate
-        float rate = Random.Range(0, 100f);
-        if (rate < 60)
+        
+        float rate = Random.Range(0, 1000f);
+        if (rate < 500)
         {
-            dropItem = ItemPool.Instance.GetPrefab(0, transform.position, Quaternion.identity);
+            //Small power up drop rate: 50%
+            if (playerPower < 128)
+            {
+                dropItem = ItemPool.Instance.GetPrefab(0, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
+            }    
+        }
+        else if (rate < 900)
+        {
+            //Mana drop rate: 40%
+            dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
+        }
+        else if (rate < 945f)
+        {
+            //Big mana drop rate: 4.5%
+            dropItem = ItemPool.Instance.GetPrefab(3, transform.position, Quaternion.identity);
+        }    
+        else if (rate < 999)
+        {
+            //Big power up drop rate: 4.5%
+            dropItem = ItemPool.Instance.GetPrefab(2, transform.position, Quaternion.identity);
         }
         else
         {
-            dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
+            //Bonus Bomb: 1%
+            dropItem = ItemPool.Instance.GetPrefab(4, transform.position, Quaternion.identity);
         }
-        Rigidbody2D rb = dropItem.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb = dropItem.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             //Drop item fly to random direction when appear
-            rb.AddForce(Vector2.up * explodeForce, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2 (Random.Range(0.2f, -0.2f), 1f) * Random.Range(1, 1.5f), ForceMode2D.Impulse);
         }
     }
     public void CharacterSpawn()
@@ -124,7 +152,26 @@ public class GameManager : Singleton<GameManager>
             yield return null;
         }
         gameBackground.position = originalPos;
-    }    
+    }
+    public IEnumerator DeleteBullet()
+    {
+        GameObject[] shooters = GameObject.FindGameObjectsWithTag("Shooter");
+        foreach (GameObject shooter in shooters)
+        {
+            Destroy(shooter);
+        }
+        yield return null;
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach (GameObject bullet in bullets)
+        {
+            EnemyBullet bulletObj = bullet.GetComponent<EnemyBullet>();
+            if (bulletObj != null)
+            {
+                bulletObj.ChangeToPoint();
+            }
+        }
+        yield return null;
+    }
 }
 public struct BossInfo
 {

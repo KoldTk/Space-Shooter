@@ -22,7 +22,12 @@ public class PlayerControl : MonoBehaviour
         if (GameManager.Instance.playerLives > 0)
         {
             GameManager.Instance.playerSpell = 2;
+            GameManager.Instance.PowerUp(-20);
             EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
+            for (int i = 0; i < 10; i++)
+            {
+                GameManager.Instance.DropItem(transform);
+            }    
             StartCoroutine(SpawnSequence());
             GameManager.Instance.CharacterSpawn();
         }
@@ -50,13 +55,16 @@ public class PlayerControl : MonoBehaviour
     }
     private Vector3 RestrictMovement()
     {
-        if (gameObject.CompareTag("Player_Invi")) return transform.position;
         Vector3 pos = transform.position;
-        //Restrict movement
-        float halfHeight = subCam.orthographicSize;
-        float halfWidth = halfHeight * subCam.aspect;
 
-        // Set sub camera as center
+        float halfHeight = subCam.orthographicSize;
+        float aspect = (float)Screen.width / (float)Screen.height;
+        float halfWidth = halfHeight * aspect;
+
+        // Nếu camera chỉ chiếm một phần màn hình
+        halfWidth *= subCam.rect.width;
+        halfHeight *= subCam.rect.height;
+
         Vector3 camPos = subCam.transform.position;
 
         float minX = camPos.x - halfWidth;
@@ -82,7 +90,7 @@ public class PlayerControl : MonoBehaviour
     private IEnumerator InvincibleSequence()
     {
         playerCollider.enabled = false;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         playerCollider.enabled = true;
     }
     private IEnumerator SpawnSequence()

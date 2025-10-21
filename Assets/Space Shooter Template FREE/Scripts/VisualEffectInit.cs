@@ -9,6 +9,7 @@ public class VisualEffectInit : MonoBehaviour {
 
     [Tooltip("the time after object will be destroyed")]
     public float destructionTime;
+    public int effectID;
 
     private void OnEnable()
     {
@@ -17,7 +18,7 @@ public class VisualEffectInit : MonoBehaviour {
 
     IEnumerator Destruction() //wait for the estimated time, and destroying or deactivating the object
     {
-        yield return new WaitForSeconds(destructionTime); 
-        Destroy(gameObject);
+        yield return new WaitForSeconds(destructionTime);
+        EffectPool.Instance.ReturnToPool(effectID, gameObject);
     }
 }

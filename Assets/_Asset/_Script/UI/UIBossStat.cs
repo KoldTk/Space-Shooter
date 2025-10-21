@@ -29,11 +29,13 @@ public class UIBossStat : MonoBehaviour
         phaseCount = GameManager.Instance.bossInfo.phaseCount;
         EventDispatcher<int>.AddListener(Event.BossTakeDamage.ToString(), UpdateBossHealth);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), RefillHealth);
+        EventDispatcher<bool>.AddListener(Event.BossDie.ToString(), HideStat);
     }
     private void OnDisable()
     {
         EventDispatcher<int>.RemoveListener(Event.BossTakeDamage.ToString(), UpdateBossHealth);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), RefillHealth);
+        EventDispatcher<bool>.RemoveListener(Event.BossDie.ToString(), HideStat);
     }
     private void Update()
     {
@@ -102,5 +104,9 @@ public class UIBossStat : MonoBehaviour
         timeCounter.text = ((int)time).ToString();
         UpdatePhaseIcon(phases, phaseIcon, phaseIconTransform, phaseCount - 1);
         ShowHealthBar(GameManager.Instance.bossInfo.maxHealth);
+    } 
+    private void HideStat(bool isTrue)
+    {
+        gameObject.SetActive(false);
     }    
 }

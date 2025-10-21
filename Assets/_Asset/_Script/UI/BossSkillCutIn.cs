@@ -14,9 +14,13 @@ public class BossSkillCutIn : MonoBehaviour
     [SerializeField] private RectTransform[] warningTextLines;
     [SerializeField] private float moveDistance = 100f;
     [SerializeField] private RectTransform backgroundText;
+    [SerializeField] private TextMeshProUGUI bonusPointCounter;
+    [SerializeField] private GameObject bonusPointText;
     private Vector3[] backgroundTextStartPos;
     private Vector3 textStartingPos;
     private Vector3 imageStartingPos;
+    private float bonusPoint;
+    private bool counterStart = false;
     private void Awake()
     {
         backgroundTextStartPos = new Vector3[warningTextLines.Length];
@@ -31,12 +35,24 @@ public class BossSkillCutIn : MonoBehaviour
     {
         backgroundText.gameObject.SetActive(true);
         spellText.text = GameManager.Instance.bossInfo.phaseName;
+        bonusPoint = GameManager.Instance.bossInfo.phaseTime * 100000;
+        bonusPointCounter.text = $"Bonus: {bonusPoint}";
         cutInImage.transform.position = imageStartingPos;
         StartCoroutine(CutInSequence());
     }
     private void OnDisable()
     {
         spellText.transform.position = textStartingPos;
+        counterStart = false;
+        ShowCompletionBonus();
+    }
+    private void Update()
+    {
+        if (counterStart)
+        {
+            bonusPoint -= (Time.deltaTime * 100000);
+            bonusPointCounter.text = $"Bonus: {bonusPoint}";
+        }
     }
     private IEnumerator CutInSequence()
     {
@@ -47,6 +63,7 @@ public class BossSkillCutIn : MonoBehaviour
         FadeOutImage();
         TextMoveToTarget();
         FadeInWarningText();
+        counterStart = true;
         yield return new WaitForSeconds(1.5f);
         HideWarningText();
         cutInImage.transform.position = imageStartingPos;
@@ -109,5 +126,11 @@ public class BossSkillCutIn : MonoBehaviour
             warningTextLines[i].localPosition = backgroundTextStartPos[i];
             warningTextLines[i].DOKill();
         }
+    }
+    private void ShowCompletionBonus()
+    {
+        GameManager.Instance.bonusPoint = (int)bonusPoint;
+        bonusPointText.SetActive(true);
+        GameManager.Instance.ScoreUp((int)bonusPoint);
     }    
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 999380311698796507}
   - component: {fileID: 7523361935767439422}
   - component: {fileID: 802374312654667815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big Power-Up Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.23, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: dccaf6668d65aaf43973befefb9fe3ad, type: 3}
+  m_Sprite: {fileID: -1017911971, guid: e79c68c3f21ca274ba4a222a53d9c781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 2
-  value: 5
+  value: 3
 --- !u!70 &7523361935767439422
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -133,8 +133,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24}
-  m_Size: {x: 0.34, y: 0.55}
+  m_Offset: {x: 0, y: -0.01}
+  m_Size: {x: 0.33, y: 0.0001}
   m_Direction: 0
 --- !u!50 &802374312654667815
 Rigidbody2D:

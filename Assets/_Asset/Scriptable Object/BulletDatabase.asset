@@ -43,7 +43,7 @@ MonoBehaviour:
     prefab: {fileID: 3760153336955986303, guid: 454cfc2c7116e3b428807fd42efa88f5, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Enemy Bullet
+  - bulletName: Enemy Delay Bullet
     ID: 6
     prefab: {fileID: 3890756181438001215, guid: 50ce53bdbece3a040aa9256fff30b806, type: 3}
     moveSpeed: 5
@@ -81,5 +81,10 @@ MonoBehaviour:
   - bulletName: Enemy Blue Water Ball
     ID: 13
     prefab: {fileID: 4745701688984818537, guid: 6b5a678318375b94ea745b4dfc59c48f, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Delay Bullet Homing
+    ID: 14
+    prefab: {fileID: 3890756181438001215, guid: 24432fcdb02a6704eb5bd22e7010f4dd, type: 3}
     moveSpeed: 5
     damage: 2

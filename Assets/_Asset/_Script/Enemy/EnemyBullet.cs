@@ -25,6 +25,6 @@ public class EnemyBullet : MonoBehaviour
     public void ChangeToPoint()
     {
         BulletPool.Instance.ReturnToPool(bulletID, gameObject);
-        //Create item here
+        ItemPool.Instance.GetPrefab(6, transform.position, transform.rotation);
     }    
 }

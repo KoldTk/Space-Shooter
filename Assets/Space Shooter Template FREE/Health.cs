@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
-    public GameObject explodeEffectPrefab;
-    public GameObject hitEffectPrefab;
+    public int explodeEffectID;
+    public int hitEffectID;
     public int maxHP;
     public int currentHP;
     private void Awake()
@@ -14,14 +14,14 @@ public class Health : MonoBehaviour
     }
     public virtual void Die()
     {
-        var explosion = Instantiate(explodeEffectPrefab, transform.position, transform.rotation);
+        var explosion = EffectPool.Instance.GetPrefab(explodeEffectID, transform.position, transform.rotation);
         Destroy(gameObject);
     }
     public virtual void TakeDamage(int damage)
     {
         if (currentHP > 1)
         {
-            var hitEffect = Instantiate(hitEffectPrefab, transform.position, transform.rotation);
+            var hitEffect = EffectPool.Instance.GetPrefab(hitEffectID, transform.position, transform.rotation);
             currentHP -= damage;
             return;
         }
