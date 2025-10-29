@@ -48,7 +48,7 @@ MonoBehaviour:
     prefab: {fileID: 3890756181438001215, guid: 50ce53bdbece3a040aa9256fff30b806, type: 3}
     moveSpeed: 5
     damage: 2
-  - bulletName: Enemy Fire
+  - bulletName: Enemy Blue Bullet
     ID: 7
     prefab: {fileID: 5181505949268131994, guid: 282b7f1bc01392a489717e5c1bdb142f, type: 3}
     moveSpeed: 5
@@ -86,5 +86,35 @@ MonoBehaviour:
   - bulletName: Enemy Delay Bullet Homing
     ID: 14
     prefab: {fileID: 3890756181438001215, guid: 24432fcdb02a6704eb5bd22e7010f4dd, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Long Laser Bullet
+    ID: 15
+    prefab: {fileID: 6985380556292429932, guid: 7f700911d3b554741aedc3741f2caa05, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Wind Bullet
+    ID: 16
+    prefab: {fileID: 5181505949268131994, guid: 3a6aff83895200e448656930f9c12053, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Size Change Bullet
+    ID: 17
+    prefab: {fileID: 2118508334098984004, guid: 4df4cc1f0a3c4c04b9cf2dec4dbf3574, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Size Change Bullet
+    ID: 18
+    prefab: {fileID: 2118508334098984004, guid: 07b05a8a1396d3b4b8279819b10f21c1, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Curve Bullet
+    ID: 19
+    prefab: {fileID: 2193489095253957770, guid: dfb449f195edff1408f27c4d61dc075b, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Curve Bullet 2
+    ID: 20
+    prefab: {fileID: 2193489095253957770, guid: 29fb8115e9360044088a8e222229a28d, type: 3}
     moveSpeed: 5
     damage: 2

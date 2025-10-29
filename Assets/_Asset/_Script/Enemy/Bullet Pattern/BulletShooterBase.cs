@@ -201,7 +201,7 @@ public class BulletShooterBase : MonoBehaviour
         {
             waveBullet.Init(worldDir, bulletSpeed, waveAmp, frequency);
         }
-    }    
+    } 
     private void RotateBulletDirection(Vector2 destination, GameObject bullet)
     {
         Vector2 position = bullet.transform.position; 
