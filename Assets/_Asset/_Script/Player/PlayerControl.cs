@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -9,32 +10,16 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private GameObject spellBomb;
     [SerializeField] private GameObject normalMode;
     [SerializeField] private GameObject focusMode;
-    [SerializeField] private GameObject magicCircle;
     [SerializeField] private Collider2D playerCollider;
-    private Vector3 startingPos = new Vector3(-3,-3.5f,0);
+
     private void OnEnable()
     {
         StartCoroutine(InvincibleSequence());
     }
     private void OnDisable()
     {
-        GameManager.Instance.playerLives--;
-        if (GameManager.Instance.playerLives > 0)
-        {
-            GameManager.Instance.playerSpell = 2;
-            GameManager.Instance.PowerUp(-20);
-            EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
-            for (int i = 0; i < 10; i++)
-            {
-                GameManager.Instance.DropItem(transform);
-            }    
-            StartCoroutine(SpawnSequence());
-            GameManager.Instance.CharacterSpawn();
-        }
-        else
-        {
-            //Game Over or Continue
-        }
+        EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
+        Debug.Log("Player Die");
     }
     void Update()
     {
@@ -61,7 +46,7 @@ public class PlayerControl : MonoBehaviour
         float aspect = (float)Screen.width / (float)Screen.height;
         float halfWidth = halfHeight * aspect;
 
-        // Nếu camera chỉ chiếm một phần màn hình
+        // If camera only take a path of the screen
         halfWidth *= subCam.rect.width;
         halfHeight *= subCam.rect.height;
 
@@ -76,7 +61,8 @@ public class PlayerControl : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         return pos;
-    }    
+    }
+
     private void UseSpell()
     {
         if (!GameManager.Instance.playerUsingSpell && GameManager.Instance.playerSpell > 0)
@@ -92,11 +78,6 @@ public class PlayerControl : MonoBehaviour
         playerCollider.enabled = false;
         yield return new WaitForSeconds(1f);
         playerCollider.enabled = true;
-    }
-    private IEnumerator SpawnSequence()
-    {
-        Instantiate(magicCircle, transform.position, transform.rotation);
-        yield return new WaitForSeconds (1f);
     }
     private void SwitchModeHandler()
     {

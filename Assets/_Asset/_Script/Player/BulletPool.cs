@@ -9,8 +9,9 @@ public class BulletPool : Singleton<BulletPool>
     [SerializeField] private Transform parentTransform;
     [SerializeField] private BulletDatabase bulletDatabase;
     private Dictionary<int, Queue<GameObject>> enemyPool;
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         PoolInitialize();
     }
     public void PoolInitialize()

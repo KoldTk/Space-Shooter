@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public int hitEffectID;
     public int maxHP;
     public int currentHP;
-    private void Awake()
+    private void Start()
     {
         currentHP = maxHP;
     }

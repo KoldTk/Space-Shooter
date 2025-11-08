@@ -7,14 +7,8 @@ public class BestScoreMainMenu : MonoBehaviour
 {
     public Text bestScore;
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

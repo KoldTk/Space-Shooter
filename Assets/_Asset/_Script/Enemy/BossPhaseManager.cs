@@ -36,6 +36,7 @@ public class BossPhaseManager : MonoBehaviour
     [SerializeField] private GameObject cutInAnim;
     [SerializeField] private string bossName;
     [SerializeField] private BackgroundFadeIn spellBackground;
+    [SerializeField] private GameObject magicCircle;
 
     private void OnEnable()
     {
@@ -131,6 +132,7 @@ public class BossPhaseManager : MonoBehaviour
         if(phase.isSpell)
         {
             cutInAnim.SetActive(true);
+            magicCircle.SetActive(true);
             spellBackground.ShowBackground();
         }
         yield return new WaitForSeconds(1f);
@@ -142,6 +144,7 @@ public class BossPhaseManager : MonoBehaviour
     }
     private void HideSpellBackground(bool isHided)
     {
+        magicCircle.SetActive(false);
         spellBackground.HideBackground();
     }
     private void StopAction(bool isDead)

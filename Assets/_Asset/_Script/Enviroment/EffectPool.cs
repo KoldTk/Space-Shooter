@@ -8,8 +8,9 @@ public class EffectPool : Singleton<EffectPool>
     [SerializeField] private Transform parentTransform;
     [SerializeField] private EffectDatabase effectDatabase;
     private Dictionary<int, Queue<GameObject>> effectPool;
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         PoolInitialize();
     }
     public void PoolInitialize()

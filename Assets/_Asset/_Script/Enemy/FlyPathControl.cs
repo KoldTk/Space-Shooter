@@ -7,8 +7,15 @@ public class FlyPathControl : MonoBehaviour
 {
     [HideInInspector] public FlyPath flyPath;
     public float flySpeed;
+    private float initialSpeed;
     private int nextIndex;
     [SerializeField] private GameObject shooter;
+    [SerializeField] private bool stayInPlace;
+    [SerializeField] private float waitTime;
+    private void Start()
+    {
+        initialSpeed = flySpeed;
+    }
     void Update()
     {
         if (flyPath == null)
@@ -17,8 +24,16 @@ public class FlyPathControl : MonoBehaviour
         }
         if (nextIndex >= flyPath.wayPoints.Length)
         {
-            Destroy(gameObject);
-            return;
+            if (!stayInPlace)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            else
+            {
+                flySpeed = 0;
+                return;
+            }
         }
         if (transform.position != flyPath[nextIndex])
         {
@@ -29,7 +44,6 @@ public class FlyPathControl : MonoBehaviour
         {
             nextIndex++;
         }
-
     }
 
     private void FlyToNextWaypoint()
@@ -37,10 +51,9 @@ public class FlyPathControl : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex], flySpeed * Time.deltaTime);
         if (transform.position == flyPath[1])
         {
-            EventDispatcher<Transform>.Dispatch(Event.EnemyAttack.ToString(), transform);
+            StartCoroutine(AttackSequence());
         }    
     }
-
     private void LookAt(Vector2 destination)
     {
         Vector2 position = transform.position;
@@ -50,4 +63,11 @@ public class FlyPathControl : MonoBehaviour
         var angle = Vector2.SignedAngle(Vector2.down, lookDirection);
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+    private IEnumerator AttackSequence()
+    {
+        flySpeed = 0;
+        shooter.SetActive(true);
+        yield return new WaitForSeconds(waitTime);
+        flySpeed = initialSpeed;
+    }    
 }

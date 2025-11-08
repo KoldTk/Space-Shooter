@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rightActorName;
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color dimColor = Color.gray;
+    [SerializeField] private GameObject resultMenu;
     public TextMeshProUGUI message;
     private DialogueData currentDialogue;
     private int leftActorId = 0;
@@ -52,7 +53,6 @@ public class DialogueManager : MonoBehaviour
     {
         currentDialogue = GameManager.Instance.LoadDialogue(fileName);
         if (currentDialogue == null) return;
-
         activeMessage = 0;
         GameManager.Instance.dialogueOn = true;
         transform.DOScale(Vector3.one, 0.5f);
@@ -78,7 +78,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            //To result menu
+            resultMenu.SetActive(true);
         }    
     }    
     private IEnumerator TypeMessageLine(string dialogueLine)

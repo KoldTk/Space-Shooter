@@ -10,7 +10,16 @@ public class ChangeScene : MonoBehaviour
     public void SwitchScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(sceneName);
-        
+        StartCoroutine(LoadSceneCoroutine(sceneName));
+    }
+    private IEnumerator LoadSceneCoroutine(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log($"Loading progress: {asyncLoad.progress}");
+            yield return null;
+        }
     }
 }

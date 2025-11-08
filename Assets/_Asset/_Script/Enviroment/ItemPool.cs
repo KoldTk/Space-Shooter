@@ -8,8 +8,9 @@ public class ItemPool : Singleton<ItemPool>
     [SerializeField] private Transform parentTransform;
     [SerializeField] private ItemDatabase itemDatabase;
     private Dictionary<int, Queue<GameObject>> itemPool;
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         PoolInitialize();
     }
     public void PoolInitialize()

@@ -23,6 +23,8 @@ public enum Event
     StartAfterBossDialogue,
     GameStart,
     PlayIntro,
+    OpenRetryMenu,
+    Retry,
 }
 public class EventDispatcher<T>
 {

@@ -8,9 +8,11 @@ using UnityEngine.UI;
 public class UIGameplay : MonoBehaviour
 {
     [SerializeField] private GameObject introImage;
+    [SerializeField] private GameObject retryMenu;
     [Header("Score UI")]
     public TextMeshProUGUI bestScore;
     public TextMeshProUGUI currentScore;
+    public TextMeshProUGUI evadePoint;
 
     [Header("Point UI")]
     public Slider power;
@@ -45,8 +47,8 @@ public class UIGameplay : MonoBehaviour
         EventDispatcher<bool>.AddListener(Event.CharacterDie.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.AddListener(Event.UsingSpell.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.AddListener(Event.BossStartAttack.ToString(), ShowBossHealthBar);
+        EventDispatcher<bool>.AddListener(Event.OpenRetryMenu.ToString(), ShowRetryMenu);
     }
-
     private void OnDisable()
     {
         EventDispatcher<bool>.RemoveListener(Event.StatusChange.ToString(), UpdateStat);
@@ -55,6 +57,7 @@ public class UIGameplay : MonoBehaviour
         EventDispatcher<bool>.RemoveListener(Event.CharacterDie.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.RemoveListener(Event.UsingSpell.ToString(), UpdateSpellLivesOnUI);
         EventDispatcher<bool>.RemoveListener(Event.BossStartAttack.ToString(), ShowBossHealthBar);
+        EventDispatcher<bool>.RemoveListener(Event.OpenRetryMenu.ToString(), ShowRetryMenu);
     }
 
     private void UpdateStat(bool isChanged)
@@ -77,6 +80,7 @@ public class UIGameplay : MonoBehaviour
     {
         //Update Score on UI
         currentScore.text = GameManager.Instance.playerScore.ToString("D12");
+        evadePoint.text = ((int)GameManager.Instance.evadePoint).ToString();
         if (GameManager.Instance.playerScore > GameManager.Instance.playerBest)
         {
             bestScore.text = GameManager.Instance.playerScore.ToString("D12");
@@ -116,5 +120,8 @@ public class UIGameplay : MonoBehaviour
     {
         bossHealthBar.SetActive(isOn);
     }
-
+    private void ShowRetryMenu(bool isOn)
+    {
+        retryMenu.SetActive(isOn);
+    }    
 }

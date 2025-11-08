@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public int playerSpell;
     [HideInInspector] public int rewardPoint;
     [HideInInspector] public int powerStage;
+    [HideInInspector] public float evadePoint;
     [HideInInspector] public float playerSpeed;
     [HideInInspector] public int expMilestone;
     [HideInInspector] public bool playerUsingSpell;
@@ -19,18 +20,16 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public BossInfo bossInfo;
     [HideInInspector] public bool allowInput = true;
     [HideInInspector] public int bonusPoint;
-
-    [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private Transform charSpawnPos;
-    [SerializeField] private Transform playerParent;
-    [SerializeField] private GameObject appearEffect;
-    [SerializeField] private Transform gameBackground;
+    [HideInInspector] public bool playerDie;
+    [HideInInspector] public int retryCount;
+    [HideInInspector] public Transform gameBackground;
     private int scoreMilestone = 20000000;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         GameStartSetup();
     }
-    private void GameStartSetup()
+    public void GameStartSetup()
     {
         playerScore = 0;
         playerLives = 3;
@@ -38,6 +37,7 @@ public class GameManager : Singleton<GameManager>
         playerPower = 0;
         rewardPoint = 0;
         powerStage = 0;
+        retryCount = 2;
         playerSpeed = 5;
         expMilestone = 16;
         dialogueOn = false;
@@ -49,6 +49,12 @@ public class GameManager : Singleton<GameManager>
         playerPower += value;
         EventDispatcher<bool>.Dispatch(Event.StatusChange.ToString(), true);
     }
+    public void DeathPenalty()
+    {
+        playerPower = Mathf.Clamp(playerPower, 0, 128);
+        playerPower /= 2;
+        EventDispatcher<bool>.Dispatch(Event.StatusChange.ToString(), true);
+    }    
     public void ManaPointUp(int value)
     {
         rewardPoint += value;
@@ -79,21 +85,22 @@ public class GameManager : Singleton<GameManager>
         GameObject dropItem;
         
         float rate = Random.Range(0, 1000f);
-        if (rate < 500)
+        if (rate < 400)
         {
-            //Small power up drop rate: 50%
+            //Small power up drop rate: 40%
             if (playerPower < 128)
             {
                 dropItem = ItemPool.Instance.GetPrefab(0, transform.position, Quaternion.identity);
             }
             else
             {
+                //Drop energy if power max
                 dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
             }    
         }
         else if (rate < 900)
         {
-            //Mana drop rate: 40%
+            //Mana drop rate: 60%
             dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
         }
         else if (rate < 945f)
@@ -117,11 +124,6 @@ public class GameManager : Singleton<GameManager>
             //Drop item fly to random direction when appear
             rb.AddForce(new Vector2 (Random.Range(0.2f, -0.2f), 1f) * Random.Range(1, 1.5f), ForceMode2D.Impulse);
         }
-    }
-    public void CharacterSpawn()
-    {
-        Instantiate(appearEffect, charSpawnPos.position, Quaternion.identity, playerParent);
-        Instantiate(playerPrefab, charSpawnPos.position, Quaternion.identity, playerParent);  
     }
     public DialogueData LoadDialogue(string filePath)
     {

@@ -6,6 +6,7 @@ using UnityEngine;
 public class MagicCircle : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 90f;
+    private float timer;
     private void OnEnable()
     {
         ShooterRotate();

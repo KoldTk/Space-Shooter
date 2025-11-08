@@ -118,3 +118,18 @@ MonoBehaviour:
     prefab: {fileID: 2193489095253957770, guid: 29fb8115e9360044088a8e222229a28d, type: 3}
     moveSpeed: 5
     damage: 2
+  - bulletName: Enemy Green Bullet
+    ID: 21
+    prefab: {fileID: 994039558805766133, guid: 556ce4c7eb64c4e429e7bf1488083fe0, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy White Bullet
+    ID: 22
+    prefab: {fileID: 994039558805766133, guid: e36f9e060fb1bfe4a92578e3404ef055, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy All Blue Bullet
+    ID: 23
+    prefab: {fileID: 5181505949268131994, guid: b2c06119494d7024e82fc34676ba967e, type: 3}
+    moveSpeed: 5
+    damage: 2

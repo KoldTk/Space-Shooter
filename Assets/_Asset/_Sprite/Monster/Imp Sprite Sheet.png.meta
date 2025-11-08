@@ -1,0 +1,1491 @@
+fileFormatVersion: 2
+guid: 88b9a6a7ea7424a429c58bd311e14ac7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 352
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95cdcd94a439ce42ae67aeac3abea4f
+      internalID: -1227081840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 352
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156794fe34ff038469dbfbb37554c61b
+      internalID: -277284153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 352
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6324b520692be794693d19e8511ee836
+      internalID: 2017357331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 352
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd852ca8a99a024fa6c35fbd6019614
+      internalID: 1733325574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 352
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ad0cc13f44a0843b7642683986e2cf
+      internalID: 1946082548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 352
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7b3fdda0011564cbedb44d559e3261
+      internalID: 996954477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 352
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320ce600e7d1430478506ba5529e1bf4
+      internalID: 1042731359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 321
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e096329c06be749b43c2a3a4b4cb7a
+      internalID: 136897970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 322
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d4dce1bc63289468eff682569bf9b2
+      internalID: -525517370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 321
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7c3bab274f14a43ae74085ab2c83e5
+      internalID: -877904261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 320
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55476ad3b59e3e84b989cfb40cb28ef2
+      internalID: 2066504325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 321
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead8469bd1c1e3745bbf676d200ee389
+      internalID: -1496655824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 322
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450844ae8abda7c4184e45cb7270386c
+      internalID: 1114102014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 321
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa1813cfbf91664daaf4591b478436f
+      internalID: -1953185853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 320
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697d04b35ddd9a34b9e1c135547e31dc
+      internalID: -428569727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 288
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d48d2e1ca33774cb76fafed53d2435
+      internalID: 1363540973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 288
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db1dfc6df0fae94d88d8a1a0bba808f
+      internalID: -1838767202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 288
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6831ebccb599b814aac3d5b48734eb37
+      internalID: -1343312761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 288
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245d18dece4c81148abefb4926b3459d
+      internalID: -634355204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 288
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3021648ad139efd4fbf9dc4076718231
+      internalID: -833127282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 288
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb6266cdae502748bbdf55fe645b510
+      internalID: 1703948389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 256
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e9c045808c35c48975250258a65771
+      internalID: -1179755960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 256
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012b9e7e34bb1e6438b65e7365276cb0
+      internalID: -742790990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 256
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba5a98b2d685ec498225f927eb951a2
+      internalID: 1910915820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 256
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044306cad5eb4e847ac5ad2b02d34dee
+      internalID: -1395800090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 196
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4fda7e1ba9b0c4e9597388863d5758
+      internalID: 1948196465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 224
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa10f62851bad5844a9d3cf32663c104
+      internalID: -501915327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 197
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f4088b1ebcdea43bd29e7b8586b93e
+      internalID: -2010346181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 197
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ab96440a9ec5c46948f1e773eb43b8
+      internalID: -2037999825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 224
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27077f4a00206f74da9366a27f5e38c5
+      internalID: 1388384596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 195
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89cf7cc26cac7c47bb759a86b1cfe10
+      internalID: 44860816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 160
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82568ad7e3933b4449ec239820bb3ac4
+      internalID: -321323232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 160
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c62e6ce10d693e4e8698f87cceee62a
+      internalID: -1160416658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 160
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159d81473ec2e124b9473aa18fc8171c
+      internalID: -364175967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 160
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84830bc8081640341b7d876f25e87ff3
+      internalID: -890252361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 160
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e30cbae90ba0845bbd8eb63267647e
+      internalID: -1372489074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 160
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324c5b68c2b73a748a1710f60a44e319
+      internalID: 887800251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02810e66227907045aa60b3d99b034fe
+      internalID: -968627926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 129
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6313a79e883465946839d0ac19f34f3e
+      internalID: -1973001143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 130
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13941498d61b13548b806dd1e9b08deb
+      internalID: -392748970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 129
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180de1cf2b969d742981d0d8348efafe
+      internalID: -830440722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 128
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bc5cf1054ba634489e033036203afc
+      internalID: -2110614779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 129
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680162a906e60124b82540c4a66e3b97
+      internalID: -1208045997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 130
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d15cbfdd78de34428424ccd594d25b6
+      internalID: -1144551117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 129
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccfbdccc7a7c8b4ea2d115822369f90
+      internalID: -1606501123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 128
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cee1f319932fe54a8e3aaa5b2ac997b
+      internalID: 1596787078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 96
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5d408ab788f0743830013641cef366
+      internalID: 33520622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 96
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8403fddc5fc11164da84ebcd2820def9
+      internalID: -2099242490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 96
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9183b5955d21c4eaaf6616ed1b5e19
+      internalID: 593390746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6c8bdbf4f0d4e44b81dea7ac589b8f
+      internalID: 1657952612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 96
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057fc682025bc3c4cbe982af97902275
+      internalID: -1961756891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 96
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3a4978f3f3bbf4c8f55eaba7df6646
+      internalID: -1564366381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 64
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552fe244f7e6f23489451310ea4a41a8
+      internalID: 775969880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 64
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d29b4b102ab00641911f2179d534aeb
+      internalID: -380076876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 64
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b246cb92995d954084615f425b9f020
+      internalID: -2107591842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 64
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f2fead588defb4582d0d52ebee9c1b
+      internalID: -1528236784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6
+        width: 15
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935eaa6aa5a28ff448b74f4ef9de7cfd
+      internalID: 606613972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108b8fcd4485c694dacb866ee580dbb2
+      internalID: -1495255706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 4
+        width: 81
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f17e0711ea6e84d9a71ef5077681fe
+      internalID: -1739031266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 32
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b77c9edcb91a74dadc95aa54772c3f
+      internalID: 277249931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 32
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75302c4f656e75e4596af0282c9aa661
+      internalID: -355030306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp Sprite Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e68285b526df8e4dae510596546352b
+      internalID: 2131624428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Imp Sprite Sheet_0: -1227081840
+      Imp Sprite Sheet_1: -277284153
+      Imp Sprite Sheet_10: 2066504325
+      Imp Sprite Sheet_11: -1496655824
+      Imp Sprite Sheet_12: 1114102014
+      Imp Sprite Sheet_13: -1953185853
+      Imp Sprite Sheet_14: -428569727
+      Imp Sprite Sheet_15: 1363540973
+      Imp Sprite Sheet_16: -1838767202
+      Imp Sprite Sheet_17: -1343312761
+      Imp Sprite Sheet_18: -634355204
+      Imp Sprite Sheet_19: -833127282
+      Imp Sprite Sheet_2: 2017357331
+      Imp Sprite Sheet_20: 1703948389
+      Imp Sprite Sheet_21: -1179755960
+      Imp Sprite Sheet_22: -742790990
+      Imp Sprite Sheet_23: 1910915820
+      Imp Sprite Sheet_24: -1395800090
+      Imp Sprite Sheet_25: 1948196465
+      Imp Sprite Sheet_26: -501915327
+      Imp Sprite Sheet_27: -2010346181
+      Imp Sprite Sheet_28: -2037999825
+      Imp Sprite Sheet_29: 1388384596
+      Imp Sprite Sheet_3: 1733325574
+      Imp Sprite Sheet_30: 44860816
+      Imp Sprite Sheet_31: -321323232
+      Imp Sprite Sheet_32: -1160416658
+      Imp Sprite Sheet_33: -364175967
+      Imp Sprite Sheet_34: -890252361
+      Imp Sprite Sheet_35: -1372489074
+      Imp Sprite Sheet_36: 887800251
+      Imp Sprite Sheet_37: -968627926
+      Imp Sprite Sheet_38: -1973001143
+      Imp Sprite Sheet_39: -392748970
+      Imp Sprite Sheet_4: 1946082548
+      Imp Sprite Sheet_40: -830440722
+      Imp Sprite Sheet_41: -2110614779
+      Imp Sprite Sheet_42: -1208045997
+      Imp Sprite Sheet_43: -1144551117
+      Imp Sprite Sheet_44: -1606501123
+      Imp Sprite Sheet_45: 1596787078
+      Imp Sprite Sheet_46: 33520622
+      Imp Sprite Sheet_47: -2099242490
+      Imp Sprite Sheet_48: 593390746
+      Imp Sprite Sheet_49: 1657952612
+      Imp Sprite Sheet_5: 996954477
+      Imp Sprite Sheet_50: -1961756891
+      Imp Sprite Sheet_51: -1564366381
+      Imp Sprite Sheet_52: 775969880
+      Imp Sprite Sheet_53: -380076876
+      Imp Sprite Sheet_54: -2107591842
+      Imp Sprite Sheet_55: -1528236784
+      Imp Sprite Sheet_56: 606613972
+      Imp Sprite Sheet_57: -1495255706
+      Imp Sprite Sheet_58: -1739031266
+      Imp Sprite Sheet_59: 277249931
+      Imp Sprite Sheet_6: 1042731359
+      Imp Sprite Sheet_60: -355030306
+      Imp Sprite Sheet_61: 2131624428
+      Imp Sprite Sheet_7: 136897970
+      Imp Sprite Sheet_8: -525517370
+      Imp Sprite Sheet_9: -877904261
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
