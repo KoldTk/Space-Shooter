@@ -1,77 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &330679873731408823
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3697316710338445909}
-  - component: {fileID: 5120118953689476690}
-  m_Layer: 0
-  m_Name: Shooter (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &3697316710338445909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330679873731408823}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6920248150761818918}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &5120118953689476690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330679873731408823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
-  shootType: 1
-  bulletType: 0
-  fireRate: 1
-  fireDuration: 0
-  shootCount: 3
-  targetSpeed: 0
-  delayTime: 0
-  accelRate: 0
-  waveAmp: 0
-  frequency: 0
-  patternType: 2
-  radialConfig:
-    bulletCount: 0
-  spiralConfig:
-    spiralAngle: 0
-    spiralSpeed: 0
-    clockwise: 0
-  waveConfig:
-    bulletCount: 10
-    spreadAngle: 120
-  straightConfig:
-    bulletCount: 5
-    offset: 0
-  randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
 --- !u!1 &1685163386491226801
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +108,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8826826326609482384}
-  - {fileID: 3697316710338445909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1253778972462349748

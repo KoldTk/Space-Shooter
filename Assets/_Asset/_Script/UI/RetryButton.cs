@@ -8,5 +8,6 @@ public class RetryButton : MonoBehaviour
     {
         EventDispatcher<bool>.Dispatch(Event.Retry.ToString(), true);
         transform.parent.gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
     }    
 }

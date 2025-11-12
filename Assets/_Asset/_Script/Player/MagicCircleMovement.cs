@@ -18,6 +18,10 @@ public class MagicCircleMovement : MonoBehaviour
         GameManager.Instance.playerUsingSpell = false;
         transform.DOKill();
     }
+    private void OnDestroy()
+    {
+        transform.DOKill();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
@@ -46,6 +50,6 @@ public class MagicCircleMovement : MonoBehaviour
         //Set target scale
         transform.localScale = target;
         yield return new WaitForSeconds(0.2f);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     } 
 }

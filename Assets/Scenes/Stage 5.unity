@@ -791,7 +791,7 @@ RectTransform:
   m_Father: {fileID: 302273308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1391,7 +1391,7 @@ RectTransform:
   m_Father: {fileID: 2093808339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1574,7 +1574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &382087204
 Transform:
   m_ObjectHideFlags: 0
@@ -4161,6 +4161,7 @@ MonoBehaviour:
   - {fileID: 1061293657}
   - {fileID: 873202410}
   changeSceneButton: {fileID: 0}
+  isEndStage: 0
 --- !u!1 &974073495
 GameObject:
   m_ObjectHideFlags: 0
@@ -9076,7 +9077,7 @@ GameObject:
   - component: {fileID: 2000302745}
   - component: {fileID: 2000302744}
   m_Layer: 7
-  m_Name: Pluvia (Boss)
+  m_Name: Chaos (Boss)
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10152,10 +10153,6 @@ MonoBehaviour:
   bonusPoint: 0
   playerDie: 0
   retryCount: 0
-  playerPrefab: {fileID: 750253098321620967, guid: 8e7e877316bbc29498bdd36272e3f6d8, type: 3}
-  charSpawnPos: {fileID: 0}
-  playerParent: {fileID: 0}
-  appearEffect: {fileID: 2574858191833707758, guid: dd1e4b4ff0b02544a8bf4fca2face3e7, type: 3}
   gameBackground: {fileID: 0}
 --- !u!114 &5316822263385397632
 MonoBehaviour:

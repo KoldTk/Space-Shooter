@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   angle: 360
+  rotateType: 0
 --- !u!1 &6363012182523754334
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,8 +109,8 @@ MonoBehaviour:
   bulletSpeed: 2
   shootType: 0
   bulletType: 0
-  fireRate: 0.3
-  fireDuration: 10
+  fireRate: 0.2
+  fireDuration: 5
   shootCount: 0
   targetSpeed: 0
   delayTime: 0

@@ -122,6 +122,10 @@ public class BossPhaseManager : MonoBehaviour
     private IEnumerator DoAttackAtPoint(AttackPoint point)
     {
         GameObject shooter = Instantiate(point.shooterPrefab, point.destination.position, Quaternion.identity);
+        if (point.shootWhileMoving)
+        {
+            shooter.transform.SetParent(boss);
+        }    
         Destroy(shooter, point.shooterDuration);
         //Wait before new action
         yield return new WaitForSeconds(point.actionDelay);

@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private GameObject magicCircle;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
+    private bool isDead;
     private void Awake()
     {
         CharacterSpawn();

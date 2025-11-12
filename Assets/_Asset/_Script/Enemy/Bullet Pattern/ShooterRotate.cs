@@ -21,6 +21,14 @@ public class ShooterRotate : MonoBehaviour
             .SetLoops(-1, loopType)
             .SetEase(Ease.Linear);
     }
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
+    private void OnDestroy()
+    {
+        transform.DOKill();
+    }
     private LoopType GetLoopType()
     {
         switch (rotateType)

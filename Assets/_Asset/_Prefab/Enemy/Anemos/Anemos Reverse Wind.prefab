@@ -58,10 +58,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletID: 7
-  bulletSpeed: 1.5
+  bulletSpeed: 2
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.3
   fireDuration: 10
   shootCount: 0
   targetSpeed: 0
@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletID: 7
-  bulletSpeed: 1.5
+  bulletSpeed: 2
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.3
   fireDuration: 10
   shootCount: 0
   targetSpeed: 0
@@ -217,9 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f293cd860926f24449a3f89b33ca6d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 10
+  duration: 5
   angle: 360
-  rotateType: 0
+  rotateType: 1
 --- !u!1 &7966197195967979531
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,10 +278,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletID: 7
-  bulletSpeed: 1.5
+  bulletSpeed: 2
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.3
   fireDuration: 10
   shootCount: 0
   targetSpeed: 0
