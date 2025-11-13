@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1747142951623644120
+--- !u!1 &2243890080439879383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1685082454099435643}
-  - component: {fileID: 379085844430659570}
-  - component: {fileID: 3109323685252472973}
+  - component: {fileID: 7632020888354305131}
+  m_Layer: 7
+  m_Name: Solyn Normal 9
+  m_TagString: Shooter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7632020888354305131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243890080439879383}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.28, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9216995685170360391}
+  - {fileID: 4978456880450655717}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4348127298691633101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4978456880450655717}
+  - component: {fileID: 7007430652959670528}
+  - component: {fileID: 3779415281861015098}
   m_Layer: 7
   m_Name: Shooter Middle (1)
   m_TagString: Untagged
@@ -18,74 +51,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1685082454099435643
+--- !u!4 &4978456880450655717
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747142951623644120}
+  m_GameObject: {fileID: 4348127298691633101}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 6.27, y: -1.9799998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4376871654341966984}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &379085844430659570
+  m_Father: {fileID: 7632020888354305131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &7007430652959670528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747142951623644120}
+  m_GameObject: {fileID: 4348127298691633101}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3109323685252472973
+--- !u!114 &3779415281861015098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747142951623644120}
+  m_GameObject: {fileID: 4348127298691633101}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
-  bulletSpeed: 1
-  shootType: 1
-  bulletType: 2
-  fireRate: 0.2
-  fireDuration: 60
-  shootCount: 20
-  targetSpeed: 3
-  delayTime: 0.5
-  accelRate: 2
-  waveAmp: 0
-  frequency: 0
-  patternType: 3
+  bulletID: 8
+  bulletSpeed: 2
+  shootType: 0
+  bulletType: 3
+  fireRate: 0.3
+  fireDuration: 15
+  shootCount: 5
+  targetSpeed: 2
+  delayTime: 4
+  accelRate: 10
+  waveAmp: -1
+  frequency: 2
+  patternType: 0
   radialConfig:
-    bulletCount: 40
+    bulletCount: 20
   spiralConfig:
     spiralAngle: -5
-    spiralSpeed: 5
+    spiralSpeed: 10
     clockwise: 1
   waveConfig:
     bulletCount: 0
     spreadAngle: 0
   straightConfig:
-    bulletCount: 10
+    bulletCount: 1
     offset: 0
   randomConfig:
     spreadAngle: 0
     bulletCount: 0
---- !u!1 &7339483437628702337
+--- !u!1 &5776643472109708429
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,9 +126,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 899402331770789788}
-  - component: {fileID: 8257070977612052011}
-  - component: {fileID: 4566760923188968274}
+  - component: {fileID: 9216995685170360391}
+  - component: {fileID: 7555589851252981930}
+  - component: {fileID: 8494515296490808155}
   m_Layer: 7
   m_Name: Shooter Middle
   m_TagString: Untagged
@@ -103,103 +136,70 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &899402331770789788
+--- !u!4 &9216995685170360391
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7339483437628702337}
+  m_GameObject: {fileID: 5776643472109708429}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 6.27, y: -1.9799998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4376871654341966984}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &8257070977612052011
+  m_Father: {fileID: 7632020888354305131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &7555589851252981930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7339483437628702337}
+  m_GameObject: {fileID: 5776643472109708429}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4566760923188968274
+--- !u!114 &8494515296490808155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7339483437628702337}
+  m_GameObject: {fileID: 5776643472109708429}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
-  bulletSpeed: 1
-  shootType: 1
-  bulletType: 2
-  fireRate: 0.2
-  fireDuration: 60
-  shootCount: 20
-  targetSpeed: 3
-  delayTime: 0.5
-  accelRate: 2
-  waveAmp: 0
-  frequency: 0
-  patternType: 3
+  bulletID: 8
+  bulletSpeed: 2
+  shootType: 0
+  bulletType: 3
+  fireRate: 0.3
+  fireDuration: 15
+  shootCount: 5
+  targetSpeed: 2
+  delayTime: 4
+  accelRate: 10
+  waveAmp: 1
+  frequency: 2
+  patternType: 0
   radialConfig:
-    bulletCount: 40
+    bulletCount: 20
   spiralConfig:
     spiralAngle: -5
-    spiralSpeed: 5
+    spiralSpeed: 10
     clockwise: 1
   waveConfig:
     bulletCount: 0
     spreadAngle: 0
   straightConfig:
-    bulletCount: 10
+    bulletCount: 1
     offset: 0
   randomConfig:
     spreadAngle: 0
     bulletCount: 0
---- !u!1 &7547681079044355849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4376871654341966984}
-  m_Layer: 7
-  m_Name: Solyn Normal 4
-  m_TagString: Shooter
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4376871654341966984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7547681079044355849}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.5735764, w: 0.8191521}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 899402331770789788}
-  - {fileID: 1685082454099435643}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 70}
