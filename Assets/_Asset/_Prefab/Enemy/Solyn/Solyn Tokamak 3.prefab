@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249898687533088905}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8976651989917303027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1585738057530804573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,19 +57,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
-  bulletSpeed: 3
+  bulletID: 7
+  bulletSpeed: 2
   shootType: 0
-  bulletType: 2
-  fireRate: 0.5
-  fireDuration: 20
+  bulletType: 1
+  fireRate: 0.4
+  fireDuration: 60
   shootCount: 1
   targetSpeed: -2
-  delayTime: 3
+  delayTime: 0.5
   accelRate: 1.5
   waveAmp: 0
   frequency: 0
-  patternType: 0
+  patternType: 2
   radialConfig:
     bulletCount: 30
   spiralConfig:
@@ -77,8 +77,8 @@ MonoBehaviour:
     spiralSpeed: 5
     clockwise: 1
   waveConfig:
-    bulletCount: 0
-    spreadAngle: 0
+    bulletCount: 5
+    spreadAngle: 60
   straightConfig:
     bulletCount: 1
     offset: 0
@@ -94,7 +94,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8976651989917303027}
-  - component: {fileID: 5400624931834925408}
   m_Layer: 7
   m_Name: Solyn Tokamak 3
   m_TagString: Shooter
@@ -118,18 +117,3 @@ Transform:
   - {fileID: 840996045476133366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5400624931834925408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8471985929129942962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f293cd860926f24449a3f89b33ca6d38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 10
-  angle: 360
-  rotateType: 0

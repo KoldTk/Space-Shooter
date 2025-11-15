@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 23842394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: -0.2, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -342,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 46382066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 0.8, z: -0.177}
+  m_LocalPosition: {x: -1.93, y: 4.02, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -750,6 +750,50 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105753837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &124020054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124020055}
+  - component: {fileID: 124020056}
+  m_Layer: 0
+  m_Name: Destination 1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124020055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124020054}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.5, z: -0.177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1847027918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &124020056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124020054}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
@@ -1519,7 +1563,7 @@ Transform:
   m_GameObject: {fileID: 262852345}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8, y: 0.73, z: -0.177}
+  m_LocalPosition: {x: 4.02, y: 2.8, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2009,7 +2053,7 @@ Transform:
   m_GameObject: {fileID: 412140591}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.28, y: 2.25, z: -0.177}
+  m_LocalPosition: {x: 4.88, y: -0.13, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2231,7 +2275,7 @@ Transform:
   m_GameObject: {fileID: 440771947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.74, y: 1, z: -0.177}
+  m_LocalPosition: {x: -5.78, y: 0.5, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2988,7 +3032,7 @@ Transform:
   m_GameObject: {fileID: 540105091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.25, y: 0.9300003, z: -0.177}
+  m_LocalPosition: {x: 0.27, y: 0.54, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3618,7 +3662,7 @@ Transform:
   m_GameObject: {fileID: 650030780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.97, y: 1.69, z: -0.177}
+  m_LocalPosition: {x: 4.85, y: 2.47, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3670,6 +3714,50 @@ Transform:
   - {fileID: 1383904164}
   m_Father: {fileID: 2000302745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &694877574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 694877575}
+  - component: {fileID: 694877576}
+  m_Layer: 0
+  m_Name: Destination 1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694877575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694877574}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.66, y: -0.41, z: -0.177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1847027918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &694877576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694877574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &702969322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,7 +3784,7 @@ Transform:
   m_GameObject: {fileID: 702969322}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.56, y: 2.01, z: -0.177}
+  m_LocalPosition: {x: -5.95, y: 0.25, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3740,7 +3828,7 @@ Transform:
   m_GameObject: {fileID: 716050462}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.15, y: 1.75, z: -0.177}
+  m_LocalPosition: {x: 4.59, y: 2.42, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3919,7 +4007,7 @@ Transform:
   m_GameObject: {fileID: 729950593}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.45, y: 2.67, z: -0.177}
+  m_LocalPosition: {x: 4.73, y: 0.38, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3932,50 +4020,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729950593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &742973746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 742973747}
-  - component: {fileID: 742973748}
-  m_Layer: 0
-  m_Name: Destination 1 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &742973747
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742973746}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.01, y: -0.43, z: -0.177}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1847027918}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &742973748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742973746}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
@@ -4184,7 +4228,7 @@ Transform:
   m_GameObject: {fileID: 813493366}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 0.3, z: -0.177}
+  m_LocalPosition: {x: -5.79, y: 0.16, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4277,7 +4321,7 @@ Transform:
   m_GameObject: {fileID: 872487128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.94, y: 3.17, z: -0.177}
+  m_LocalPosition: {x: -0.2, y: 0.99, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4798,6 +4842,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909990859}
   m_CullTransparentMesh: 1
+--- !u!1 &936464265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936464266}
+  - component: {fileID: 936464267}
+  m_Layer: 0
+  m_Name: Destination 1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &936464266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936464265}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.96, y: -0.41, z: -0.177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1847027918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &936464267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936464265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &943982755
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,7 +5933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -338.86, y: 6.1619263}
+  m_AnchoredPosition: {x: -338.85986, y: 6.161865}
   m_SizeDelta: {x: -923, y: -60.361}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099264403
@@ -7417,7 +7505,7 @@ Transform:
   m_GameObject: {fileID: 1241991553}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.16, y: -3.14, z: -0.177}
+  m_LocalPosition: {x: 4.89, y: 1, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7461,7 +7549,7 @@ Transform:
   m_GameObject: {fileID: 1266894037}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.81, y: 0.9, z: -0.177}
+  m_LocalPosition: {x: -5.35, y: 1.35, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8558,7 +8646,7 @@ Transform:
   m_GameObject: {fileID: 1424986042}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10084,7 +10172,7 @@ Transform:
   m_GameObject: {fileID: 1771700672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1, y: -0.11999965, z: -0.177}
+  m_LocalPosition: {x: 5.09, y: 0.41, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10280,8 +10368,10 @@ Transform:
   m_Children:
   - {fileID: 1424986043}
   - {fileID: 23842395}
+  - {fileID: 124020055}
   - {fileID: 2024743146}
-  - {fileID: 742973747}
+  - {fileID: 694877575}
+  - {fileID: 936464266}
   m_Father: {fileID: 2000302745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847495365
@@ -10310,7 +10400,7 @@ Transform:
   m_GameObject: {fileID: 1847495365}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 3.96, z: -0.177}
+  m_LocalPosition: {x: -5.72, y: 1.78, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10390,7 +10480,7 @@ Transform:
   m_GameObject: {fileID: 1858807783}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.08, y: -1.98, z: -0.177}
+  m_LocalPosition: {x: -5.84, y: -0.75, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10568,7 +10658,7 @@ Transform:
   m_GameObject: {fileID: 1931520786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.46, y: 0.42, z: -0.177}
+  m_LocalPosition: {x: 4.98, y: 1.87, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11057,7 +11147,7 @@ Transform:
   m_GameObject: {fileID: 1992138346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8499999, y: 0.2300005, z: -0.177}
+  m_LocalPosition: {x: -5.14, y: -0.95, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11106,7 +11196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phases:
   - phaseName: Normal Attack
-    phaseHP: 2000
+    phaseHP: 200
     isSpell: 0
     attackPoints:
     - destination: {fileID: 2036718673}
@@ -11131,7 +11221,7 @@ MonoBehaviour:
     phaseTime: 40
     loopDelay: 1
   - phaseName: 'Fire Magic: Flare Dance'
-    phaseHP: 6000
+    phaseHP: 200
     isSpell: 1
     attackPoints:
     - destination: {fileID: 482321744}
@@ -11143,48 +11233,48 @@ MonoBehaviour:
     - destination: {fileID: 1083781657}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 1
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1105099142}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 1
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1666857045}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 0
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 2
     - destination: {fileID: 482321744}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 1
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1444146395}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 1
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 414752922}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 1
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1102865234}
       shooterPrefab: {fileID: 7285450540420332989, guid: 6c060cf2b752a9c45a2e85d71806194b, type: 3}
       shooterDuration: 1
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 1
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 8533424895223409565, guid: fdec573f7802d5242848ea76369f1580, type: 3}
-      shooterDuration: 2
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 1
@@ -11192,80 +11282,80 @@ MonoBehaviour:
     phaseTime: 45
     loopDelay: 3
   - phaseName: Normal Attack
-    phaseHP: 2000
+    phaseHP: 200
     isSpell: 0
     attackPoints:
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
     - destination: {fileID: 1266894038}
       shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
+      shooterDuration: 3
       shootWhileMoving: 1
-      prepareTime: 1
+      prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1771700673}
-      shooterPrefab: {fileID: 2596118106437562560, guid: cef58b212f1ad8f469414af46059ab22, type: 3}
-      shooterDuration: 4
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1992138347}
-      shooterPrefab: {fileID: 4705752337020937050, guid: d6c1ba2ef47510a4ba5b8df51a323010, type: 3}
-      shooterDuration: 4
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 262852346}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 540105092}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
       shooterDuration: 0
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0.5
     - destination: {fileID: 440771948}
       shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
+      shooterDuration: 3
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 650030781}
       shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
+      shooterDuration: 3
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 2093645788}
-      shooterPrefab: {fileID: 2596118106437562560, guid: cef58b212f1ad8f469414af46059ab22, type: 3}
-      shooterDuration: 4
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 729950594}
-      shooterPrefab: {fileID: 4705752337020937050, guid: d6c1ba2ef47510a4ba5b8df51a323010, type: 3}
-      shooterDuration: 4
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 872487129}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 0
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0.5
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
-      shooterDuration: 10
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 1
-      actionDelay: 1
-    moveDuration: 1
+      actionDelay: 0
+    moveDuration: 2
     phaseTime: 45
-    loopDelay: 9
+    loopDelay: 6
   - phaseName: 'Fire Magic: Energy Burst'
-    phaseHP: 6000
+    phaseHP: 200
     isSpell: 1
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11296,7 +11386,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 0.5
   - phaseName: Normal Attack
-    phaseHP: 2000
+    phaseHP: 200
     isSpell: 0
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11321,11 +11411,11 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 0
   - phaseName: 'Fire Magic: Burning Wheel'
-    phaseHP: 6000
+    phaseHP: 200
     isSpell: 1
     attackPoints:
-    - destination: {fileID: 1266894038}
-      shooterPrefab: {fileID: 800315925}
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 4512530460478835564, guid: e2b7541bd3d25d547b0b17561a82e037, type: 3}
       shooterDuration: 2
       shootWhileMoving: 0
       prepareTime: 0
@@ -11334,177 +11424,13 @@ MonoBehaviour:
       shooterPrefab: {fileID: 980937840955768081, guid: f976232ef3c8c55489974477bcf5df4a, type: 3}
       shooterDuration: 2
       shootWhileMoving: 0
-      prepareTime: 1
+      prepareTime: 0
       actionDelay: 0.5
     moveDuration: 1
     phaseTime: 60
     loopDelay: 0
   - phaseName: Normal Attack
-    phaseHP: 2000
-    isSpell: 0
-    attackPoints:
-    - destination: {fileID: 1266894038}
-      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 1
-      actionDelay: 0
-    - destination: {fileID: 1771700673}
-      shooterPrefab: {fileID: 2596118106437562560, guid: cef58b212f1ad8f469414af46059ab22, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1992138347}
-      shooterPrefab: {fileID: 4705752337020937050, guid: d6c1ba2ef47510a4ba5b8df51a323010, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 262852346}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 540105092}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 0
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0.5
-    - destination: {fileID: 440771948}
-      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 650030781}
-      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 2093645788}
-      shooterPrefab: {fileID: 2596118106437562560, guid: cef58b212f1ad8f469414af46059ab22, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 729950594}
-      shooterPrefab: {fileID: 4705752337020937050, guid: d6c1ba2ef47510a4ba5b8df51a323010, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 872487129}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 1
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
-      shooterDuration: 10
-      shootWhileMoving: 0
-      prepareTime: 1
-      actionDelay: 11
-    - destination: {fileID: 716050463}
-      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 1
-      actionDelay: 0
-    - destination: {fileID: 813493367}
-      shooterPrefab: {fileID: 2596118106437562560, guid: cef58b212f1ad8f469414af46059ab22, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 46382067}
-      shooterPrefab: {fileID: 4705752337020937050, guid: d6c1ba2ef47510a4ba5b8df51a323010, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 412140592}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1847495366}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 0
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 1
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
-      shooterDuration: 10
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 11
-    - destination: {fileID: 1499298327}
-      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 1
-      actionDelay: 0
-    - destination: {fileID: 702969323}
-      shooterPrefab: {fileID: 2596118106437562560, guid: cef58b212f1ad8f469414af46059ab22, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1931520787}
-      shooterPrefab: {fileID: 4705752337020937050, guid: d6c1ba2ef47510a4ba5b8df51a323010, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1858807784}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1241991554}
-      shooterPrefab: {fileID: 5234192908136782871, guid: 44cd4ad5d3be8634ea85e0b0d373be20, type: 3}
-      shooterDuration: 4
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 1
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
-      shooterDuration: 10
-      shootWhileMoving: 0
-      prepareTime: 1
-      actionDelay: 1
-    moveDuration: 1
-    phaseTime: 45
-    loopDelay: 9
-  - phaseName: 'Fire Magic: Solar Flare'
-    phaseHP: 6000
-    isSpell: 1
-    attackPoints:
-    - destination: {fileID: 105753838}
-      shooterPrefab: {fileID: 2456087945154174300, guid: 028b25f6019a9d746bbffe20fe4275c3, type: 3}
-      shooterDuration: 30
-      shootWhileMoving: 0
-      prepareTime: 2
-      actionDelay: 0
-    - destination: {fileID: 105753838}
-      shooterPrefab: {fileID: 5633111622689608739, guid: c8f927c4fda86a142b0f42eb20c63de2, type: 3}
-      shooterDuration: 30
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    moveDuration: 3
-    phaseTime: 60
-    loopDelay: 25
-  - phaseName: Normal Attack
-    phaseHP: 2000
+    phaseHP: 200
     isSpell: 0
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11534,45 +11460,209 @@ MonoBehaviour:
     moveDuration: 3
     phaseTime: 60
     loopDelay: 0
+  - phaseName: 'Fire Magic: Solar Flare'
+    phaseHP: 200
+    isSpell: 1
+    attackPoints:
+    - destination: {fileID: 105753838}
+      shooterPrefab: {fileID: 2456087945154174300, guid: 028b25f6019a9d746bbffe20fe4275c3, type: 3}
+      shooterDuration: 30
+      shootWhileMoving: 0
+      prepareTime: 2
+      actionDelay: 0
+    moveDuration: 3
+    phaseTime: 60
+    loopDelay: 25
+  - phaseName: Normal Attack
+    phaseHP: 200
+    isSpell: 0
+    attackPoints:
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 716050463}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 813493367}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 46382067}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 412140592}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 0
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0.5
+    - destination: {fileID: 1847495366}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 1499298327}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 4
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 702969323}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 4
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 1931520787}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 4
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 1858807784}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 4
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 1
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
+      shooterDuration: 5
+      shootWhileMoving: 0
+      prepareTime: 1
+      actionDelay: 6
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 1499298327}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 702969323}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 1931520787}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 1858807784}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 0
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 1
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
+      shooterDuration: 5
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 6
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 716050463}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 813493367}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 46382067}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 412140592}
+      shooterPrefab: {fileID: 7547681079044355849, guid: 634f7692edd0b1f44b7e9839f8a6ce00, type: 3}
+      shooterDuration: 4
+      shootWhileMoving: 1
+      prepareTime: 0
+      actionDelay: 1
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 3529363481555461765, guid: c78648d024143ce4eb76c78f917b7a96, type: 3}
+      shooterDuration: 5
+      shootWhileMoving: 0
+      prepareTime: 1
+      actionDelay: 0
+    moveDuration: 1
+    phaseTime: 45
+    loopDelay: 6
   - phaseName: 'Fire Magic: Fairy''s Tokamak'
-    phaseHP: 6000
+    phaseHP: 200
     isSpell: 1
     attackPoints:
     - destination: {fileID: 1424986043}
       shooterPrefab: {fileID: 3040481640432196869, guid: 7bfc98da50c38dc4983460a7fa8e6d5c, type: 3}
-      shooterDuration: 3
+      shooterDuration: 60
       shootWhileMoving: 0
       prepareTime: 1
       actionDelay: 0
-    - destination: {fileID: 1225831253}
-      shooterPrefab: {fileID: 3171608626791800717, guid: 20819d80b6dd05e4ba0f02dda0e51789, type: 3}
-      shooterDuration: 3
+    - destination: {fileID: 23842395}
+      shooterPrefab: {fileID: 8471985929129942962, guid: d3e89daf03881a8429a64dc45e8373c3, type: 3}
+      shooterDuration: 60
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 23842395}
-      shooterPrefab: {fileID: 8471985929129942962, guid: d3e89daf03881a8429a64dc45e8373c3, type: 3}
-      shooterDuration: 20
+    - destination: {fileID: 124020055}
+      shooterPrefab: {fileID: 3040481640432196869, guid: 7bfc98da50c38dc4983460a7fa8e6d5c, type: 3}
+      shooterDuration: 60
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 1
     - destination: {fileID: 2024743146}
       shooterPrefab: {fileID: 8471985929129942962, guid: d3e89daf03881a8429a64dc45e8373c3, type: 3}
-      shooterDuration: 20
+      shooterDuration: 60
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 742973747}
-      shooterPrefab: {fileID: 8471985929129942962, guid: d3e89daf03881a8429a64dc45e8373c3, type: 3}
-      shooterDuration: 0
+    - destination: {fileID: 694877575}
+      shooterPrefab: {fileID: 8471985929129942962, guid: fa62edc4ef7f4bf4e9ccd5ebf152d126, type: 3}
+      shooterDuration: 30
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 30
+    - destination: {fileID: 694877575}
+      shooterPrefab: {fileID: 8471985929129942962, guid: fa62edc4ef7f4bf4e9ccd5ebf152d126, type: 3}
+      shooterDuration: 30
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     moveDuration: 2
     phaseTime: 60
-    loopDelay: 20
+    loopDelay: 61
   - phaseName: 'Fire Magic: Artificial Sun'
-    phaseHP: 6000
+    phaseHP: 200
     isSpell: 1
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11580,13 +11670,13 @@ MonoBehaviour:
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 1
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 2550291461745186862, guid: c94cd80c2548ff84eba7d76738302d17, type: 3}
       shooterDuration: 61
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 30
+      actionDelay: 15
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 7120989445318963442, guid: 87d7b4a2690b44748bbcc56e65c6aaa2, type: 3}
       shooterDuration: 31
@@ -11968,7 +12058,7 @@ GameObject:
   - component: {fileID: 2024743146}
   - component: {fileID: 2024743147}
   m_Layer: 0
-  m_Name: Destination 1 (2)
+  m_Name: Destination 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11983,7 +12073,7 @@ Transform:
   m_GameObject: {fileID: 2024743145}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.5, z: -0.177}
+  m_LocalPosition: {x: -0.2, y: -6.5, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12277,7 +12367,7 @@ Transform:
   m_GameObject: {fileID: 2093645787}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96, y: 2.11, z: -0.177}
+  m_LocalPosition: {x: -5.66, y: 2.33, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

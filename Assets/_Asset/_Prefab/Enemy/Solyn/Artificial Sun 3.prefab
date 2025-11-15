@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3351851054590280324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.25, y: 0.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58,11 +58,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletID: 19
-  bulletSpeed: 2
+  bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
   fireRate: 0.3
-  fireDuration: 30
+  fireDuration: 60
   shootCount: 0
   targetSpeed: 0
   delayTime: 0
@@ -94,6 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7661469503575024670}
+  - component: {fileID: 5853670726452881554}
   m_Layer: 7
   m_Name: Artificial Sun 3
   m_TagString: Shooter
@@ -117,3 +118,18 @@ Transform:
   - {fileID: 752461974331686505}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5853670726452881554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7120989445318963442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f293cd860926f24449a3f89b33ca6d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2.5
+  angle: 270
+  rotateType: 1
