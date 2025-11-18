@@ -3,29 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class AttackPoint
-{
-    public Transform destination;       // Destination for boss
-    public GameObject shooterPrefab;
-    public float shooterDuration;       //Shooter's alive time
-    public bool shootWhileMoving;       //Shooter follow boss or independent
-    public float prepareTime;           //Delay time before spawn shooter
-    public float actionDelay;          //Delay before starting new action
-}
-
-[System.Serializable]
-public class BossPhase
-{
-    public string phaseName;
-    public int phaseHP;
-    public bool isSpell;
-    public AttackPoint[] attackPoints;       // Attack and movement point
-    public float moveDuration = 3f;
-    public float phaseTime;
-    public float loopDelay;         //Delay before starting a new loop
-}
-public class BossPhaseManager : MonoBehaviour
+public class MidBossPhaseManager : MonoBehaviour
 {
     [SerializeField] private BossPhase[] phases;
     private int currentPhaseIndex = 0;
@@ -37,21 +15,18 @@ public class BossPhaseManager : MonoBehaviour
     [SerializeField] private string bossName;
     [SerializeField] private Sprite spellSprite;
     [SerializeField] private GameObject magicCircle;
-
     private void OnEnable()
-    {
+    {   
         GameManager.Instance.bossInfo.phaseCount = phases.Length;
         GameManager.Instance.bossInfo.bossName = bossName;
-        EventDispatcher<bool>.AddListener(Event.BossAppear.ToString(), BossAppear);
-        EventDispatcher<bool>.AddListener(Event.BossStartAttack.ToString(), StartAttack);
+        EventDispatcher<bool>.AddListener(Event.MidBossAppear.ToString(), BossAppear);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), ChangePhase);
         EventDispatcher<bool>.AddListener(Event.SpellEnd.ToString(), HideSpellBackground);
         EventDispatcher<bool>.AddListener(Event.BossDie.ToString(), StopAction);
     }
+
     private void OnDisable()
     {
-        EventDispatcher<bool>.RemoveListener(Event.BossAppear.ToString(), BossAppear);
-        EventDispatcher<bool>.RemoveListener(Event.BossStartAttack.ToString(), StartAttack);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), ChangePhase);
         EventDispatcher<bool>.RemoveListener(Event.BossDie.ToString(), StopAction);
         EventDispatcher<bool>.RemoveListener(Event.SpellEnd.ToString(), HideSpellBackground);
@@ -64,12 +39,12 @@ public class BossPhaseManager : MonoBehaviour
     {
         GameManager.Instance.StartCoroutine(GameManager.Instance.DeleteBullet());
         boss.tag = "Boss_Invi";
-        EventDispatcher<bool>.Dispatch(Event.ShowCutInAnim.ToString(), false);
+        cutInAnim.SetActive(false);
         currentPhaseIndex++;
         if (currentPhaseIndex >= phases.Length)
         {
             return;
-        }    
+        }
         StartPhase(currentPhaseIndex);
     }
     private void BossAppear(bool isAppear)
@@ -108,8 +83,8 @@ public class BossPhaseManager : MonoBehaviour
                 pointIndex = 0;
                 yield return MoveToPoint(startPos.position, phase.moveDuration);
                 yield return new WaitForSeconds(phase.loopDelay);
-            }    
-        }    
+            }
+        }
     }
     private IEnumerator MoveToPoint(Vector3 target, float moveDuration)
     {
@@ -118,7 +93,7 @@ public class BossPhaseManager : MonoBehaviour
             Tween tween = boss.transform.DOMove(target, moveDuration)
             .SetEase(Ease.OutQuad);
             yield return tween.WaitForCompletion();
-        }    
+        }
     }
     private IEnumerator DoAttackAtPoint(AttackPoint point)
     {
@@ -126,7 +101,7 @@ public class BossPhaseManager : MonoBehaviour
         if (point.shootWhileMoving)
         {
             shooter.transform.SetParent(boss);
-        }    
+        }
         Destroy(shooter, point.shooterDuration);
         //Wait before new action
         yield return new WaitForSeconds(point.actionDelay);
@@ -134,9 +109,9 @@ public class BossPhaseManager : MonoBehaviour
     private IEnumerator PreparePhase(BossPhase phase)
     {
         yield return MoveToPoint(startPos.position, 1);
-        if(phase.isSpell)
+        if (phase.isSpell)
         {
-            EventDispatcher<bool>.Dispatch(Event.ShowCutInAnim.ToString(), true);
+            cutInAnim.SetActive(true);
             magicCircle.SetActive(true);
             EventDispatcher<Sprite>.Dispatch(Event.ShowSpellBackground.ToString(), spellSprite);
         }
@@ -155,5 +130,5 @@ public class BossPhaseManager : MonoBehaviour
     private void StopAction(bool isDead)
     {
         StopAllCoroutines();
-    }    
+    }
 }

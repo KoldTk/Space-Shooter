@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4770490061982926239
+--- !u!1 &2814944551987822825
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3949299945449030540}
-  - component: {fileID: 2655315404459491507}
-  - component: {fileID: 8843091945534979197}
+  - component: {fileID: 6154266179239249406}
+  - component: {fileID: 1799893975273286006}
+  - component: {fileID: 5925499323203918833}
   m_Layer: 7
   m_Name: Shooter Middle
   m_TagString: Untagged
@@ -18,58 +18,58 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3949299945449030540
+--- !u!4 &6154266179239249406
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770490061982926239}
+  m_GameObject: {fileID: 2814944551987822825}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.92387956, w: 0.38268343}
+  m_LocalPosition: {x: 2.53, y: -6.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 707698630159264977}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
---- !u!114 &2655315404459491507
+  m_Father: {fileID: 4562468698443176377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135}
+--- !u!114 &1799893975273286006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770490061982926239}
+  m_GameObject: {fileID: 2814944551987822825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8843091945534979197
+--- !u!114 &5925499323203918833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770490061982926239}
+  m_GameObject: {fileID: 2814944551987822825}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 20
+  bulletID: 7
   bulletSpeed: 2
   shootType: 1
   bulletType: 0
   fireRate: 0.3
-  fireDuration: 10
+  fireDuration: 2
   shootCount: 10
   targetSpeed: 0
   delayTime: 0
   accelRate: 0
   waveAmp: 0
   frequency: 0
-  patternType: 2
+  patternType: 4
   radialConfig:
     bulletCount: 30
   spiralConfig:
@@ -77,15 +77,15 @@ MonoBehaviour:
     spiralSpeed: 0
     clockwise: 1
   waveConfig:
-    bulletCount: 10
-    spreadAngle: 90
+    bulletCount: 0
+    spreadAngle: 0
   straightConfig:
     bulletCount: 1
     offset: 0
   randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
---- !u!1 &5225030379829962713
+    spreadAngle: 90
+    bulletCount: 10
+--- !u!1 &3150047868824475178
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,27 +93,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 707698630159264977}
+  - component: {fileID: 4562468698443176377}
   m_Layer: 7
-  m_Name: Chaos Normal 5
+  m_Name: Chaos Predicament Escape 4 Right
   m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &707698630159264977
+--- !u!4 &4562468698443176377
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225030379829962713}
+  m_GameObject: {fileID: 3150047868824475178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.28, y: 0.55, z: 0}
+  m_LocalPosition: {x: -0.38, y: 3.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3949299945449030540}
+  - {fileID: 6154266179239249406}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

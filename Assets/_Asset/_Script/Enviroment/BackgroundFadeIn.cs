@@ -5,25 +5,41 @@ using UnityEngine;
 
 public class BackgroundFadeIn : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer sprite;
+    private SpriteRenderer background;
     [SerializeField] private SpriteRenderer fadeOverlay;
     [SerializeField] private float fadeDuration;
     [SerializeField] private float holdDuration;
     [SerializeField] private float targetFade = 1;
-    public void ShowBackground()
+    private void Start()
     {
+        background = GetComponent<SpriteRenderer>();
+    }
+    private void OnEnable()
+    {
+        EventDispatcher<Sprite>.AddListener(Event.ShowSpellBackground.ToString(), ShowBackground);
+        EventDispatcher<Sprite>.AddListener(Event.HideSpellBackground.ToString(), HideBackground);
+    }
+    private void OnDisable()
+    {
+        EventDispatcher<Sprite>.RemoveListener(Event.ShowSpellBackground.ToString(), ShowBackground);
+        EventDispatcher<Sprite>.RemoveListener(Event.HideSpellBackground.ToString(), HideBackground);
+    }
+    public void ShowBackground(Sprite targetSprite)
+    {
+        background.sprite = targetSprite;
         fadeOverlay.DOFade(1f, fadeDuration).OnComplete(() =>
         {
-            sprite.enabled = true;
+            background.enabled = true;
             DOVirtual.DelayedCall(holdDuration, () =>
             {
                 fadeOverlay.DOFade(0, fadeDuration);
             });
         });
-        sprite.DOFade(targetFade, 0.5f);
+        background.DOFade(targetFade, 0.5f);
     }
-    public void HideBackground()
+    public void HideBackground(Sprite targetSprite)
     {
-        sprite.DOFade(0, 0.5f);
+        background.sprite = targetSprite;
+        background.DOFade(0, 0.5f);
     }    
 }

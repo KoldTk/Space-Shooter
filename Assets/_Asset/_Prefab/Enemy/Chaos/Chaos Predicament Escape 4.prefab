@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2398154164130311060
+--- !u!1 &5139079671649201469
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,31 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8223534654723317433}
+  - component: {fileID: 1725005814820808864}
   m_Layer: 7
-  m_Name: Chaos Crystal Cleaver 2 Top
+  m_Name: Chaos Predicament Escape 4
   m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8223534654723317433
+--- !u!4 &1725005814820808864
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2398154164130311060}
+  m_GameObject: {fileID: 5139079671649201469}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.28, y: 0.55, z: 0}
+  m_LocalPosition: {x: -0.38, y: 3.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2908312362298012939}
+  - {fileID: 8000839917469147498}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6528206632460409172
+--- !u!1 &6996029841345708040
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,9 +40,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2908312362298012939}
-  - component: {fileID: 6802746743052482814}
-  - component: {fileID: 555304902890087693}
+  - component: {fileID: 8000839917469147498}
+  - component: {fileID: 1721495721475397640}
+  - component: {fileID: 5389517096614828540}
   m_Layer: 7
   m_Name: Shooter Middle
   m_TagString: Untagged
@@ -50,58 +50,58 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2908312362298012939
+--- !u!4 &8000839917469147498
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6528206632460409172}
+  m_GameObject: {fileID: 6996029841345708040}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.67, y: 3.17, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8223534654723317433}
+  m_Father: {fileID: 1725005814820808864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &6802746743052482814
+--- !u!114 &1721495721475397640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6528206632460409172}
+  m_GameObject: {fileID: 6996029841345708040}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &555304902890087693
+--- !u!114 &5389517096614828540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6528206632460409172}
+  m_GameObject: {fileID: 6996029841345708040}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 13
-  bulletSpeed: 1.5
+  bulletID: 7
+  bulletSpeed: 2
   shootType: 1
-  bulletType: 1
-  fireRate: 0.5
-  fireDuration: 1
-  shootCount: 5
+  bulletType: 0
+  fireRate: 0.3
+  fireDuration: 2
+  shootCount: 10
   targetSpeed: 0
   delayTime: 0
   accelRate: 0
   waveAmp: 0
   frequency: 0
-  patternType: 2
+  patternType: 4
   radialConfig:
     bulletCount: 30
   spiralConfig:
@@ -109,11 +109,11 @@ MonoBehaviour:
     spiralSpeed: 0
     clockwise: 1
   waveConfig:
-    bulletCount: 10
-    spreadAngle: 90
+    bulletCount: 0
+    spreadAngle: 0
   straightConfig:
     bulletCount: 1
     offset: 0
   randomConfig:
-    spreadAngle: 60
+    spreadAngle: 90
     bulletCount: 10

@@ -4295,6 +4295,11 @@ MonoBehaviour:
   magicCircle: {fileID: 6181317213967098049, guid: 75bf980c09a7b074bb0c8c0d811e0bd8, type: 3}
   playerPrefab: {fileID: 750253098321620967, guid: 8e7e877316bbc29498bdd36272e3f6d8, type: 3}
   charSpawnPos: {fileID: 2016135065}
+  sprite: {fileID: 9166343872178763126}
+  fadeOverlay: {fileID: 943982757}
+  fadeDuration: 0
+  holdDuration: 0
+  targetFade: 0.7
 --- !u!1 &872487128
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,7 +11201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phases:
   - phaseName: Normal Attack
-    phaseHP: 200
+    phaseHP: 2000
     isSpell: 0
     attackPoints:
     - destination: {fileID: 2036718673}
@@ -11221,7 +11226,7 @@ MonoBehaviour:
     phaseTime: 40
     loopDelay: 1
   - phaseName: 'Fire Magic: Flare Dance'
-    phaseHP: 200
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 482321744}
@@ -11282,7 +11287,7 @@ MonoBehaviour:
     phaseTime: 45
     loopDelay: 3
   - phaseName: Normal Attack
-    phaseHP: 200
+    phaseHP: 2000
     isSpell: 0
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11355,7 +11360,7 @@ MonoBehaviour:
     phaseTime: 45
     loopDelay: 6
   - phaseName: 'Fire Magic: Energy Burst'
-    phaseHP: 200
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11386,7 +11391,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 0.5
   - phaseName: Normal Attack
-    phaseHP: 200
+    phaseHP: 2000
     isSpell: 0
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11411,7 +11416,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 0
   - phaseName: 'Fire Magic: Burning Wheel'
-    phaseHP: 200
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11430,7 +11435,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 0
   - phaseName: Normal Attack
-    phaseHP: 200
+    phaseHP: 2000
     isSpell: 0
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11461,7 +11466,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 0
   - phaseName: 'Fire Magic: Solar Flare'
-    phaseHP: 200
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 105753838}
@@ -11474,7 +11479,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 25
   - phaseName: Normal Attack
-    phaseHP: 200
+    phaseHP: 2000
     isSpell: 0
     attackPoints:
     - destination: {fileID: 800315926}
@@ -11619,7 +11624,7 @@ MonoBehaviour:
     phaseTime: 45
     loopDelay: 6
   - phaseName: 'Fire Magic: Fairy''s Tokamak'
-    phaseHP: 200
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 1424986043}
@@ -11662,7 +11667,7 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 61
   - phaseName: 'Fire Magic: Artificial Sun'
-    phaseHP: 200
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 800315926}

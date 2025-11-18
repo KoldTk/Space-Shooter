@@ -21,7 +21,7 @@ public class IceBarrierAbility : SpellBombShooter
     private void OnDisable()
     {
         GameManager.Instance.playerUsingSpell = false;
-        EventDispatcher<bool>.Dispatch(Event.SpellEnd.ToString(), true);
+        EventDispatcher<bool>.Dispatch(Event.PlayerSpellEnd.ToString(), true);
     }
     public override IEnumerator StartSpell()
     {

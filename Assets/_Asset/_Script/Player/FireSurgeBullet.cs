@@ -27,8 +27,6 @@ public class FireSurgeBullet : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.playerUsingSpell = false;
-            EventDispatcher<bool>.Dispatch(Event.SpellEnd.ToString(), true);
             Destroy(transform.parent.gameObject);
         }
     }

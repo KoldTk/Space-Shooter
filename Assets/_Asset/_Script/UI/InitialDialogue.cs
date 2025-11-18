@@ -13,17 +13,17 @@ public class InitialDialogue : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventDispatcher<bool>.AddListener(Event.StartBeforeBossDialogue.ToString(), BeforeBossDialogue);
+        EventDispatcher<string>.AddListener(Event.StartBeforeBossDialogue.ToString(), BeforeBossDialogue);
         EventDispatcher<bool>.AddListener(Event.StartAfterBossDialogue.ToString(), AfterBossDialogue);
     }
     private void OnDisable()
     {
-        EventDispatcher<bool>.RemoveListener(Event.StartBeforeBossDialogue.ToString(), BeforeBossDialogue);
+        EventDispatcher<string>.RemoveListener(Event.StartBeforeBossDialogue.ToString(), BeforeBossDialogue);
         EventDispatcher<bool>.RemoveListener(Event.StartAfterBossDialogue.ToString(), AfterBossDialogue);
     }
-    public void BeforeBossDialogue(bool dialogueOn)
+    public void BeforeBossDialogue(string dialogue)
     {
-        StartCoroutine(StartDialogueSequence(5f, beforeBossDialogue));
+        StartCoroutine(StartDialogueSequence(5f, dialogue));
     }
     public void AfterBossDialogue(bool dialogueOn)
     {

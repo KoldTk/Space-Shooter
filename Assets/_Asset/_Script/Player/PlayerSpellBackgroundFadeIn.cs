@@ -1,25 +1,35 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSpellBackgroundFadeIn : BackgroundFadeIn
+public class PlayerSpellBackgroundFadeIn : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer fadeOverlay;
+    [SerializeField] private float fadeDuration;
+    [SerializeField] private float holdDuration;
+    [SerializeField] private float targetFade = 1;
     private void OnEnable()
     {
-        EventDispatcher<bool>.AddListener(Event.UsingSpell.ToString(), ShowBackground);
-        EventDispatcher<bool>.AddListener(Event.SpellEnd.ToString(), HideBackground);
     }
     private void OnDisable()
     {
-        EventDispatcher<bool>.RemoveListener(Event.UsingSpell.ToString(), ShowBackground);
-        EventDispatcher<bool>.RemoveListener(Event.SpellEnd.ToString(), HideBackground);
     }
     private void ShowBackground(bool isUsingSpell)
     {
-        ShowBackground();
+        fadeOverlay.DOFade(1f, fadeDuration).OnComplete(() =>
+        {
+            sprite.enabled = true;
+            DOVirtual.DelayedCall(holdDuration, () =>
+            {
+                fadeOverlay.DOFade(0, fadeDuration);
+            });
+        });
+        sprite.DOFade(targetFade, 0.5f);
     }
     private void HideBackground(bool spellEnd)
     {
-        HideBackground();
-    }    
+        sprite.DOFade(0, 0.5f);
+    }
 }

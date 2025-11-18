@@ -955,7 +955,7 @@ RectTransform:
   m_Father: {fileID: 302273308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1635,7 +1635,7 @@ RectTransform:
   m_Father: {fileID: 2093808339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1818,7 +1818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &382087204
 Transform:
   m_ObjectHideFlags: 0
@@ -3929,6 +3929,11 @@ MonoBehaviour:
   magicCircle: {fileID: 6181317213967098049, guid: 75bf980c09a7b074bb0c8c0d811e0bd8, type: 3}
   playerPrefab: {fileID: 750253098321620967, guid: 8e7e877316bbc29498bdd36272e3f6d8, type: 3}
   charSpawnPos: {fileID: 2016135065}
+  sprite: {fileID: 9166343872178763126}
+  fadeOverlay: {fileID: 943982757}
+  fadeDuration: 0
+  holdDuration: 0
+  targetFade: 0.7
 --- !u!1 &873202410
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,7 +4977,7 @@ Transform:
   m_GameObject: {fileID: 1024531671}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -11.77, y: -6.33, z: 0}
+  m_LocalPosition: {x: -13.89, y: -7.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5411,7 +5416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -338.86, y: 6.1619263}
+  m_AnchoredPosition: {x: -338.85986, y: 6.161865}
   m_SizeDelta: {x: -923, y: -60.361}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099264403
@@ -5924,7 +5929,7 @@ Transform:
   m_GameObject: {fileID: 1124140789}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.24, y: 2.02, z: 0}
+  m_LocalPosition: {x: -3.24, y: 2.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7149,7 +7154,7 @@ Transform:
   m_GameObject: {fileID: 1295029343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.11, y: -6.33, z: 0}
+  m_LocalPosition: {x: 7.83, y: -6.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7456,7 +7461,7 @@ Transform:
   m_GameObject: {fileID: 1345176341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.01, y: 0.94, z: -0.177}
+  m_LocalPosition: {x: -3, y: 0.95000005, z: -0.177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10308,58 +10313,58 @@ MonoBehaviour:
     attackPoints:
     - destination: {fileID: 2036718673}
       shooterPrefab: {fileID: 8142171721570698393, guid: 1bfa95500a4c313408ba6fcbcbe8fa2a, type: 3}
-      shooterDuration: 3.5
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 1.5
-    - destination: {fileID: 2036718673}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0.5
     - destination: {fileID: 2036718673}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
-      shooterDuration: 1.5
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
+      shooterDuration: 2.1
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1.5
+      actionDelay: 0
+    - destination: {fileID: 2036718673}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
+      shooterDuration: 2.1
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 2
     - destination: {fileID: 1000999987}
       shooterPrefab: {fileID: 8142171721570698393, guid: 1bfa95500a4c313408ba6fcbcbe8fa2a, type: 3}
-      shooterDuration: 3.5
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 1.5
-    - destination: {fileID: 1000999987}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0.5
     - destination: {fileID: 1000999987}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
-      shooterDuration: 1.5
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
+      shooterDuration: 2.1
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1.5
+      actionDelay: 0
+    - destination: {fileID: 1000999987}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
+      shooterDuration: 2.1
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 2
     - destination: {fileID: 1383904164}
       shooterPrefab: {fileID: 8142171721570698393, guid: 1bfa95500a4c313408ba6fcbcbe8fa2a, type: 3}
-      shooterDuration: 3.5
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 1.5
-    - destination: {fileID: 1383904164}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0.5
     - destination: {fileID: 1383904164}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
-      shooterDuration: 1.5
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
+      shooterDuration: 2.1
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1.5
+      actionDelay: 0
+    - destination: {fileID: 1383904164}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
+      shooterDuration: 2.1
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 2
     moveDuration: 1.5
     phaseTime: 45
     loopDelay: 0
@@ -10369,121 +10374,61 @@ MonoBehaviour:
     attackPoints:
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 3055969287758637140, guid: ec5f328e6c5aff94d8ea9ac7c6c4a385, type: 3}
-      shooterDuration: 5
+      shooterDuration: 10
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 5
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 1788142000595691568, guid: 831cd8b861b558d4793d03c6d70a5d40, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 434426585391432021, guid: e92abfefb942a2d4bb2688ef88729ae6, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 3569049363760916428, guid: ace4a40f34fe6314b888fe566413f8fc, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 2398154164130311060, guid: c79ff2da89cf3914e8f4babedca2b872, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1207484103}
       shooterPrefab: {fileID: 3055969287758637140, guid: ec5f328e6c5aff94d8ea9ac7c6c4a385, type: 3}
-      shooterDuration: 5
+      shooterDuration: 10
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 5
     - destination: {fileID: 1207484103}
       shooterPrefab: {fileID: 2140757483595836578, guid: a62d00d6362dba14c83f999610e19138, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1207484103}
       shooterPrefab: {fileID: 5146840857109854983, guid: 72f136e69698f7747a0fc5439a6cd8fd, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1207484103}
       shooterPrefab: {fileID: 4183240877637552910, guid: 607d4b597cd4d0242ae80c72b4cbe18b, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1207484103}
       shooterPrefab: {fileID: 1685280684711786164, guid: ed593546bdf05a045a4301a5967e6758, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1083781657}
-      shooterPrefab: {fileID: 3055969287758637140, guid: ec5f328e6c5aff94d8ea9ac7c6c4a385, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 5
-    - destination: {fileID: 1083781657}
-      shooterPrefab: {fileID: 1788142000595691568, guid: 831cd8b861b558d4793d03c6d70a5d40, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1207484103}
-      shooterPrefab: {fileID: 434426585391432021, guid: e92abfefb942a2d4bb2688ef88729ae6, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1207484103}
-      shooterPrefab: {fileID: 3569049363760916428, guid: ace4a40f34fe6314b888fe566413f8fc, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1207484103}
-      shooterPrefab: {fileID: 2398154164130311060, guid: c79ff2da89cf3914e8f4babedca2b872, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1631311724}
-      shooterPrefab: {fileID: 3055969287758637140, guid: ec5f328e6c5aff94d8ea9ac7c6c4a385, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 5
-    - destination: {fileID: 1631311724}
-      shooterPrefab: {fileID: 2140757483595836578, guid: a62d00d6362dba14c83f999610e19138, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1631311724}
-      shooterPrefab: {fileID: 5146840857109854983, guid: 72f136e69698f7747a0fc5439a6cd8fd, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1631311724}
-      shooterPrefab: {fileID: 4183240877637552910, guid: 607d4b597cd4d0242ae80c72b4cbe18b, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 1631311724}
-      shooterPrefab: {fileID: 1685280684711786164, guid: ed593546bdf05a045a4301a5967e6758, type: 3}
-      shooterDuration: 3
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
@@ -10496,139 +10441,139 @@ MonoBehaviour:
     attackPoints:
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 3508150798893621400, guid: d4553ef0bfe18dd46a88bf9735552b8b, type: 3}
-      shooterDuration: 4
+      shooterDuration: 5
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1266894038}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 0.5
+      actionDelay: 0
     - destination: {fileID: 1266894038}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1266894038}
       shooterPrefab: {fileID: 3508150798893621400, guid: d4553ef0bfe18dd46a88bf9735552b8b, type: 3}
-      shooterDuration: 4
+      shooterDuration: 5
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1771700673}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1771700673}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1771700673}
       shooterPrefab: {fileID: 3508150798893621400, guid: d4553ef0bfe18dd46a88bf9735552b8b, type: 3}
-      shooterDuration: 4
+      shooterDuration: 5
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1992138347}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1992138347}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1992138347}
       shooterPrefab: {fileID: 3508150798893621400, guid: d4553ef0bfe18dd46a88bf9735552b8b, type: 3}
-      shooterDuration: 4
+      shooterDuration: 5
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 685863286}
-      shooterPrefab: {fileID: 6355748131554541363, guid: bc0af032b0eccba4d85672dd7f6bc4a3, type: 3}
+      shooterPrefab: {fileID: 6355748131554541363, guid: 8bdeea5fb5ceed54692a00afd2bfc712, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 685863286}
-      shooterPrefab: {fileID: 4057160023873202394, guid: 5fb3f4b2868cf03438ffc170630123ce, type: 3}
+      shooterPrefab: {fileID: 4057160023873202394, guid: 7edd463c17a417447a965814ad13f9f7, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     moveDuration: 2
-    phaseTime: 30
+    phaseTime: 45
     loopDelay: 1
   - phaseName: 'Trickster Magic: Predicament Escape'
     phaseHP: 5000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 1345176342}
-      shooterPrefab: {fileID: 8941542907013977733, guid: 8ebb068db20db5d4585414c4a607ce97, type: 3}
+      shooterPrefab: {fileID: 6921592572269922314, guid: bd42a7abb616a2b4d990fa5a383940c0, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 1345176342}
-      shooterPrefab: {fileID: 642610850498341916, guid: bb1c8e2e05c84874a82cdcc88cd6da6f, type: 3}
+      shooterPrefab: {fileID: 3278001728140186740, guid: bb1c8e2e05c84874a82cdcc88cd6da6f, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 800315926}
+    - destination: {fileID: 1345176342}
       shooterPrefab: {fileID: 2087330381617888807, guid: 981e4467dfb27334b9f77154e95e7311, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 800315926}
+    - destination: {fileID: 1345176342}
       shooterPrefab: {fileID: 2151907972618111477, guid: adff04882d5766441a11b3dffc914d6a, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 800315926}
+    - destination: {fileID: 1345176342}
       shooterPrefab: {fileID: 839792261520312899, guid: 28be47f7dc3b9b94fab57d855e220444, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 2
+    - destination: {fileID: 624386846}
+      shooterPrefab: {fileID: 2250765828326556776, guid: e0834deb52e58cf4f86511346c00dd6f, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 624386846}
-      shooterPrefab: {fileID: 2793080096185542172, guid: e0834deb52e58cf4f86511346c00dd6f, type: 3}
+      shooterPrefab: {fileID: 4994797525013603405, guid: dff6f9469405a064183c80759bc06b7f, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
+      actionDelay: 0
     - destination: {fileID: 624386846}
-      shooterPrefab: {fileID: 4561234566074018269, guid: dff6f9469405a064183c80759bc06b7f, type: 3}
+      shooterPrefab: {fileID: 5139079671649201469, guid: e254985fc5724bf439ae61d2604c6db2, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 2087330381617888807, guid: 981e4467dfb27334b9f77154e95e7311, type: 3}
+    - destination: {fileID: 624386846}
+      shooterPrefab: {fileID: 3150047868824475178, guid: 2bb3fba560e734a4186c1a8afc917e9a, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 2151907972618111477, guid: adff04882d5766441a11b3dffc914d6a, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 839792261520312899, guid: 28be47f7dc3b9b94fab57d855e220444, type: 3}
+    - destination: {fileID: 624386846}
+      shooterPrefab: {fileID: 1431470785493471930, guid: 74c7068d8083feb47ac8d71154a06b20, type: 3}
       shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
@@ -10712,16 +10657,16 @@ MonoBehaviour:
       shooterDuration: 35
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 30
+      actionDelay: 15
     - destination: {fileID: 1358187170}
       shooterPrefab: {fileID: 3835565647799281727, guid: fd29905b93ad3f248baff63ba540f187, type: 3}
       shooterDuration: 35
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 30
+      actionDelay: 15
     moveDuration: 1
     phaseTime: 60
-    loopDelay: 1
+    loopDelay: 5
   - phaseName: Normal Attack
     phaseHP: 2000
     isSpell: 0
@@ -10731,31 +10676,31 @@ MonoBehaviour:
       shooterDuration: 4
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 2
+      actionDelay: 0.5
     - destination: {fileID: 1979286017}
       shooterPrefab: {fileID: 7486528558464914712, guid: b37ff562a4c0a6a4eb1badd0cb8d8b29, type: 3}
       shooterDuration: 4
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 2
+      actionDelay: 0.5
     - destination: {fileID: 1454386043}
       shooterPrefab: {fileID: 7486528558464914712, guid: b37ff562a4c0a6a4eb1badd0cb8d8b29, type: 3}
       shooterDuration: 4
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 2
+      actionDelay: 0.5
     - destination: {fileID: 1757112340}
       shooterPrefab: {fileID: 7486528558464914712, guid: b37ff562a4c0a6a4eb1badd0cb8d8b29, type: 3}
       shooterDuration: 4
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 2
+      actionDelay: 0.5
     - destination: {fileID: 1980416581}
       shooterPrefab: {fileID: 7486528558464914712, guid: b37ff562a4c0a6a4eb1badd0cb8d8b29, type: 3}
       shooterDuration: 4
       shootWhileMoving: 1
       prepareTime: 0
-      actionDelay: 2
+      actionDelay: 0.5
     moveDuration: 1
     phaseTime: 60
     loopDelay: 1
@@ -10765,37 +10710,37 @@ MonoBehaviour:
     attackPoints:
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 4657198760019274078, guid: f9ed4d15ac2043b448d5ce1a2737f545, type: 3}
-      shooterDuration: 10
+      shooterDuration: 15
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 1
     - destination: {fileID: 1979286017}
       shooterPrefab: {fileID: 7384354610897227924, guid: 9c8b2ea748a332e4f8297f2255764c81, type: 3}
-      shooterDuration: 10
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 2
     - destination: {fileID: 1541592863}
       shooterPrefab: {fileID: 1257112311308932043, guid: 3bf3d0319a3e079428a432047a2250c2, type: 3}
-      shooterDuration: 10
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 2
     - destination: {fileID: 1757112340}
       shooterPrefab: {fileID: 4657198760019274078, guid: f9ed4d15ac2043b448d5ce1a2737f545, type: 3}
-      shooterDuration: 10
+      shooterDuration: 15
       shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 2
     - destination: {fileID: 1980416581}
       shooterPrefab: {fileID: 7384354610897227924, guid: 9c8b2ea748a332e4f8297f2255764c81, type: 3}
-      shooterDuration: 10
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 2
     - destination: {fileID: 951578052}
       shooterPrefab: {fileID: 1257112311308932043, guid: 3bf3d0319a3e079428a432047a2250c2, type: 3}
-      shooterDuration: 10
+      shooterDuration: 15
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 2
@@ -10845,116 +10790,116 @@ MonoBehaviour:
     attackPoints:
     - destination: {fileID: 800315926}
       shooterPrefab: {fileID: 3657220519047638776, guid: 95f42c43d1b97fd4aa564261208d3141, type: 3}
-      shooterDuration: 30
+      shooterDuration: 99
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 1
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 6499251789316674597, guid: 9559a1528fd1b7a468275cf734ab06c1, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 5069527784409589663, guid: 17a1c99f2b9f7764093ddbfdbe062ba1, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 7760990468528748014, guid: 47e39a6260fc085499263bba67c697ed, type: 3}
+      shooterDuration: 3
+      shootWhileMoving: 0
+      prepareTime: 0
+      actionDelay: 0
+    - destination: {fileID: 800315926}
+      shooterPrefab: {fileID: 9043375250436376944, guid: e89d08097967dc241b14a11e58491f9a, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 5340013804333909496, guid: 9559a1528fd1b7a468275cf734ab06c1, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 8148852095206181919, guid: 4d2874c50e9641b4797b8759748712bf, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 5139229952159460403, guid: 17a1c99f2b9f7764093ddbfdbe062ba1, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 5960862859707770149, guid: 08b79a4b5c3b3d14aa8e91bd6185f8b8, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 4420443327147252935, guid: 47e39a6260fc085499263bba67c697ed, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 7497134443757264922, guid: c9de46a6e8e1cb846aa637bc3695268c, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 8218123320472919046, guid: e89d08097967dc241b14a11e58491f9a, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 3193305108184869117, guid: 8bc11a844d9b2ca48ae84106f78b3231, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 3
+      actionDelay: 2
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 952679102172826697, guid: 4d2874c50e9641b4797b8759748712bf, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 1673230460042732252, guid: 2a846b9ca58d7494a8b6f9bf7820e5d4, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 6843876981165776800, guid: 08b79a4b5c3b3d14aa8e91bd6185f8b8, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 3360463977666571715, guid: fc4c3f205e8b0f642842ccd2df5a3f1e, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 2966191657405510497, guid: c9de46a6e8e1cb846aa637bc3695268c, type: 3}
-      shooterDuration: 2
+      shooterPrefab: {fileID: 276935388707873044, guid: fa9daa45cbc624344b15cb0a062160a4, type: 3}
+      shooterDuration: 3
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 855132277614965426, guid: 8bc11a844d9b2ca48ae84106f78b3231, type: 3}
-      shooterDuration: 2
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 3
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 2526575068174455797, guid: 2a846b9ca58d7494a8b6f9bf7820e5d4, type: 3}
+      shooterPrefab: {fileID: 6154442438054639763, guid: b28285a7e961b0b4a9a3ec28b4cc1bda, type: 3}
       shooterDuration: 2
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 7129104529534340372, guid: fc4c3f205e8b0f642842ccd2df5a3f1e, type: 3}
-      shooterDuration: 2
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 4100422506253582054, guid: fa9daa45cbc624344b15cb0a062160a4, type: 3}
-      shooterDuration: 2
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    - destination: {fileID: 800315926}
-      shooterPrefab: {fileID: 5525028622929196099, guid: b28285a7e961b0b4a9a3ec28b4cc1bda, type: 3}
-      shooterDuration: 2
-      shootWhileMoving: 0
-      prepareTime: 0
-      actionDelay: 0
-    moveDuration: 3
+    moveDuration: 1
     phaseTime: 60
     loopDelay: 3
-  - phaseName: Normal Attack
-    phaseHP: 2000
-    isSpell: 0
+  - phaseName: 'Fire Magic: Aristolochia'
+    phaseHP: 6000
+    isSpell: 1
     attackPoints:
     - destination: {fileID: 1065118439}
       shooterPrefab: {fileID: 4979020840453555935, guid: ac198d0ae9f4c924a98b9dda0d2a2e90, type: 3}
-      shooterDuration: 3
-      shootWhileMoving: 1
+      shooterDuration: 6
+      shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 646473875}
       shooterPrefab: {fileID: 4979020840453555935, guid: ac198d0ae9f4c924a98b9dda0d2a2e90, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 2050299565}
       shooterPrefab: {fileID: 4979020840453555935, guid: ac198d0ae9f4c924a98b9dda0d2a2e90, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 60371623}
       shooterPrefab: {fileID: 4979020840453555935, guid: ac198d0ae9f4c924a98b9dda0d2a2e90, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 87264223}
       shooterPrefab: {fileID: 4979020840453555935, guid: ac198d0ae9f4c924a98b9dda0d2a2e90, type: 3}
-      shooterDuration: 3
+      shooterDuration: 6
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 3
@@ -10962,40 +10907,40 @@ MonoBehaviour:
     phaseTime: 60
     loopDelay: 1
   - phaseName: 'Trickster Magic: Vanishing'
-    phaseHP: 2000
+    phaseHP: 6000
     isSpell: 1
     attackPoints:
     - destination: {fileID: 244751005}
       shooterPrefab: {fileID: 1254579686772028897, guid: de97ce6f69c359a48ad054953c41f1e4, type: 3}
-      shooterDuration: 60
+      shooterDuration: 20
       shootWhileMoving: 0
       prepareTime: 2
-      actionDelay: 10
+      actionDelay: 5
     - destination: {fileID: 244751005}
       shooterPrefab: {fileID: 4284604385557262149, guid: 84e989f68181659409b322d666405d4e, type: 3}
-      shooterDuration: 60
+      shooterDuration: 20
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 10
+      actionDelay: 5
     - destination: {fileID: 244751005}
       shooterPrefab: {fileID: 6119975701940746495, guid: 027823c7fcb902c4cb743f72617dbd72, type: 3}
-      shooterDuration: 60
+      shooterDuration: 10
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 244751005}
       shooterPrefab: {fileID: 1145552362679882340, guid: 4dd6cbe64c579a345a72cd6fbe230947, type: 3}
-      shooterDuration: 60
+      shooterDuration: 10
       shootWhileMoving: 0
       prepareTime: 2
       actionDelay: 0
     moveDuration: 2
     phaseTime: 45
-    loopDelay: 99
+    loopDelay: 5
   boss: {fileID: 1531791279}
   startPos: {fileID: 800315926}
   cutInAnim: {fileID: 1044109833}
-  bossName: Pluvia
+  bossName: Chaos Jestin
   spellBackground: {fileID: 954554719}
   magicCircle: {fileID: 1955636982}
 --- !u!4 &2000302745

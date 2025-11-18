@@ -13,6 +13,11 @@ public class FireSurgeAbility : MonoBehaviour
         StartCoroutine(GameManager.Instance.ScreenShake(shakeDuration, shakeMagnitude));
         bullet = Instantiate(fireSurgeBullet, transform.position, transform.rotation).GetComponentInChildren<FireSurgeBullet>(); ;
     }
+    private void OnDisable()
+    {
+        GameManager.Instance.playerUsingSpell = false;
+        EventDispatcher<bool>.Dispatch(Event.PlayerSpellEnd.ToString(), true);
+    }
     private void Update()
     {
         if (bullet != null)

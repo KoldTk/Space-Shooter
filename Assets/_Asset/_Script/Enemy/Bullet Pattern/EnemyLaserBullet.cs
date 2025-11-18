@@ -17,7 +17,14 @@ public class EnemyLaserBullet : MonoBehaviour
         tween = transform.DOScale(new Vector3(1, 1, 0), 0.2f);
         currentTime = liveDuration;
     }
-    // Update is called once per frame
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
+    private void OnDestroy()
+    {
+        transform.DOKill();
+    }
     void Update()
     {
         if (liveDuration > 0)

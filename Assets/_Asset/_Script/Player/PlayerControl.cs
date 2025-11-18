@@ -19,7 +19,7 @@ public class PlayerControl : MonoBehaviour
     private void OnDisable()
     {
         EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
-        Debug.Log("Player Die");
+        EventDispatcher<bool>.Dispatch(Event.PlayerSpellEnd.ToString(), true);
     }
     void Update()
     {
@@ -69,7 +69,7 @@ public class PlayerControl : MonoBehaviour
         {
             spellBomb.SetActive(true);
             GameManager.Instance.playerSpell--;
-            EventDispatcher<bool>.Dispatch(Event.UsingSpell.ToString(), true);
+            EventDispatcher<bool>.Dispatch(Event.PlayerUsingSpell.ToString(), true);
             GameManager.Instance.playerUsingSpell = true;
         }
     }

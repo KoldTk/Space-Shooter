@@ -12,6 +12,7 @@ public class UIBossStat : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeCounter;
     [SerializeField] private GameObject phaseIcon;
     [SerializeField] private Transform phaseIconTransform;
+    [SerializeField] private GameObject cutInAnim;
     [SerializeField] private float spacing;
     [SerializeField] private float healthFillSpeed;
     private float time;
@@ -30,12 +31,14 @@ public class UIBossStat : MonoBehaviour
         EventDispatcher<int>.AddListener(Event.BossTakeDamage.ToString(), UpdateBossHealth);
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), RefillHealth);
         EventDispatcher<bool>.AddListener(Event.BossDie.ToString(), HideStat);
+        EventDispatcher<bool>.AddListener(Event.ShowCutInAnim.ToString(), ShowCutInAnim);
     }
     private void OnDisable()
     {
         EventDispatcher<int>.RemoveListener(Event.BossTakeDamage.ToString(), UpdateBossHealth);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), RefillHealth);
         EventDispatcher<bool>.RemoveListener(Event.BossDie.ToString(), HideStat);
+        EventDispatcher<bool>.RemoveListener(Event.ShowCutInAnim.ToString(), ShowCutInAnim);
     }
     private void Update()
     {
@@ -108,5 +111,9 @@ public class UIBossStat : MonoBehaviour
     private void HideStat(bool isTrue)
     {
         gameObject.SetActive(false);
+    }
+    private void ShowCutInAnim(bool isShowed)
+    {
+        cutInAnim.SetActive(isShowed);
     }    
 }

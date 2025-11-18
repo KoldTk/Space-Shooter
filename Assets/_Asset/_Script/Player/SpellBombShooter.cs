@@ -11,7 +11,7 @@ public abstract class SpellBombShooter : MonoBehaviour
     private void OnDisable()
     {
         GameManager.Instance.playerUsingSpell = false;
-        EventDispatcher<bool>.Dispatch(Event.SpellEnd.ToString(), true);
+        EventDispatcher<bool>.Dispatch(Event.PlayerSpellEnd.ToString(), true);
     }
     public abstract IEnumerator StartSpell();  
 }
