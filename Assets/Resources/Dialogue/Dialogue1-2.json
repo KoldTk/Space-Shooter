@@ -1,0 +1,62 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Water Fairy - Pluvia", "spritePath": "Character Sprite/Pluvia/PluviaSmile"
+    },
+    {
+      "id": 4, "name": "The Water Fairy - Pluvia", "spritePath": "Character Sprite/Pluvia/PluviaPout"
+    },
+    {
+      "id": 5, "name": "The Water Fairy - Pluvia", "spritePath": "Character Sprite/Pluvia/PluviaInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 5,
+      "message": "Ouch... You're stronger than I thought."
+    },
+    {
+      "actorId": 0,
+      "message": "Sorry, I'm not good at holding back."
+    },
+    {
+      "actorId": 5,
+      "message": "As promised, I will show you the way."
+    },
+    {
+      "actorId": 5,
+      "message": "Someone just built a mansion deep in the forest recently. I saw my sisters play around that area last week, they suddenly became weird right after."
+    },
+    {
+      "actorId": 0,
+      "message": "How weird?"
+    },
+    {
+      "actorId": 5,
+      "message": "They became more aggressive than normal and rampaged around."
+    },
+    {
+      "actorId": 5,
+      "message": "Can you help them too? Just give them a good beating until they're exhausted."
+    },
+    {
+      "actorId": 0,
+      "message": "Quite a violent method coming from the gentle fairy."
+    },
+    {
+      "actorId": 5,
+      "message": "Don't worry, I do that all the time.",
+	"eventType": 5,
+	"eventParam": "StageEnd"
+    }
+  ]
+}

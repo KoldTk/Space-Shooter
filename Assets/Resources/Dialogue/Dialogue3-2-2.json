@@ -1,0 +1,50 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosNormal"
+    },
+    {
+      "id": 4, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosAngry"
+    },
+    {
+      "id": 5, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 4,
+      "message": "Uuu..."
+    },
+    {
+      "actorId": 0,
+      "message": "Dizzy..."
+    },
+    {
+      "actorId": 4,
+      "message": "Why was I flying that fast again?"
+    },
+    {
+      "actorId": 4,
+      "message": "Ugh-bleh!"
+    },
+    {
+      "actorId": 2,
+      "message": "Another target down!"
+    },
+    {
+      "actorId": 2,
+      "message": "To the next one!",
+	"eventType": 5,
+	"eventParam": "StageEnd"
+    }
+  ]
+}

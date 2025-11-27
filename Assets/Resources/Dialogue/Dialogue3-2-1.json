@@ -1,0 +1,48 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosNormal"
+    },
+    {
+      "id": 4, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosAngry"
+    },
+    {
+      "id": 5, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 4,
+      "message": "Gyaaaa! You're so persistent!",
+	"eventType": 2,
+	"eventParam": "Prefab/Anemos (Boss)"
+    },
+    {
+      "actorId": 2,
+      "message": "Speed doesn’t matter if I can track your every move."
+    },
+    {
+      "actorId": 2,
+      "message": "Ready to become one with the wind?"
+    },
+    {
+      "actorId": 3,
+      "message": "Don't think you have won just yet!"
+    },
+    {
+      "actorId": 3,
+      "message": "Wind, become my wings!",
+	"eventType": 4,
+	"eventParam": "BossStartAttack"
+    }
+  ]
+}

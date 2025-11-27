@@ -1,0 +1,88 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Water Fairy - Pluvia", "spritePath": "Character Sprite/Pluvia/PluviaSmile"
+    },
+    {
+      "id": 4, "name": "The Water Fairy - Pluvia", "spritePath": "Character Sprite/Pluvia/PluviaPout"
+    },
+    {
+      "id": 5, "name": "The Water Fairy - Pluvia", "spritePath": "Character Sprite/Pluvia/PluviaInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 0,
+      "message": "So this is the the place."
+    },
+    {
+      "actorId": 0,
+      "message": "Sight of fairies wreaking havoc in Eastern region of Mystalogia, investigate and resolve the matter... Or so the request says..."
+    },
+    {
+      "actorId": 0,
+      "message": "Forest is rowdy than usual, but no sight of fairy yet."
+    },
+    {
+      "actorId": 3,
+      "message": "Please stop right there.",
+	"eventType": 2,
+	"eventParam": "Prefab/Pluvia (Boss)"
+    },
+    {
+      "actorId": 0,
+      "message": "Ah, suspicious girl spotted."
+    },
+    {
+      "actorId": 4,
+      "message": "How can you call a gentle fairy like me "suspicious"!?"
+    },
+    {
+      "actorId": 4,
+      "message": "Who are you anyway? Why come to this forest?"
+    },
+    {
+      "actorId": 4,
+      "message": "This area is dangerous at the moment so please leave as soon as possible."
+    },
+    {
+      "actorId": 0,
+      "message": "Selene Arcanist, Guild requested me to investigate this forest"
+    },
+    {
+      "actorId": 3,
+      "message": "So you're a member of Magic Research Guild."
+    },
+    {
+      "actorId": 3,
+      "message": "I can show you the way, but let me test you first."
+    },
+    {
+      "actorId": 0,
+      "message": "Test what?"
+    },
+    {
+      "actorId": 3,
+      "message": "Your capability, of course."
+    },
+    {
+      "actorId": 3,
+      "message": "Those kids are a bit aggresive right now. I want to know if you have the ability to defend yourself."
+    },
+    {
+      "actorId": 3,
+      "message": "If this is too much for you, feel free to leave.",
+	"eventType": 4,
+	"eventParam": "BossStartAttack"
+    }
+  ]
+}

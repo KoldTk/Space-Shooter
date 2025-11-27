@@ -13,27 +13,16 @@ public class InitialDialogue : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventDispatcher<string>.AddListener(Event.StartBeforeBossDialogue.ToString(), BeforeBossDialogue);
-        EventDispatcher<bool>.AddListener(Event.StartAfterBossDialogue.ToString(), AfterBossDialogue);
+        EventDispatcher<string>.AddListener(Event.StartDialogue.ToString(), InitBossDialogue);
     }
     private void OnDisable()
     {
-        EventDispatcher<string>.RemoveListener(Event.StartBeforeBossDialogue.ToString(), BeforeBossDialogue);
-        EventDispatcher<bool>.RemoveListener(Event.StartAfterBossDialogue.ToString(), AfterBossDialogue);
+        EventDispatcher<string>.RemoveListener(Event.StartDialogue.ToString(), InitBossDialogue);
     }
-    public void BeforeBossDialogue(string dialogue)
-    {
-        StartCoroutine(StartDialogueSequence(5f, dialogue));
-    }
-    public void AfterBossDialogue(bool dialogueOn)
-    {
-        StartCoroutine(StartDialogueSequence(0.5f, afterBossDialogue));
-    }    
-    private IEnumerator StartDialogueSequence(float duration, string filePath)
+    public void InitBossDialogue(string dialoguePath)
     {
         dialogueArea.SetActive(true);
-        yield return new WaitForSeconds(duration);
-        StartDialogue(filePath);
+        StartDialogue(dialoguePath);
     }
     private void StartDialogue(string filePath)
     {

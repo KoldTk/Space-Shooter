@@ -7,6 +7,7 @@ public class EnemyWavesController : MonoBehaviour
     public StageData stageData;
     private int currentWave = 0;
     [SerializeField] private string bossDialogue;
+    [SerializeField] private float bossWaitDuration;
     private void OnEnable()
     {
         EventDispatcher<bool>.AddListener(Event.WaveEnd.ToString(), StartWave);
@@ -28,8 +29,13 @@ public class EnemyWavesController : MonoBehaviour
         }
         else
         {
-            EventDispatcher<string>.Dispatch(Event.StartBeforeBossDialogue.ToString(), bossDialogue);
+            StartCoroutine(InitBossDialogue());
             Debug.Log("Mob Wave End, Boss Appear");
         }    
     }
+    private IEnumerator InitBossDialogue()
+    {
+        yield return new WaitForSeconds(bossWaitDuration);
+        EventDispatcher<string>.Dispatch(Event.StartDialogue.ToString(), bossDialogue);
+    }    
 }

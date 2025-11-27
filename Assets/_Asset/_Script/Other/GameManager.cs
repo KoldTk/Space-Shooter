@@ -134,7 +134,7 @@ public class GameManager : Singleton<GameManager>
             return null;
         }    
         return JsonUtility.FromJson<DialogueData>(jsonFile.text);
-    }
+    }   
     public IEnumerator ScreenShake(float duration, float magnitude)
     {
         Vector3 originalPos = gameBackground.position;

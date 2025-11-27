@@ -1,0 +1,62 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosNormal"
+    },
+    {
+      "id": 4, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosAngry"
+    },
+    {
+      "id": 5, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 4,
+      "message": "Ouch! Why did you attack me!?"
+    },
+    {
+      "actorId": 0,
+      "message": "Stop the wind. I can’t see through all these flying leaves."
+    },
+    {
+      "actorId": 4,
+      "message": "No! I want stronger wind!"
+    },
+    {
+      "actorId": 4,
+      "message": "Becoming one with the wind is the best feeling!"
+    },
+    {
+      "actorId": 1,
+      "message": "Stop, or I’ll make you one with the wind for real."
+    },
+    {
+      "actorId": 3,
+      "message": "Heh!"
+    },
+    {
+      "actorId": 3,
+      "message": "I'm not scared of you, grandma! Catch me if you can!"
+    },	
+    {
+      "actorId": 1,
+      "message": "..."
+    },
+    {
+      "actorId": 2,
+      "message": "You ask for it.",
+	"eventType": 4,
+	"eventParam": "WaveEnd"
+    }
+  ]
+}

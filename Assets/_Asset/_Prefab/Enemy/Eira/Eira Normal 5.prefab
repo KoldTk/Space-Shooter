@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   angle: 360
+  rotateType: 0
 --- !u!1 &8219483916173795270
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 9
+  bulletID: 29
   bulletSpeed: 0.5
   shootType: 0
   bulletType: 0
@@ -191,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 9
+  bulletID: 29
   bulletSpeed: 0.5
   shootType: 0
   bulletType: 0
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 9
+  bulletID: 29
   bulletSpeed: 0.5
   shootType: 0
   bulletType: 0

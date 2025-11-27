@@ -12,7 +12,7 @@ public class EnemyBullet : MonoBehaviour
     private float lastRewardTime;
     private void OnEnable()
     {
-        targetCollider = FindAnyObjectByType<PlayerControl>().GetComponent<Collider2D>();
+        targetCollider = FindAnyObjectByType<PlayerControl>()?.GetComponent<Collider2D>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

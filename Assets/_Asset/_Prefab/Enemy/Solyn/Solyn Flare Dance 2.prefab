@@ -1,345 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &151008708519179546
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6749923936479824366}
-  - component: {fileID: 9186260375625708468}
-  - component: {fileID: 4476441326340877247}
-  m_Layer: 7
-  m_Name: Shooter Middle (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6749923936479824366
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151008708519179546}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1145173986866566064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &9186260375625708468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151008708519179546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4476441326340877247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151008708519179546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
-  shootType: 0
-  bulletType: 0
-  fireRate: 0.1
-  fireDuration: 4
-  shootCount: 1
-  targetSpeed: 0
-  delayTime: 0
-  accelRate: 0
-  waveAmp: 0
-  frequency: 0
-  patternType: 1
-  radialConfig:
-    bulletCount: 15
-  spiralConfig:
-    spiralAngle: 5
-    spiralSpeed: 10
-    clockwise: 1
-  waveConfig:
-    bulletCount: 0
-    spreadAngle: 0
-  straightConfig:
-    bulletCount: 1
-    offset: 0
-  randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
---- !u!1 &2159086883519146601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9100684632085028817}
-  - component: {fileID: 4424775031562407637}
-  - component: {fileID: 43719643877061469}
-  m_Layer: 7
-  m_Name: Shooter Middle (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9100684632085028817
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2159086883519146601}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1145173986866566064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &4424775031562407637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2159086883519146601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &43719643877061469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2159086883519146601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
-  shootType: 0
-  bulletType: 0
-  fireRate: 0.1
-  fireDuration: 4
-  shootCount: 1
-  targetSpeed: 0
-  delayTime: 0
-  accelRate: 0
-  waveAmp: 0
-  frequency: 0
-  patternType: 1
-  radialConfig:
-    bulletCount: 15
-  spiralConfig:
-    spiralAngle: 5
-    spiralSpeed: 10
-    clockwise: 0
-  waveConfig:
-    bulletCount: 0
-    spreadAngle: 0
-  straightConfig:
-    bulletCount: 1
-    offset: 0
-  randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
---- !u!1 &5814428686577766896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5303019637042195318}
-  - component: {fileID: 4520274895167322279}
-  - component: {fileID: 6657178221233898803}
-  m_Layer: 7
-  m_Name: Shooter Middle (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5303019637042195318
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814428686577766896}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1145173986866566064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &4520274895167322279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814428686577766896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6657178221233898803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814428686577766896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
-  shootType: 0
-  bulletType: 0
-  fireRate: 0.1
-  fireDuration: 4
-  shootCount: 1
-  targetSpeed: 0
-  delayTime: 0
-  accelRate: 0
-  waveAmp: 0
-  frequency: 0
-  patternType: 1
-  radialConfig:
-    bulletCount: 15
-  spiralConfig:
-    spiralAngle: 5
-    spiralSpeed: 10
-    clockwise: 0
-  waveConfig:
-    bulletCount: 0
-    spreadAngle: 0
-  straightConfig:
-    bulletCount: 1
-    offset: 0
-  randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
---- !u!1 &6068143998803087088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4959403626104667300}
-  - component: {fileID: 6588707908457113}
-  - component: {fileID: 4962473390609374946}
-  m_Layer: 7
-  m_Name: Shooter Middle (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4959403626104667300
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068143998803087088}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1145173986866566064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &6588707908457113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068143998803087088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bd7a328e777934b9a05140e67ab6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4962473390609374946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068143998803087088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
-  shootType: 0
-  bulletType: 0
-  fireRate: 0.1
-  fireDuration: 4
-  shootCount: 1
-  targetSpeed: 0
-  delayTime: 0
-  accelRate: 0
-  waveAmp: 0
-  frequency: 0
-  patternType: 1
-  radialConfig:
-    bulletCount: 15
-  spiralConfig:
-    spiralAngle: 5
-    spiralSpeed: 10
-    clockwise: 1
-  waveConfig:
-    bulletCount: 0
-    spreadAngle: 0
-  straightConfig:
-    bulletCount: 1
-    offset: 0
-  randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
 --- !u!1 &7334943965535150923
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,11 +57,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 42
   bulletSpeed: 2
   shootType: 0
   bulletType: 0
-  fireRate: 0.1
+  fireRate: 0.2
   fireDuration: 4
   shootCount: 1
   targetSpeed: 0
@@ -434,6 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145173986866566064}
+  - component: {fileID: 3565066659976674729}
   m_Layer: 7
   m_Name: Solyn Flare Dance 2
   m_TagString: Shooter
@@ -455,9 +116,20 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 403924141743815501}
-  - {fileID: 6749923936479824366}
-  - {fileID: 4959403626104667300}
-  - {fileID: 9100684632085028817}
-  - {fileID: 5303019637042195318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3565066659976674729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533424895223409565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f293cd860926f24449a3f89b33ca6d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 4
+  angle: 360
+  rotateType: 1

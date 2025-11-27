@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     {
         EventDispatcher<bool>.RemoveListener(Event.CharacterDie.ToString(), RespawnCharacter);
         EventDispatcher<bool>.RemoveListener(Event.Retry.ToString(), Retry);
+        EventDispatcher<bool>.RemoveListener(Event.PlayerUsingSpell.ToString(), ShowBackground);
         EventDispatcher<bool>.RemoveListener(Event.PlayerSpellEnd.ToString(), HideBackground);
     }
     void Start()

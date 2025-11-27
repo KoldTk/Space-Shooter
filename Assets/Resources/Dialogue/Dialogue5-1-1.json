@@ -1,0 +1,72 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "Demon of Unwitting Mischief - Chaos Jestin", "spritePath": "Character Sprite/Chaos/ChaosNormal"
+    },
+    {
+      "id": 4, "name": "Demon of Unwitting Mischief - Chaos Jestin", "spritePath": "Character Sprite/Chaos/ChaosAngry"
+    },
+    {
+      "id": 5, "name": "Demon of Unwitting Mischief - Chaos Jestin", "spritePath": "Character Sprite/Chaos/ChaosInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 3,
+      "message": "NOT ANOTHER STEP!",
+	"eventType": 2,
+	"eventParam": "Prefab/Chaos (Boss)"
+    },
+    {
+      "actorId": 3,
+      "message": "You're messing up my house!"
+    },
+    {
+      "actorId": 0,
+      "message": "Then station your monsters outside."
+    },
+    {
+      "actorId": 0,
+      "message": "What's the point of guards if they're all inside the house?"
+    },
+    {
+      "actorId": 3,
+      "message": "Why are you here, human?"
+    },
+    {
+      "actorId": 0,
+      "message": "There were some fairies turned weird and caused trouble in the forest."
+    },
+    {
+      "actorId": 0,
+      "message": "They're said to have come here before the incident."
+    },
+    {
+      "actorId": 3,
+      "message": "It wasn't my fault."
+    },
+    {
+      "actorId": 0,
+      "message": "I haven't said anything."
+    },
+    {
+      "actorId": 3,
+      "message": "It's not my fault! Leave my house, or I will kick you out!"
+    },
+    {
+      "actorId": 3,
+      "message": "Looks like I found the culprit.",
+	"eventType": 4,
+	"eventParam": "BossStartAttack"
+    }
+  ]
+}

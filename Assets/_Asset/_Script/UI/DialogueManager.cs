@@ -22,7 +22,6 @@ public class DialogueManager : MonoBehaviour
     private int lastSpeakingActor = -1; //Last people talk
     private int activeMessage = 0;
     private float textSpeed;
-    private bool bossBattleStart = true;
     private Dictionary<int, string> actorPositions = new Dictionary<int, string>();
     private void OnEnable()
     {
@@ -65,21 +64,38 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeMessageLine(messageToDisplay.message));
         ActorData actorToDisplay = currentDialogue.actors[messageToDisplay.actorId];
         DisplayCharacterImage(actorToDisplay);
+        ExecuteDialogueEvent(messageToDisplay.eventType, messageToDisplay.eventParam);
+    }
+    public void ExecuteDialogueEvent(DialogueEvent eventType, string param)
+    {
+        switch (eventType)
+        {
+            case DialogueEvent.None:
+                break;
+            case DialogueEvent.ChangeBGM:
+                //Play BGM
+                break;
+            case DialogueEvent.SpawnObject:
+                var prefab = Resources.Load<GameObject>(param);
+                Instantiate(prefab);
+                break;
+            case DialogueEvent.ChangeBackground:
+                //Change background
+                break;
+            case DialogueEvent.DialogueEnd:
+                EventDispatcher<bool>.Dispatch(param, true);
+                CloseMessageBox();
+                break;
+            case DialogueEvent.StageEnd:
+               resultMenu.SetActive(true);
+                break;
+        }
     }
     private IEnumerator CloseMessageBox()
     {
         transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InOutExpo);
         GameManager.Instance.dialogueOn = false;
-        yield return new WaitForSeconds(0.6f);
-        if (bossBattleStart)
-        {
-            EventDispatcher<bool>.Dispatch(Event.BossStartAttack.ToString(), true);
-            bossBattleStart = false;
-        }
-        else
-        {
-            resultMenu.SetActive(true);
-        }    
+        yield return new WaitForSeconds(0.6f);  
     }    
     private IEnumerator TypeMessageLine(string dialogueLine)
     {
@@ -142,7 +158,6 @@ public class DialogueManager : MonoBehaviour
                     leftActorName.text = actorToDisplay.name;
                     actorPositions[speakerId] = "left";
                 }
-                EventDispatcher<bool>.Dispatch(Event.BossAppear.ToString(), true);
             }
             else
             {

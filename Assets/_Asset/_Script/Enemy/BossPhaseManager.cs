@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +34,6 @@ public class BossPhaseManager : MonoBehaviour
 
     [SerializeField] private Transform boss;
     [SerializeField] private Transform startPos;
-    [SerializeField] private GameObject cutInAnim;
     [SerializeField] private string bossName;
     [SerializeField] private Sprite spellSprite;
     [SerializeField] private GameObject magicCircle;
@@ -47,6 +47,7 @@ public class BossPhaseManager : MonoBehaviour
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), ChangePhase);
         EventDispatcher<bool>.AddListener(Event.SpellEnd.ToString(), HideSpellBackground);
         EventDispatcher<bool>.AddListener(Event.BossDie.ToString(), StopAction);
+        EventDispatcher<bool>.AddListener(Event.CharacterDie.ToString(), ResetWave);
     }
     private void OnDisable()
     {
@@ -55,6 +56,7 @@ public class BossPhaseManager : MonoBehaviour
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), ChangePhase);
         EventDispatcher<bool>.RemoveListener(Event.BossDie.ToString(), StopAction);
         EventDispatcher<bool>.RemoveListener(Event.SpellEnd.ToString(), HideSpellBackground);
+        EventDispatcher<bool>.RemoveListener(Event.CharacterDie.ToString(), ResetWave);
     }
     private void StartAttack(bool isAttacking)
     {
@@ -155,5 +157,9 @@ public class BossPhaseManager : MonoBehaviour
     private void StopAction(bool isDead)
     {
         StopAllCoroutines();
-    }    
+    }
+    private void ResetWave(bool isReset)
+    {
+        StartPhase(currentPhaseIndex);
+    }   
 }

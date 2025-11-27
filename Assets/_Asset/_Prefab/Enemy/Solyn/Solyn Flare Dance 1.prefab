@@ -57,12 +57,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 22
   bulletSpeed: 1
   shootType: 0
   bulletType: 0
   fireRate: 0.1
-  fireDuration: 2
+  fireDuration: 1
   shootCount: 1
   targetSpeed: 0
   delayTime: 0
@@ -94,6 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2859192514059706630}
+  - component: {fileID: 8507262225379288622}
   m_Layer: 7
   m_Name: Solyn Flare Dance 1
   m_TagString: Shooter
@@ -117,3 +118,18 @@ Transform:
   - {fileID: 4916633243829046898}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8507262225379288622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285450540420332989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f293cd860926f24449a3f89b33ca6d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  angle: 360
+  rotateType: 0

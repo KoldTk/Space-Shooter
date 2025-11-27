@@ -1,0 +1,67 @@
+{
+  "actors": [
+    {
+      "id": 0,
+      "name": "",
+      "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2,
+      "name": "",
+      "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3,
+      "name": "The Ice Fairy - Eira",
+      "spritePath": "Character Sprite/Eira/EiraNormal"
+    },
+    {
+      "id": 4,
+      "name": "The Ice Fairy - Eira",
+      "spritePath": "Character Sprite/Eira/EiraInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 0,
+      "message": "So cold..."
+    },
+    {
+      "actorId": 0,
+      "message": "Snow supposed to melt a month ago."
+    },
+    {
+      "actorId": 3,
+      "message": "...",
+	"eventType": 2,
+	"eventParam": "Prefab/Eira (Boss)"
+    },
+    {
+      "actorId": 3,
+      "message": "..."
+    },
+    {
+      "actorId": 0,
+      "message": "..."
+    },
+    {
+      "actorId": 3,
+      "message": "..."
+    },
+    {
+      "actorId": 0,
+      "message": "..."
+    },
+    {
+      "actorId": 3,
+      "message": "...",
+	"eventType": 4,
+	"eventParam": "BossStartAttack"
+    }
+  ]
+}

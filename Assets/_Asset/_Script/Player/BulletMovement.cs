@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
@@ -44,7 +45,15 @@ public class BulletMovement : MonoBehaviour
         var boss = collision.GetComponent<BossControl>();
         if ((boss != null))
         {
-            boss.TakeDamage(gunDamage); 
+            boss.TakeDamage(gunDamage);
+        }
+        else
+        {
+            var midBoss = collision.GetComponent<MidBossControl>();
+            if ((midBoss != null))
+            {
+                midBoss.TakeDamage(gunDamage);
+            }    
         }
         BulletPool.Instance.ReturnToPool(bulletID, gameObject);
     }

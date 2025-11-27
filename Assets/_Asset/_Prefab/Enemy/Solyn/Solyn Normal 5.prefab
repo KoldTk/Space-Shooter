@@ -57,14 +57,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 38
   bulletSpeed: 1
   shootType: 1
   bulletType: 2
-  fireRate: 0.2
+  fireRate: 0.15
   fireDuration: 60
   shootCount: 20
-  targetSpeed: 3
+  targetSpeed: 5
   delayTime: 0.5
   accelRate: 2
   waveAmp: 0
@@ -175,14 +175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 38
   bulletSpeed: 1
   shootType: 1
   bulletType: 2
-  fireRate: 0.2
+  fireRate: 0.15
   fireDuration: 60
   shootCount: 20
-  targetSpeed: 3
+  targetSpeed: 5
   delayTime: 0.5
   accelRate: 2
   waveAmp: 0

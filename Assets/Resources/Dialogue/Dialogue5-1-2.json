@@ -1,0 +1,74 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "Demon of Unwitting Mischief - Chaos Jestin", "spritePath": "Character Sprite/Chaos/ChaosNormal"
+    },
+    {
+      "id": 4, "name": "Demon of Unwitting Mischief - Chaos Jestin", "spritePath": "Character Sprite/Chaos/ChaosAngry"
+    },
+    {
+      "id": 5, "name": "Demon of Unwitting Mischief - Chaos Jestin", "spritePath": "Character Sprite/Chaos/ChaosInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 0,
+      "message": "Confess. What did you do to those fairies?",
+    },
+    {
+      "actorId": 3,
+      "message": "It's not my fault!"
+    },
+    {
+      "actorId": 0,
+      "message": "But you are involved, right?"
+    },
+    {
+      "actorId": 3,
+      "message": "I wanted to decorate my mansion, so I bought some flowers from demon kingdom to plant at the front door."
+    },
+    {
+      "actorId": 3,
+      "message": "Those faires came here play with those flowers and turn violent after that, so I have removed it."
+    },
+    {
+      "actorId": 0,
+      "message": "How do those flowers look?"
+    },
+    {
+      "actorId": 3,
+      "message": "They have trumpet shape, pale purple color, their smell always makes me feel motivated and excited."
+    },
+    {
+      "actorId": 0,
+      "message": "Those are "Devil's Trumpets", a poisonous flower."
+    },
+    {
+      "actorId": 0,
+      "message": "Demons have high resistance, so flowers's effects are insignificant, but other species can become aggressive, or afflicted with fever and hallucinations if they stand too close."
+    },
+    {
+      "actorId": 0,
+      "message": "Do some research before bringing anything from demon kingdom next time."
+    },
+    {
+      "actorId": 5,
+      "message": "Ok..."
+    },
+    {
+      "actorId": 0,
+      "message": "And remember to apologize to those fairies.",
+	"eventType": 4,
+	"eventParam": "StageEnd"
+    }
+  ]
+}

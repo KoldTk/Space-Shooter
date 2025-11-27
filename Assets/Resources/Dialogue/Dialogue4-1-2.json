@@ -1,0 +1,58 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynNormal"
+    },
+    {
+      "id": 4, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynSmile"
+    },
+    {
+      "id": 5, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 5,
+      "message": "What just happened?"
+    },
+    {
+      "actorId": 5,
+      "message": "Why am I here, and why am I all tattered?"
+    },
+    {
+      "actorId": 5,
+      "message": "Well, doesn't matter! My body feels great!"
+    },
+    {
+      "actorId": 5,
+      "message": "It's like I just finished a full workout session."
+    },
+    {
+      "actorId": 5,
+      "message": "Kuhahahahahahaha!"
+    },
+    {
+      "actorId": 0,
+      "message": "Now she's even more annoying."
+    },
+    {
+      "actorId": 0,
+      "message": "I should leave before more trouble comes."
+    },
+    {
+      "actorId": 5,
+      "message": "Kuhahahahaha!",
+	"eventType": 5,
+	"eventParam": "StageEnd"
+    }
+  ]
+}

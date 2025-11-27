@@ -6,8 +6,8 @@ public class Health : MonoBehaviour
 {
     public int explodeEffectID;
     public int hitEffectID;
-    public int maxHP;
-    public int currentHP;
+    [HideInInspector] public int maxHP;
+    [HideInInspector] public int currentHP;
     private void Start()
     {
         currentHP = maxHP;

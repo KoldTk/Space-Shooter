@@ -8,19 +8,18 @@ public class ChangeBulletDirection : MonoBehaviour
     [SerializeField] float moveSpeed;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(ShakeScreen());
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
     private IEnumerator ShakeScreen()
     {
-        GameManager.Instance.ScreenShake(1, 1);
+        GameManager.Instance.ScreenShake(2, 1);
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject bullet in bullets)
         {
@@ -31,8 +30,8 @@ public class ChangeBulletDirection : MonoBehaviour
             if (rb != null )
             {
                 rb.velocity = moveDirection * moveSpeed;
-            }    
+            }
             yield return null;
         }
-    }
+    }  
 }

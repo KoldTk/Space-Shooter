@@ -1,0 +1,40 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosNormal"
+    },
+    {
+      "id": 4, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosAngry"
+    },
+    {
+      "id": 5, "name": "The Wind Fairy - Anemos", "spritePath": "Character Sprite/Anemos/AnemosInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 3,
+      "message": "Ha ha ha! So fast, so fast!",
+	"eventType": 2,
+	"eventParam": "Prefab/Anemos (Mid Boss)"
+    },
+    {
+      "actorId": 3,
+      "message": "Wind! Blow even faster!"
+    },
+    {
+      "actorId": 0,
+      "message": "...",
+	"eventType": 4,
+	"eventParam": "BossStartAttack"
+    }
+  ]
+}

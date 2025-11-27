@@ -1,0 +1,65 @@
+{
+  "actors": [
+    {
+      "id": 0,
+      "name": "",
+      "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2,
+      "name": "",
+      "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3,
+      "name": "The Ice Fairy - Eira",
+      "spritePath": "Character Sprite/Eira/EiraNormal"
+    },
+    {
+      "id": 4,
+      "name": "The Ice Fairy - Eira",
+      "spritePath": "Character Sprite/Eira/EiraInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 4,
+      "message": "..."
+    },
+    {
+      "actorId": 4,
+      "message": "Finally calm down..."
+    },
+    {
+      "actorId": 4,
+      "message": "Thank you..."
+    },
+    {
+      "actorId": 4,
+      "message": "I was too excited..."
+    },
+    {
+      "actorId": 0,
+      "message": "(Just now was she being "excited"?)"
+    },
+    {
+      "actorId": 0,
+      "message": "Do you know where your other sisters went to?"
+    },
+    {
+      "actorId": 4,
+      "message": "Deeper inside the forest... You will meet them..."
+    },
+    {
+      "actorId": 4,
+      "message": "Careful, they're even more excited than I am...",
+	"eventType": 5,
+	"eventParam": "StageEnd"
+    }
+  ]
+}

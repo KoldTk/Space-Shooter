@@ -57,8 +57,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
+  bulletID: 28
+  bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
   fireRate: 0.2
@@ -84,7 +84,7 @@ MonoBehaviour:
     offset: 2
   randomConfig:
     spreadAngle: 180
-    bulletCount: 10
+    bulletCount: 20
 --- !u!1 &6083805515801961408
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 2
+  bulletID: 28
+  bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
   fireRate: 0.2
@@ -169,7 +169,7 @@ MonoBehaviour:
     offset: 2
   randomConfig:
     spreadAngle: 180
-    bulletCount: 10
+    bulletCount: 20
 --- !u!1 &6381269890060477523
 GameObject:
   m_ObjectHideFlags: 0

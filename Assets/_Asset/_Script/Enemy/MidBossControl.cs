@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,20 +10,25 @@ public class MidBossControl : Health
     [SerializeField] private float phaseCount;
     [SerializeField] private string bossName;
     [SerializeField] private int itemDropCount = 10;
+    [SerializeField] private string midBossEndDialogue;
     private Vector3 appearPosition;
     private bool haveDialogue;
     private void OnEnable()
     {
+        gameObject.tag = "Boss_Invi";
         appearPosition = startPosition.position;
         GameManager.Instance.bossInfo.maxHealth = maxHP;
         GameManager.Instance.bossInfo.bossName = bossName;
         phaseCount = GameManager.Instance.bossInfo.phaseCount;
         EventDispatcher<bool>.AddListener(Event.BossChangePhase.ToString(), RefillHealth);
         EventDispatcher<int>.AddListener(Event.UpdateBossHP.ToString(), UpdateBossHP);
+        EventDispatcher<bool>.AddListener(Event.DialogueEnd.ToString(), BossRetreat);
         StartCoroutine(MoveToPosition(startPosition.position));
     }
+
     private void OnDisable()
     {
+        EventDispatcher<bool>.RemoveListener(Event.DialogueEnd.ToString(), BossRetreat);
         EventDispatcher<bool>.RemoveListener(Event.BossChangePhase.ToString(), RefillHealth);
         EventDispatcher<int>.RemoveListener(Event.UpdateBossHP.ToString(), UpdateBossHP);
     }
@@ -54,7 +60,7 @@ public class MidBossControl : Health
             GameManager.Instance.StartCoroutine(GameManager.Instance.DeleteBullet());
             StartCoroutine(MidBossDieSequence());
             EventDispatcher<bool>.Dispatch(Event.BossDie.ToString(), true);
-            EventDispatcher<bool>.Dispatch(Event.StartAfterBossDialogue.ToString(), true);
+            EventDispatcher<string>.Dispatch(Event.StartDialogue.ToString(), midBossEndDialogue);
         }
         EventDispatcher<bool>.Dispatch(Event.SpellEnd.ToString(), true);
     }
@@ -77,6 +83,7 @@ public class MidBossControl : Health
             yield return null;
         }
         transform.position = target;
+        gameObject.tag = "Boss";
     }
     private void RefillHealth(bool isRefilled)
     {
@@ -85,5 +92,11 @@ public class MidBossControl : Health
     private IEnumerator MidBossDieSequence()
     {
         yield return MoveToPosition(appearPosition);
-    }    
+
+    }
+    private void BossRetreat(bool IsRetreat)
+    {
+        Destroy(transform.parent.gameObject);
+    }
+
 }

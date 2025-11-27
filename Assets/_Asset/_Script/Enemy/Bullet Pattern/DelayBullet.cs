@@ -65,9 +65,23 @@ public class DelayBullet : MonoBehaviour
             {
                 Transform playerPos = player.transform;
                 moveDir = (playerPos.position - transform.position).normalized;
+                RotateBulletDirection(playerPos.transform.position, gameObject);
+
             }
             currentSpeed = startSpeed;
             rb.velocity = moveDir * currentSpeed;
+            
+        }
+    }
+    private void RotateBulletDirection(Vector2 destination, GameObject bullet)
+    {
+        if (destination == null) return;
+        Vector2 position = bullet.transform.position;
+        var dir = destination - (Vector2)transform.position.normalized;
+        if (dir.sqrMagnitude > 0.0001f)
+        {
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
 }

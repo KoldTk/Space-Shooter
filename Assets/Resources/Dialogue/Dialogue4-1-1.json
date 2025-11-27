@@ -1,0 +1,52 @@
+{
+  "actors": [
+    {
+      "id": 0, "name": "", "spritePath": "Character Sprite/Witch/SeleneNormal"
+    },
+    {
+      "id": 1, "name": "", "spritePath": "Character Sprite/Witch/SeleneSmile"
+    },
+    {
+      "id": 2, "name": "", "spritePath": "Character Sprite/Witch/SeleneAngry"
+    },
+    {
+      "id": 3, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynNormal"
+    },
+    {
+      "id": 4, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynSmile"
+    },
+    {
+      "id": 5, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjured"
+    }
+  ],
+  "messages": [
+    {
+      "actorId": 3,
+      "message": "Kuhahahaha! Let's fight!",
+	"eventType": 2,
+	"eventParam": "Prefab/Solyn (Boss)"
+    },
+    {
+      "actorId": 0,
+      "message": "Great... now a battle junkie appear."
+    },
+    {
+      "actorId": 0,
+      "message": "Is there even one normal fairy in this forest?"
+    },
+    {
+      "actorId": 3,
+      "message": "I thought fairies suppose to be gentle and friendly!"
+    },
+    {
+      "actorId": 3,
+      "message": "You are strong! Fight me!"
+    },
+    {
+      "actorId": 3,
+      "message": "Haa...",
+	"eventType": 4,
+	"eventParam": "BossStartAttack"
+    }
+  ]
+}
