@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
-  interval: 3
+  interval: 0.5
 --- !u!212 &3305780445230599557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
-  bulletSpeed: 0.5
+  bulletID: 22
+  bulletSpeed: 1
   shootType: 0
   bulletType: 0
   fireRate: 0.2
@@ -183,5 +183,5 @@ MonoBehaviour:
     bulletCount: 1
     offset: 0
   randomConfig:
-    spreadAngle: 360
-    bulletCount: 10
+    spreadAngle: 120
+    bulletCount: 5

@@ -417,14 +417,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyWave:
-  - enemyPrefab: {fileID: 3522327233583233492, guid: 03892978e034fad4a8da10b4595ffc1f, type: 3}
+  - enemyPrefab: {fileID: 3522327233583233492, guid: 16dc65cd4dfcd6b4684f27f87d66d3b8, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: -1, y: 0, z: 0}
     flyPath: {fileID: 4271758827305539493}
     enemyHealth: 20
     speed: 2
     nextWaveDelay: 0.2
-  - enemyPrefab: {fileID: 3522327233583233492, guid: 03892978e034fad4a8da10b4595ffc1f, type: 3}
+  - enemyPrefab: {fileID: 3522327233583233492, guid: 16dc65cd4dfcd6b4684f27f87d66d3b8, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: -1, y: 0, z: 0}
     flyPath: {fileID: 3588401907865412807}

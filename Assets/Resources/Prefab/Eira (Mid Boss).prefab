@@ -448,7 +448,7 @@ MonoBehaviour:
   phaseCount: 0
   bossName: Eira
   itemDropCount: 10
-  midBossDialogue: Dialogue/Dialogue2-2
+  midBossEndDialogue: 
 --- !u!1 &2738955617198038632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,82 +1287,64 @@ MonoBehaviour:
     - destination: {fileID: 5228408918103252960}
       shooterPrefab: {fileID: 5368321487230841642, guid: 43b6a7ea5f44c2d40be178f4cfbe4031, type: 3}
       shooterDuration: 3
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 5228408918103252960}
       shooterPrefab: {fileID: 4914058022560053946, guid: b765b6d7ee85a4f4183139aeeda5069c, type: 3}
       shooterDuration: 3
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 2949376112865550435}
       shooterPrefab: {fileID: 5368321487230841642, guid: 43b6a7ea5f44c2d40be178f4cfbe4031, type: 3}
       shooterDuration: 3
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 2949376112865550435}
       shooterPrefab: {fileID: 4914058022560053946, guid: b765b6d7ee85a4f4183139aeeda5069c, type: 3}
       shooterDuration: 3
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 3
     - destination: {fileID: 1096233698377301044}
       shooterPrefab: {fileID: 5368321487230841642, guid: 43b6a7ea5f44c2d40be178f4cfbe4031, type: 3}
       shooterDuration: 3
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 1096233698377301044}
       shooterPrefab: {fileID: 4914058022560053946, guid: b765b6d7ee85a4f4183139aeeda5069c, type: 3}
       shooterDuration: 3
-      shootWhileMoving: 0
+      shootWhileMoving: 1
       prepareTime: 0
       actionDelay: 3
     moveDuration: 1
     phaseTime: 30
     loopDelay: 1
-  - phaseName: 'Ice Magic: Icicle Bullet'
+  - phaseName: 'Ice Magic: Icicle Flower'
     phaseHP: 200
     isSpell: 1
     attackPoints:
     - destination: {fileID: 5228408918103252960}
-      shooterPrefab: {fileID: 8879280974003245269, guid: 5bdd5fc9f0bbb6f4087f380492680010, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 1
+      shooterPrefab: {fileID: 543071094998552202, guid: 0e1ce80ffa433fd4e929824a15843eed, type: 3}
+      shooterDuration: 30
+      shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
-    - destination: {fileID: 5228408918103252960}
-      shooterPrefab: {fileID: 2689026405881922643, guid: 634401fc05e125e4d866d35981188391, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 2
+      actionDelay: 4
     - destination: {fileID: 7049202783720831812}
-      shooterPrefab: {fileID: 8879280974003245269, guid: 5bdd5fc9f0bbb6f4087f380492680010, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 1
+      shooterPrefab: {fileID: 543071094998552202, guid: 0e1ce80ffa433fd4e929824a15843eed, type: 3}
+      shooterDuration: 30
+      shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
-    - destination: {fileID: 7049202783720831812}
-      shooterPrefab: {fileID: 2689026405881922643, guid: 634401fc05e125e4d866d35981188391, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 2
+      actionDelay: 4
     - destination: {fileID: 6120635120250569027}
-      shooterPrefab: {fileID: 8879280974003245269, guid: 5bdd5fc9f0bbb6f4087f380492680010, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 1
+      shooterPrefab: {fileID: 543071094998552202, guid: 0e1ce80ffa433fd4e929824a15843eed, type: 3}
+      shooterDuration: 30
+      shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 1
-    - destination: {fileID: 6120635120250569027}
-      shooterPrefab: {fileID: 2689026405881922643, guid: 634401fc05e125e4d866d35981188391, type: 3}
-      shooterDuration: 5
-      shootWhileMoving: 1
-      prepareTime: 0
-      actionDelay: 2
+      actionDelay: 4
     moveDuration: 1
     phaseTime: 45
     loopDelay: 1

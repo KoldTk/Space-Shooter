@@ -9,6 +9,7 @@ public class ShooterRotate : MonoBehaviour
     {
         Restart,
         Yoyo,
+        Beyond,
     }
     [SerializeField] private float duration;
     [SerializeField] private float angle;
@@ -38,6 +39,9 @@ public class ShooterRotate : MonoBehaviour
                 break;
             case RotateType.Yoyo:
                 loopType = LoopType.Yoyo;
+                break;
+            case RotateType.Beyond:
+                loopType = LoopType.Incremental;
                 break;
             default:
                 break;

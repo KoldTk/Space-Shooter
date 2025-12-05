@@ -33,9 +33,10 @@ public class BossSkillCutIn : MonoBehaviour
     }
     private void OnEnable()
     {
+        GameManager.Instance.spellSuccess = true;
         backgroundText.gameObject.SetActive(true);
         spellText.text = GameManager.Instance.bossInfo.phaseName;
-        bonusPoint = GameManager.Instance.bossInfo.phaseTime * 100000;
+        bonusPoint = GameManager.Instance.bossInfo.phaseTime * 10000;
         bonusPointCounter.text = $"Bonus: {bonusPoint}";
         cutInImage.transform.position = imageStartingPos;
         StartCoroutine(CutInSequence());
@@ -50,7 +51,7 @@ public class BossSkillCutIn : MonoBehaviour
     {
         if (counterStart)
         {
-            bonusPoint -= (Time.deltaTime * 100000);
+            bonusPoint -= (Time.deltaTime * 10000);
             bonusPointCounter.text = $"Bonus: {bonusPoint}";
         }
     }
@@ -132,5 +133,6 @@ public class BossSkillCutIn : MonoBehaviour
         GameManager.Instance.bonusPoint = (int)bonusPoint;
         bonusPointText.SetActive(true);
         GameManager.Instance.ScoreUp((int)bonusPoint);
+
     }    
 }

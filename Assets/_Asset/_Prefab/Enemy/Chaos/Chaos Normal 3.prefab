@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270231344787245512}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7660445, w: 0.64278764}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7598505397244003887}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -100}
 --- !u!114 &2748557643953736088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,11 +57,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 34
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.15
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -194,11 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 26
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.25
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -248,13 +248,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838588717229932352}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: -0.8433915, w: 0.53729963}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7598505397244003887}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -115}
 --- !u!114 &3289684647996639689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,11 +279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 33
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.225
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -333,13 +333,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7058414535137822829}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7933534, w: 0.6087614}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7598505397244003887}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105}
 --- !u!114 &6248417539094329214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,11 +364,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 34
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.175
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -418,13 +418,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7387096026025364903}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
+  m_LocalRotation: {x: 0, y: 0, z: -0.8191521, w: 0.57357645}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7598505397244003887}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -110}
 --- !u!114 &8361786736764239791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 39
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0

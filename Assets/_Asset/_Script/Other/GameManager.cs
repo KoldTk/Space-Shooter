@@ -23,7 +23,8 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public bool playerDie;
     [HideInInspector] public int retryCount;
     [HideInInspector] public Transform gameBackground;
-    private int scoreMilestone = 20000000;
+    [HideInInspector] public bool spellSuccess;
+    private int scoreMilestone;
     protected override void Awake()
     {
         base.Awake();
@@ -40,6 +41,7 @@ public class GameManager : Singleton<GameManager>
         retryCount = 2;
         playerSpeed = 5;
         expMilestone = 16;
+        scoreMilestone = 20000000;
         dialogueOn = false;
         bossInfo.phaseTime = Mathf.Clamp(bossInfo.phaseTime, 0, bossInfo.phaseTime);
     } 
@@ -76,7 +78,7 @@ public class GameManager : Singleton<GameManager>
         if (playerScore >= scoreMilestone)
         {
             playerLives++;
-            playerScore += 20000000;
+            scoreMilestone += 20000000; 
         }    
         EventDispatcher<bool>.Dispatch(Event.ScoreGain.ToString(), true);
     }
@@ -173,6 +175,24 @@ public class GameManager : Singleton<GameManager>
             }
         }
         yield return null;
+    }
+    public void ClearObject()
+    {
+        GameObject[] shooters = GameObject.FindGameObjectsWithTag("Shooter");
+        foreach (GameObject shooter in shooters)
+        {
+            Destroy(shooter);
+        }
+        GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach (GameObject item in items)
+        {
+            item.SetActive(false);
+        }
+        foreach (GameObject bullet in bullets)
+        {
+            bullet.SetActive(false);
+        }
     }
 }
 public struct BossInfo

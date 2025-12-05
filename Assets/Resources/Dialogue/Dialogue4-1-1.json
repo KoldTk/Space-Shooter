@@ -17,11 +17,14 @@
     },
     {
       "id": 5, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjured"
+    },
+    {
+      "id": 6, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjured2"
     }
   ],
   "messages": [
     {
-      "actorId": 3,
+      "actorId": 4,
       "message": "Kuhahahaha! Let's fight!",
 	"eventType": 2,
 	"eventParam": "Prefab/Solyn (Boss)"
@@ -35,7 +38,7 @@
       "message": "Is there even one normal fairy in this forest?"
     },
     {
-      "actorId": 3,
+      "actorId": 0,
       "message": "I thought fairies suppose to be gentle and friendly!"
     },
     {
@@ -43,7 +46,7 @@
       "message": "You are strong! Fight me!"
     },
     {
-      "actorId": 3,
+      "actorId": 0,
       "message": "Haa...",
 	"eventType": 4,
 	"eventParam": "BossStartAttack"

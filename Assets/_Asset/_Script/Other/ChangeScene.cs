@@ -18,8 +18,9 @@ public class ChangeScene : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
+            GameManager.Instance.ClearObject();
             Debug.Log($"Loading progress: {asyncLoad.progress}");
             yield return null;
         }
-    }
+    }      
 }

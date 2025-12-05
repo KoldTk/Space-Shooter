@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 19
+  bulletID: 48
   bulletSpeed: 2
   shootType: 1
   bulletType: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   accelRate: 0
   waveAmp: 0
   frequency: 0
-  patternType: 2
+  patternType: 4
   radialConfig:
     bulletCount: 30
   spiralConfig:
@@ -115,5 +115,5 @@ MonoBehaviour:
     bulletCount: 1
     offset: 0
   randomConfig:
-    spreadAngle: 0
-    bulletCount: 0
+    spreadAngle: 360
+    bulletCount: 20

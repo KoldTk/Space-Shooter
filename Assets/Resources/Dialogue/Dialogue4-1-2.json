@@ -17,27 +17,33 @@
     },
     {
       "id": 5, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjured"
+    },
+    {
+      "id": 6, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjured2"
+    },
+    {
+      "id": 7, "name": "The Fire Fairy - Solyn", "spritePath": "Character Sprite/Solyn/SolynInjuredSmile"
     }
   ],
   "messages": [
     {
-      "actorId": 5,
+      "actorId": 6,
       "message": "What just happened?"
     },
     {
-      "actorId": 5,
-      "message": "Why am I here, and why am I all tattered?"
+      "actorId": 6,
+      "message": "Why am I here? And why am I all tattered?"
     },
     {
-      "actorId": 5,
+      "actorId": 7,
       "message": "Well, doesn't matter! My body feels great!"
     },
     {
-      "actorId": 5,
+      "actorId": 7,
       "message": "It's like I just finished a full workout session."
     },
     {
-      "actorId": 5,
+      "actorId": 7,
       "message": "Kuhahahahahahaha!"
     },
     {
@@ -49,7 +55,7 @@
       "message": "I should leave before more trouble comes."
     },
     {
-      "actorId": 5,
+      "actorId": 7,
       "message": "Kuhahahahaha!",
 	"eventType": 5,
 	"eventParam": "StageEnd"

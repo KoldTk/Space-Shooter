@@ -1331,82 +1331,82 @@ MonoBehaviour:
       actionDelay: 1
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 6499251789316674597, guid: 9559a1528fd1b7a468275cf734ab06c1, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 5069527784409589663, guid: 17a1c99f2b9f7764093ddbfdbe062ba1, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 7760990468528748014, guid: 47e39a6260fc085499263bba67c697ed, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 9043375250436376944, guid: e89d08097967dc241b14a11e58491f9a, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 3
+      actionDelay: 1
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 8148852095206181919, guid: 4d2874c50e9641b4797b8759748712bf, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 5960862859707770149, guid: 08b79a4b5c3b3d14aa8e91bd6185f8b8, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 7497134443757264922, guid: c9de46a6e8e1cb846aa637bc3695268c, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 3193305108184869117, guid: 8bc11a844d9b2ca48ae84106f78b3231, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
-      actionDelay: 2
+      actionDelay: 1
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 1673230460042732252, guid: 2a846b9ca58d7494a8b6f9bf7820e5d4, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 3360463977666571715, guid: fc4c3f205e8b0f642842ccd2df5a3f1e, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 276935388707873044, guid: fa9daa45cbc624344b15cb0a062160a4, type: 3}
-      shooterDuration: 3
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     - destination: {fileID: 608396846402451410}
       shooterPrefab: {fileID: 6154442438054639763, guid: b28285a7e961b0b4a9a3ec28b4cc1bda, type: 3}
-      shooterDuration: 2
+      shooterDuration: 5
       shootWhileMoving: 0
       prepareTime: 0
       actionDelay: 0
     moveDuration: 1
     phaseTime: 60
     loopDelay: 3
-  - phaseName: 'Fire Magic: Aristolochia'
-    phaseHP: 6000
-    isSpell: 1
+  - phaseName: Normal Attack
+    phaseHP: 2000
+    isSpell: 0
     attackPoints:
     - destination: {fileID: 8935848706937546809}
       shooterPrefab: {fileID: 4979020840453555935, guid: ac198d0ae9f4c924a98b9dda0d2a2e90, type: 3}

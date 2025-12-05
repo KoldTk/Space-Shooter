@@ -49,6 +49,7 @@ public class UIBossStat : MonoBehaviour
         }
         else if (time <= 0)
         {
+            GameManager.Instance.spellSuccess = false;
             EventDispatcher<bool>.Dispatch(Event.BossChangePhase.ToString(), true);
         }
     }

@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 39
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
@@ -142,11 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 33
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.175
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -227,11 +227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 26
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.15
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -312,11 +312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 7
+  bulletID: 34
   bulletSpeed: 1.5
   shootType: 0
   bulletType: 0
-  fireRate: 0.2
+  fireRate: 0.225
   fireDuration: 15
   shootCount: 0
   targetSpeed: 0
@@ -388,6 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f293cd860926f24449a3f89b33ca6d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 1
+  duration: 0.5
   angle: 90
   rotateType: 1

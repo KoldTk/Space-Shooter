@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 152663362779694771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: 2.4, z: 0}
+  m_LocalPosition: {x: -10.47, y: 3.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57,13 +57,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -184,13 +184,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -269,13 +269,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 1790241508203127463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: 0.4, z: 0}
+  m_LocalPosition: {x: -10.47, y: 1.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -354,13 +354,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -439,13 +439,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -494,7 +494,7 @@ Transform:
   m_GameObject: {fileID: 3622547757185027483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: -1.6, z: 0}
+  m_LocalPosition: {x: -10.47, y: -0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -524,13 +524,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -609,13 +609,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -664,7 +664,7 @@ Transform:
   m_GameObject: {fileID: 5271119791399674137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: -3.6, z: 0}
+  m_LocalPosition: {x: -10.47, y: -2.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -694,13 +694,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -779,13 +779,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -864,13 +864,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1
@@ -919,7 +919,7 @@ Transform:
   m_GameObject: {fileID: 8356125927709697703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: -5.6, z: 0}
+  m_LocalPosition: {x: -10.47, y: -4.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -949,13 +949,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96317995259d0d48ad4c12d98224e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletID: 6
+  bulletID: 37
   bulletSpeed: 0
   shootType: 1
   bulletType: 2
-  fireRate: 0.8
+  fireRate: 2.5
   fireDuration: 2
-  shootCount: 1
+  shootCount: 20
   targetSpeed: 0.5
   delayTime: 1
   accelRate: 1

@@ -59,6 +59,7 @@ public class PlayerManager : MonoBehaviour
             }
             else
             {
+                GameManager.Instance.ClearObject();
                 SceneManager.LoadScene("Result");
             }
         }

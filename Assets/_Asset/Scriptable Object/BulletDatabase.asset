@@ -238,3 +238,53 @@ MonoBehaviour:
     prefab: {fileID: 3890756181438001215, guid: 7f6ccaa41e6174d468a4b0f2fe67ed72, type: 3}
     moveSpeed: 5
     damage: 2
+  - bulletName: Enemy Delay Homing 2
+    ID: 45
+    prefab: {fileID: 3890756181438001215, guid: a144deeb3a3d7a34a9a5db79c3163635, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Fire Arrow
+    ID: 46
+    prefab: {fileID: 5838402393802865155, guid: db4cb620ec789c040afeb5551c7aa53b, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Delay Bullet 9
+    ID: 47
+    prefab: {fileID: 3890756181438001215, guid: e9f7ccfefef9b224897f42859ba0808f, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Curve Bullet 3
+    ID: 48
+    prefab: {fileID: 2193489095253957770, guid: 7bf523a633577b14a8c8276e579ed737, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Curve Bullet 4
+    ID: 49
+    prefab: {fileID: 2193489095253957770, guid: 08cec688722ed6f49bb9cbd5b0afe880, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Dark Bullet
+    ID: 50
+    prefab: {fileID: 5181505949268131994, guid: 78d40bb3a3f18594bb96256e4969fcf4, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy White Bullet
+    ID: 51
+    prefab: {fileID: 5181505949268131994, guid: fb52bc8057939d6479dc3b0b2f611b1c, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Dark Bullet 2
+    ID: 52
+    prefab: {fileID: 5181505949268131994, guid: dc258b32dbefb9c41b9090a7eed3b7fe, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Ice Flower
+    ID: 53
+    prefab: {fileID: 5181505949268131994, guid: 7b1d4dcb0a03b384aa405651d7535d0b, type: 3}
+    moveSpeed: 5
+    damage: 2
+  - bulletName: Enemy Fire Petal
+    ID: 54
+    prefab: {fileID: 5181505949268131994, guid: 00a610a69d692eb40bf609264d25d405, type: 3}
+    moveSpeed: 5
+    damage: 2
