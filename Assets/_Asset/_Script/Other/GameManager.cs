@@ -24,6 +24,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public int retryCount;
     [HideInInspector] public Transform gameBackground;
     [HideInInspector] public bool spellSuccess;
+    [HideInInspector] public GameObject selectedCharacter;
     private int scoreMilestone;
     protected override void Awake()
     {
@@ -87,7 +88,7 @@ public class GameManager : Singleton<GameManager>
         GameObject dropItem;
         
         float rate = Random.Range(0, 1000f);
-        if (rate < 400)
+        if (rate < 300)
         {
             //Small power up drop rate: 40%
             if (playerPower < 128)
@@ -100,31 +101,35 @@ public class GameManager : Singleton<GameManager>
                 dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
             }    
         }
-        else if (rate < 900)
+        else if (rate < 600)
         {
             //Mana drop rate: 60%
             dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
         }
-        else if (rate < 945f)
+        else if (rate < 645f)
         {
             //Big mana drop rate: 4.5%
             dropItem = ItemPool.Instance.GetPrefab(3, transform.position, Quaternion.identity);
         }    
-        else if (rate < 999)
+        else if (rate < 690)
         {
             //Big power up drop rate: 4.5%
             dropItem = ItemPool.Instance.GetPrefab(2, transform.position, Quaternion.identity);
         }
-        else
+        else if (rate < 700)
         {
             //Bonus Bomb: 1%
             dropItem = ItemPool.Instance.GetPrefab(4, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            return;
         }
             Rigidbody2D rb = dropItem.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             //Drop item fly to random direction when appear
-            rb.AddForce(new Vector2 (Random.Range(0.2f, -0.2f), 1f) * Random.Range(1, 1.5f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2 (0, 3), ForceMode2D.Impulse);
         }
     }
     public DialogueData LoadDialogue(string filePath)
@@ -179,12 +184,12 @@ public class GameManager : Singleton<GameManager>
     public void ClearObject()
     {
         GameObject[] shooters = GameObject.FindGameObjectsWithTag("Shooter");
+        GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject shooter in shooters)
         {
             Destroy(shooter);
         }
-        GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject item in items)
         {
             item.SetActive(false);

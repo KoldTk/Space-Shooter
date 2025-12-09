@@ -42,7 +42,7 @@ public class RetryMenu : MonoBehaviour
             //Setup hightlight color here, or using custom highlight
             ColorBlock cb = buttons[i].colors;
             //Disable highlight for non selected
-            cb.normalColor = (i == index) ? Color.yellow : Color.white;
+            cb.normalColor = (i == index) ? buttons[i].colors.selectedColor : buttons[i].colors.disabledColor;
             buttons[i].colors = cb;
         }
     }

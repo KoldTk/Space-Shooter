@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private GameObject magicCircle;
-    [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform charSpawnPos;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private SpriteRenderer fadeOverlay;
     [SerializeField] private float fadeDuration;
     [SerializeField] private float holdDuration;
     [SerializeField] private float targetFade = 1;
+    [SerializeField] private GameObject fullPowerItem;
+    [SerializeField] private Transform dropItemLocation;
     private bool isDead;
     private void Awake()
     {
@@ -56,6 +57,16 @@ public class PlayerManager : MonoBehaviour
             if (GameManager.Instance.retryCount > 0)
             {
                 EventDispatcher<bool>.Dispatch(Event.OpenRetryMenu.ToString(), true);
+                for (int i = 0; i < 10; i++)
+                {
+                    GameObject dropItem = Instantiate(fullPowerItem, dropItemLocation.position, Quaternion.identity);
+                    Rigidbody2D rb = dropItem.GetComponent<Rigidbody2D>();
+                    if (rb != null)
+                    {
+                        //Drop item fly to random direction when appear
+                        rb.AddForce(new Vector2(Random.Range(-0.5f, 0.5f), 3), ForceMode2D.Impulse);
+                    }
+                }
             }
             else
             {
@@ -71,6 +82,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void CharacterSpawn()
     {
+        GameObject playerPrefab = GameManager.Instance.selectedCharacter;
         Instantiate(playerPrefab, charSpawnPos.position, Quaternion.identity, transform);
     }
     public void Retry(bool retry)
