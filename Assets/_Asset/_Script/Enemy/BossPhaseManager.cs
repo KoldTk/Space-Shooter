@@ -160,6 +160,7 @@ public class BossPhaseManager : MonoBehaviour
     }
     private void ResetWave(bool isReset)
     {
+        GameManager.Instance.DeleteBullet();
         StartPhase(currentPhaseIndex);
     }   
 }

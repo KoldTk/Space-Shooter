@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class MenuGroupManager : MonoBehaviour
 {
     [SerializeField] Button[] buttons;
+    [SerializeField] private GameObject targetMenu;
     private int currentIndex = 0;
-    private Button targetButton;
     private bool isHighlighted;
     private void OnEnable()
     {
@@ -27,11 +27,17 @@ public class MenuGroupManager : MonoBehaviour
             currentIndex = (currentIndex - 1 + buttons.Length) % buttons.Length;
             HighlightButton(currentIndex);
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
         {
             buttons[currentIndex].onClick.Invoke(); //Call button event
         }
-
+        else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.X))
+        {
+            if (targetMenu != null)
+            {
+                ReturnToMenuGroup();
+            }
+        }    
     }
     private void HighlightButton(int index)
     {
@@ -42,5 +48,10 @@ public class MenuGroupManager : MonoBehaviour
             buttons[i].image.enabled = isHighlighted;
         }
     }
-
+    private void ReturnToMenuGroup()
+    {
+        targetMenu.SetActive(true);
+        transform.gameObject.SetActive(false);
+    }
+    
 }

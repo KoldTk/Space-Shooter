@@ -25,6 +25,8 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public Transform gameBackground;
     [HideInInspector] public bool spellSuccess;
     [HideInInspector] public GameObject selectedCharacter;
+    [HideInInspector] public bool isChangingScene = true;
+    [HideInInspector] public string selectedChapter;
     private int scoreMilestone;
     protected override void Awake()
     {
@@ -106,17 +108,17 @@ public class GameManager : Singleton<GameManager>
             //Mana drop rate: 60%
             dropItem = ItemPool.Instance.GetPrefab(1, transform.position, Quaternion.identity);
         }
-        else if (rate < 645f)
+        else if (rate < 630f)
         {
             //Big mana drop rate: 4.5%
             dropItem = ItemPool.Instance.GetPrefab(3, transform.position, Quaternion.identity);
         }    
-        else if (rate < 690)
+        else if (rate < 660)
         {
             //Big power up drop rate: 4.5%
             dropItem = ItemPool.Instance.GetPrefab(2, transform.position, Quaternion.identity);
         }
-        else if (rate < 700)
+        else if (rate < 670)
         {
             //Bonus Bomb: 1%
             dropItem = ItemPool.Instance.GetPrefab(4, transform.position, Quaternion.identity);
@@ -129,7 +131,7 @@ public class GameManager : Singleton<GameManager>
         if (rb != null)
         {
             //Drop item fly to random direction when appear
-            rb.AddForce(new Vector2 (0, 3), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2 (0, Random.Range(1,2)), ForceMode2D.Impulse);
         }
     }
     public DialogueData LoadDialogue(string filePath)
@@ -186,6 +188,7 @@ public class GameManager : Singleton<GameManager>
         GameObject[] shooters = GameObject.FindGameObjectsWithTag("Shooter");
         GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject shooter in shooters)
         {
             Destroy(shooter);
@@ -198,6 +201,10 @@ public class GameManager : Singleton<GameManager>
         {
             bullet.SetActive(false);
         }
+        foreach(GameObject obj in players)
+        {
+            obj.SetActive(false);
+        }    
     }
 }
 public struct BossInfo

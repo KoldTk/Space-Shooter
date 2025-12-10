@@ -22,6 +22,7 @@ public abstract class MenuButton : MonoBehaviour
     }
     private void OnDisable()
     {
+        transform.DOKill();
         rect.localPosition = startPosition;
     }
     private void MoveToPosition()

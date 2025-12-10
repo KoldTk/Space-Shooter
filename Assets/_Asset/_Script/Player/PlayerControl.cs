@@ -18,7 +18,10 @@ public class PlayerControl : MonoBehaviour
     }
     private void OnDisable()
     {
-        EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
+        if (!GameManager.Instance.isChangingScene)
+        {
+            EventDispatcher<bool>.Dispatch(Event.CharacterDie.ToString(), true);
+        }    
         EventDispatcher<bool>.Dispatch(Event.PlayerSpellEnd.ToString(), true);
     }
     void Update()

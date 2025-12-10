@@ -21,11 +21,25 @@ public class InitialDialogue : MonoBehaviour
     }
     public void InitBossDialogue(string dialoguePath)
     {
+
         dialogueArea.SetActive(true);
         StartDialogue(dialoguePath);
     }
     private void StartDialogue(string filePath)
     {
+        ClearBullet();
         dialogueArea.GetComponentInChildren<DialogueManager>().OpenDialogue(filePath);
     }
+    private void ClearBullet()
+    {
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach (GameObject bullet in bullets)
+        {
+            EnemyBullet enemyBullet = bullet.GetComponent<EnemyBullet>();
+            if (enemyBullet != null)
+            {
+                enemyBullet.ChangeToPoint();
+            }
+        }
+    }    
 }

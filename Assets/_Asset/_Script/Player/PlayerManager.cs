@@ -15,11 +15,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private float targetFade = 1;
     [SerializeField] private GameObject fullPowerItem;
     [SerializeField] private Transform dropItemLocation;
-    private bool isDead;
-    private void Awake()
-    {
-        CharacterSpawn();
-    }
     private void OnEnable()
     {
         EventDispatcher<bool>.AddListener(Event.CharacterDie.ToString(), RespawnCharacter);
@@ -36,6 +31,7 @@ public class PlayerManager : MonoBehaviour
     }
     void Start()
     {
+        CharacterSpawn();
         GameManager.Instance.gameBackground = GameObject.FindGameObjectWithTag("Background").transform;
     }
     private void RespawnCharacter(bool isSpawn)
@@ -64,7 +60,7 @@ public class PlayerManager : MonoBehaviour
                     if (rb != null)
                     {
                         //Drop item fly to random direction when appear
-                        rb.AddForce(new Vector2(Random.Range(-0.5f, 0.5f), 3), ForceMode2D.Impulse);
+                        rb.AddForce(new Vector2(Random.Range(-0.5f, 0.5f), 2), ForceMode2D.Impulse);
                     }
                 }
             }
@@ -84,6 +80,7 @@ public class PlayerManager : MonoBehaviour
     {
         GameObject playerPrefab = GameManager.Instance.selectedCharacter;
         Instantiate(playerPrefab, charSpawnPos.position, Quaternion.identity, transform);
+        GameManager.Instance.isChangingScene = false;
     }
     public void Retry(bool retry)
     {
@@ -107,5 +104,5 @@ public class PlayerManager : MonoBehaviour
     private void HideBackground(bool spellEnd)
     {
         sprite.DOFade(0, 0.5f);
-    }
+    }  
 }

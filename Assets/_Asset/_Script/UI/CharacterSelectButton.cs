@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+public class CharacterSelectButton : MenuButton
 {
     public string sceneName;
-    // Start is called before the first frame update
-    public void SwitchScene()
+    [SerializeField] private GameObject characterPrefab;
+    private void SwitchScene()
     {
+        if (sceneName == "")
+        {
+            sceneName = GameManager.Instance.selectedChapter;
+        }
         Time.timeScale = 1;
-        GameManager.Instance.isChangingScene = true;
         StartCoroutine(LoadSceneCoroutine(sceneName));
     }
     private IEnumerator LoadSceneCoroutine(string sceneName)
@@ -20,7 +23,13 @@ public class ChangeScene : MonoBehaviour
         {
             GameManager.Instance.ClearObject();
             Debug.Log($"Loading progress: {asyncLoad.progress}");
-            yield return new WaitForSeconds(0.5f);
+            yield return null;
         }
-    }      
+    }
+
+    public override void ClickEvent()
+    {
+        GameManager.Instance.selectedCharacter = characterPrefab;
+        SwitchScene();
+    }
 }
